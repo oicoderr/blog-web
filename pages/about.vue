@@ -21,7 +21,7 @@
 				<p>
 					<i class="iconfont icon">&#xe64a;</i>
 					<span>
-						<a href="https://github.com/naihe138" target="_blank"><i class="iconfont like">&#xe621;</i></a>
+						<a href="https://github.com/Iovedw" target="_blank"><i class="iconfont like">&#xe621;</i></a>
 						<a href="https://segmentfault.com/u/naice" target="_blank"><i class="iconfont like">&#xe610;</i></a>
 						<a href="https://juejin.im/user/5768b5f8a341310064ef444e" target="_blank"><i class="iconfont like">&#xe606;</i></a>
 						<a href="https://juejin.im/user/5768b5f8a341310064ef444e" target="_blank"></a>

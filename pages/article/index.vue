@@ -66,7 +66,7 @@ import TimeMixin from '../../utils/time-mixin'
 
 let page = 1
 let fetchTags = getTag()
-let fetchHotArticle = getArticle({hot: true})
+let fetchHotArticle = getArticle({top: '1'})
 let fetchArticle = getArticle({current_page: page})
 
 export default {

@@ -1,10 +1,10 @@
 一直以来都想用自己所想的技术做一些个人小项目，之前的[博客](https://segmentfault.com/a/1190000010301516)觉从视觉上和交互上得有点小小不满足，所以想着做一些小小的重构。陆陆续续花了两个多月的时间，原因是工作特别的忙（为自己懒惰找借口），所以知道今天才发布上线。
 
-博客地址：[naice-blog](https://github.com/naihe138/naice-blog)
+博客地址：[naice-blog](https://github.com/Iovedw/naice-blog)
 
-博客管理：[naice-blog-admin](https://github.com/naihe138/naice-blog-admin)
+博客管理：[naice-blog-admin](https://github.com/Iovedw/naice-blog-admin)
 
-博客后台：[node-koa](https://github.com/naihe138/naice-blog-koa)
+博客后台：[node-koa](https://github.com/Iovedw/naice-blog-koa)
 
 
 ### 相关截图:
@@ -59,7 +59,7 @@
 
 ### 启动
 
->启动前一定要先启动[服务器](https://github.com/naihe138/naice-blog-koa)，不然那请求不到数据
+>启动前一定要先启动[服务器](https://github.com/Iovedw/naice-blog-koa)，不然那请求不到数据
 
 #### Clone
 ````

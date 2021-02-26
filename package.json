@@ -1,8 +1,8 @@
 {
   "name": "blog-nuxt",
   "version": "1.1.0",
-  "description": "Nuxt.js project",
-  "author": "何文林 <370215230@qq.com>",
+  "description": "Nuxt.js",
+  "author": "pyc <849656290@qq.com>",
   "private": true,
   "scripts": {
     "dev": "backpack dev",

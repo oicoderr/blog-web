@@ -13,7 +13,7 @@
           </h1>
           <slot></slot>
           <div class="aside-icon">
-            <a href="https://github.com/naihe138">
+            <a href="https://github.com/Iovedw">
               <i class="iconfont">&#xe621;</i>
             </a>
             <a href="https://segmentfault.com/u/naice">
@@ -54,7 +54,7 @@
 	export default {
 		head () {
 			return {
-				title: 'naice | 首页'
+				title: 'pydw | 首页'
 			}
 		},
 		mounted() {
