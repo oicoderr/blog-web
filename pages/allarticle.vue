@@ -25,7 +25,7 @@ import {getArticleAll, getTag} from '../api'
 
 export default {
 	head: {
-		title: 'naice | 归档'
+		title: 'pydw | 归档'
 	},
 	layout: 'layout',
 	mixins: [FooterMixin],

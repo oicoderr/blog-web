@@ -21,11 +21,11 @@ export default {
     props: {
         title: {
             type: String,
-            default: 'naice的博客'
+            default: 'pydw的博客'
         },
         url: {
             type: String,
-            default: 'blog.naice.me'
+            default: 'blog.pydw.me'
         }
     },
     methods: {

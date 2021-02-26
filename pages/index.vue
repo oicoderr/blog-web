@@ -16,7 +16,7 @@
             <a href="https://github.com/Iovedw">
               <i class="iconfont">&#xe621;</i>
             </a>
-            <a href="https://segmentfault.com/u/naice">
+            <a href="https://segmentfault.com/u/manxinhuanxi_5f33d98ab73d9">
               <i class="iconfont">&#xe610;</i>
             </a>
           </div>

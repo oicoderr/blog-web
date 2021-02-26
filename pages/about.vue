@@ -4,7 +4,7 @@
 			<div class="info">
 				<p>
 					<i class="iconfont icon">&#xe670;</i>
-					<span>我是Naice, 一个前端开发程序员</span>
+					<span>我是pydw, 一个全栈开发程序员</span>
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe65b;</i>
@@ -12,24 +12,18 @@
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe63b;</i>
-					<span>喜欢coding、看书、电影、王者农药</span>
+					<span>喜欢coding、看书、电影、农药</span>
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe6c3;</i>
-					<span>胡歌、周星驰、周杰伦</span>
+					<span>❤ ❤ ❤ ❤</span>
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe64a;</i>
 					<span>
 						<a href="https://github.com/Iovedw" target="_blank"><i class="iconfont like">&#xe621;</i></a>
-						<a href="https://segmentfault.com/u/naice" target="_blank"><i class="iconfont like">&#xe610;</i></a>
-						<a href="https://juejin.im/user/5768b5f8a341310064ef444e" target="_blank"><i class="iconfont like">&#xe606;</i></a>
-						<a href="https://juejin.im/user/5768b5f8a341310064ef444e" target="_blank"></a>
-						<a href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=CTo_OTs4PDs6OUl4eCdqZmQ" target="_blank"><i class="iconfont like">&#xe60a;</i></a>
-						<a href="https://user.qzone.qq.com/370215230/infocenter" target="_blank"><i class="iconfont like">&#xe7dc;</i></a>
-						<a href="https://weibo.com/5091678932/profile?topnav=1&wvr=6" target="_blank"><i class="iconfont like">&#xe63d;</i></a>
-						<a href="https://www.facebook.com/he.wenlin.501" target="_blank"><i class="iconfont like">&#xe6e2;</i></a>
-						<a href="https://twitter.com/naice_heheda" target="_blank"><i class="iconfont like">&#xec9c;</i></a>
+						<a href="https://segmentfault.com/u/manxinhuanxi_5f33d98ab73d9" target="_blank"><i class="iconfont like">&#xe610;</i></a>
+						<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=uYGNgI_Mj4uAifnIyJfa1tQ" style="text-decoration:none;"><i class="iconfont like">&#xe60a;</i></a>
 					</span>
 				</p>
 				<p>
@@ -57,8 +51,8 @@
 							ref="bCanvas"></canvas>
 				</div>
 				<div class="name">
-					<h2 class="title">Naice</h2>
-					<p class="disc">JS stack developer</p>
+					<h2 class="title">pydw</h2>
+					<p class="disc"> Whole stack developer</p>
 					<p class="friend">Friend me</p>
 				</div>
 				<img class="averter" src="../assets/img/averter.jpg" alt="头像">
@@ -81,7 +75,7 @@
 import FooterMixin from '../utils/footer-mixin'
 export default {
 	head: {
-		title: 'naice | 关于',
+		title: 'pydw | 关于',
 		meta: [
       { hid: 'description', name: 'description', content: 'Home page description' }
     ]

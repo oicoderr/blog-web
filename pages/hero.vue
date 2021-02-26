@@ -34,7 +34,7 @@ var timer = null
 
 export default {
 	head: {
-		title: 'naice | 留言墙'
+		title: 'pydw | 留言墙'
 	},
 	layout: 'layout',
 	components: {

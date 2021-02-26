@@ -132,7 +132,7 @@ export default {
     layout: 'layout',
     head () {
       return {
-        title: this.article.title || `naice | blog`
+        title: this.article.title || `pydw | blog`
       }
     },
     validate({ params }) {

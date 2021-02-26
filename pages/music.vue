@@ -48,9 +48,9 @@ import { formatLyric, findLine } from '../utils/music'
 import MusicDraw from '../utils/draw'
 export default {
 	head: {
-		title: 'naice | 音乐',
+		title: 'pydw | 音乐',
 		meta: [
-      { hid: 'description', name: 'description', content: 'naice | 音乐' }
+      { hid: 'description', name: 'description', content: 'pydw | 音乐' }
     ]
 	},
 	layout: 'music-layout',

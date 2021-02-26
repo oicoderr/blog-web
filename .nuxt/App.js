@@ -12,7 +12,7 @@ import _6f6c098b from './layouts/default.vue'
 const layouts = { "_layout": _7c6a36a0,"_music-layout": _40930270,"_default": _6f6c098b }
 
 export default {
-  head: {"title":"Naice","meta":[{"charset":"utf-8"},{"http-equiv":"cleartype","content":"on"},{"http-equiv":"Cache-Control"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"description","name":"description","content":"Naice, 前端, blog"},{"hid":"keywords","name":"keywords","content":"前端开发，JavaScript, Node, Vue，nuxt"},{"name":"author","content":"370215230@qq.com"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fjquery\u002F3.3.1\u002Fjquery.min.js"},{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fhighlight.js\u002F9.12.0\u002Fhighlight.min.js"}],"style":[]},
+  head: {"title":"pydw","meta":[{"charset":"utf-8"},{"http-equiv":"cleartype","content":"on"},{"http-equiv":"Cache-Control"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"description","name":"description","content":"pydw, 全栈, blog"},{"hid":"keywords","name":"keywords","content":"全栈开发，JavaScript, Python, Vue，nuxt"},{"name":"author","content":"370215230@qq.com"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fjquery\u002F3.3.1\u002Fjquery.min.js"},{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fhighlight.js\u002F9.12.0\u002Fhighlight.min.js"}],"style":[]},
 
   render(h, props) {
     const loadingEl = h('NuxtLoading', { ref: 'loading' })

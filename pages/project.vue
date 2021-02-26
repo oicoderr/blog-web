@@ -18,7 +18,7 @@ import {getProject} from '../api'
 export default {
 	head () {
 		return {
-			title: 'naice | 项目'
+			title: 'pydw | 项目'
 		}
 	},
 	layout: 'layout',
