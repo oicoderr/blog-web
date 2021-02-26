@@ -16,14 +16,14 @@
                 to="/article"
                 class="tagLink"
                 >{{tag.name}}</nuxt-link></p>
-            <p>作者：pydw</p>
-            <p>链接：https://naice.me/article/{{article._id}}</p>
+            <p>作者：Pydw</p>
+            <p>链接：https://Pydw.me/article/{{article._id}}</p>
             <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
         </div>
         <!-- 平台链接 -->
         <transition name="fade">
             <div class="shearBox articleDetailBox" v-show="isShowShear" style="background: transparent">
-                <shear :title="article.title" :url="`https://blog.naice.me/article/${article._id}`"></shear>
+                <shear :title="article.title" :url="`https://blog.Pydw.me/article/${article._id}`"></shear>
             </div>
         </transition>
 
@@ -132,7 +132,7 @@ export default {
     layout: 'layout',
     head () {
       return {
-        title: this.article.title || `pydw | blog`
+        title: this.article.title || `Pydw | blog`
       }
     },
     validate({ params }) {

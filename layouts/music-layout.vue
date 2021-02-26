@@ -34,7 +34,7 @@
 			<nuxt/>
 		</div>
 		<footer class="musicLayoutFooter">
-			© 2021 - <nuxt-link to="/">pydw的博客</nuxt-link>
+			© 2021 - <nuxt-link to="/">Pydw的博客</nuxt-link>
 			 - Powered by Nuxt.js & Tornado
 		</footer>
 	</div>

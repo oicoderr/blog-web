@@ -18,7 +18,7 @@ import {getProject} from '../api'
 export default {
 	head () {
 		return {
-			title: 'pydw | 项目'
+			title: 'Pydw | 项目'
 		}
 	},
 	layout: 'layout',

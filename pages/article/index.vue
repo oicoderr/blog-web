@@ -73,7 +73,7 @@ let fetchArticle = getArticle({current_page: page})
 export default {
   head () {
     return {
-      title: 'pydw | 文章'
+      title: 'Pydw | 文章'
     }
   },
   layout: 'layout',

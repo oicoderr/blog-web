@@ -9,7 +9,7 @@
       <a title="Facebook" target="_blank" :href="`https://www.facebook.com/sharer/sharer.php?u=${url}`"><i class="iconfont">&#xe6e2;</i></a>
       <a title="人人网" target="_blank" :href="`http://widget.renren.com/dialog/share?resourceUrl=${url}&srcUrl=${url}&title=${title}`"><i class="iconfont">&#xe608;</i></a>
       <a title="twitter" target="_blank" :href="`https://twitter.com/intent/tweet?text=${title}&url=${url}`"><i class="iconfont">&#xec9c;</i></a>
-      <a title="邮件" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=CTo_OTs4PDs6OUl4eCdqZmQ" target="_blank"><i class="iconfont">&#xe60a;</i></a>
+      <a title="邮件" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=uYGNgI_Mj4uAifnIyJfa1tQ" target="_blank"><i class="iconfont">&#xe60a;</i></a>
       <a title="复制链接" @click="copy" :data-clipboard-text="url" ref="copy"><i class="iconfont">&#xe609;</i></a>
   </div>
 </template>
@@ -21,11 +21,11 @@ export default {
     props: {
         title: {
             type: String,
-            default: 'pydw的博客'
+            default: 'Pydw的博客'
         },
         url: {
             type: String,
-            default: 'blog.pydw.me'
+            default: 'blog.Pydw.me'
         }
     },
     methods: {

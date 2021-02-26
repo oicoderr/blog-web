@@ -29,7 +29,7 @@ export default {
 			$("html,body").animate({scrollTop:`${this.scrollNum}px`}, 300);
 		},
 		mail() {
-			window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=CTo_OTs4PDs6OUl4eCdqZmQ', '_blank')
+			window.open('http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=uYGNgI_Mj4uAifnIyJfa1tQ', '_blank')
 		}
 	},
 	watch: {

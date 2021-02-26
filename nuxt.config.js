@@ -3,13 +3,13 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'pydw',
+    title: 'Pydw',
     meta: [
       { charset: 'utf-8' },
       { 'http-equiv': 'cleartype', content: 'on' },
       { 'http-equiv': 'Cache-Control' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' },
-      { hid: 'description', name: 'description', content: 'pydw, 全栈, blog' },
+      { hid: 'description', name: 'description', content: 'Pydw, 全栈, blog' },
       { hid: 'keywords', name: 'keywords', content: '全栈开发，JavaScript, Python, Vue，nuxt' },
       { name: 'author', content: '849656290@qq.com' }
     ],

@@ -4,7 +4,7 @@
 			<div class="info">
 				<p>
 					<i class="iconfont icon">&#xe670;</i>
-					<span>我是pydw, 一个全栈开发程序员</span>
+					<span>我是Pydw, 一个全栈开发程序员</span>
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe65b;</i>
@@ -28,7 +28,7 @@
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe725;</i>
-					<span>很多事情不是因为有希望才去坚持，而是坚持了才有希望。</span>
+					<span>要努力成为一个有价值的人。</span>
 				</p>
 			</div>
 			<div class="user">
@@ -51,7 +51,7 @@
 							ref="bCanvas"></canvas>
 				</div>
 				<div class="name">
-					<h2 class="title">pydw</h2>
+					<h2 class="title">Pydw</h2>
 					<p class="disc"> Whole stack developer</p>
 					<p class="friend">Friend me</p>
 				</div>
@@ -75,7 +75,7 @@
 import FooterMixin from '../utils/footer-mixin'
 export default {
 	head: {
-		title: 'pydw | 关于',
+		title: 'Pydw | 关于',
 		meta: [
       { hid: 'description', name: 'description', content: 'Home page description' }
     ]

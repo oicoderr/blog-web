@@ -34,7 +34,7 @@ var timer = null
 
 export default {
 	head: {
-		title: 'pydw | 留言墙'
+		title: 'Pydw | 留言墙'
 	},
 	layout: 'layout',
 	components: {

@@ -8,15 +8,15 @@
             <img src="../assets/img/averter.jpg" alt="">
           </a>
           <h1>
-            <nuxt-link to="/article?page=0">Naice</nuxt-link>
-            <p>很多事情不是因为有希望才去坚持，而是坚持了才有希望。</p>
+            <nuxt-link to="/article?page=0">Pydw</nuxt-link>
+            <p>要努力成为一个有价值的人。</p>
           </h1>
           <slot></slot>
           <div class="aside-icon">
-            <a href="https://github.com/Iovedw">
+            <a href="https://github.com/Iovedw" target="_blank">
               <i class="iconfont">&#xe621;</i>
             </a>
-            <a href="https://segmentfault.com/u/manxinhuanxi_5f33d98ab73d9">
+            <a href="https://segmentfault.com/u/manxinhuanxi_5f33d98ab73d9" target="_blank">
               <i class="iconfont">&#xe610;</i>
             </a>
           </div>
@@ -54,7 +54,7 @@
 	export default {
 		head () {
 			return {
-				title: 'pydw | 首页'
+				title: 'Pydw | 首页'
 			}
 		},
 		mounted() {
