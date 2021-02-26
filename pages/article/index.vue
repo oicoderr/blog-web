@@ -3,18 +3,19 @@
         <main class="box main">
             <section class="article">
                 <div class="item" v-for="(item, index) in article" :key="index">
-                    <a href="javascript:void(0)" class="article-title" @click="goDetail(item._id, article)">
+                    <a href="javascript:void(0)" class="article-title" @click="goDetail(item.id, article)">
                         <h2>{{item.title}}</h2>
                     </a>
-                    <p class="article-desc">{{item.descript}}</p>
+                    <p class="article-desc">{{item.desc}}</p>
                     <div class="article-info">
-                        <span class="time">{{toTime(item.update_at, '.')}}</span>
+                        <span class="time">{{item.update_time || item.create_time }}</span>
                             <i class="iconfont">&#xe600;</i>
-                        <span class="time"><strong v-if="item.meta">{{item.meta.views}}</strong>次阅读</span>
+                        <span class="time">
+                          <strong>{{item.viewCount}}</strong>次阅读</span>
                             <i class="iconfont">&#xe600;</i>
-                        <span class="time"><strong v-if="item.meta">{{item.meta.comments}}</strong>条评论</span>
+                        <span class="time"><strong>{{item.comments}}</strong>条评论</span>
                             <i class="iconfont">&#xe600;</i>
-                        <span class="time"><strong v-if="item.meta">{{item.meta.likes}}</strong>人喜欢</span>
+                        <span class="time"><strong>{{item.likeCount}}</strong>人喜欢</span>
                     </div>
                 </div>
                 <div class="loadmore" v-if="!hasMore">没有更多数据了</div>
@@ -26,7 +27,7 @@
                 <div class="hot" id = "sideHot">
                     <div class="hot-title">热门文章</div>
                     <div class="hot-article">
-                        <h3 v-for="(item, index) in hotArticle" :key="index" @click="goDetail(item._id, hotArticle)">
+                        <h3 v-for="(item, index) in hotArticle" :key="index" @click="goDetail(item.id, hotArticle)">
                             <a href="javascript:void(0)">{{item.title}}</a>
                         </h3>
                     </div>
@@ -66,7 +67,7 @@ import TimeMixin from '../../utils/time-mixin'
 
 let page = 1
 let fetchTags = getTag()
-let fetchHotArticle = getArticle({top: '1'})
+let fetchHotArticle = getArticle({top: true})
 let fetchArticle = getArticle({current_page: page})
 
 export default {
@@ -131,7 +132,8 @@ export default {
       })
     },
     goDetail(id, data) {
-      const arr = data.filter(item => item._id == id)
+      const arr = data.filter(item => item.id == id)
+      console.log('id: ' + id, arr)
       this.$store.commit('selectArticle', arr[0])
       this.$router.push('/article/' + id)
     }

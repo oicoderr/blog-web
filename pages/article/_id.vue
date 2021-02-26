@@ -1,44 +1,49 @@
 <template>
     <section>
+        <!-- md 文章详情 -->
         <div class="markdown articleDetailBox">
             <div class="title">
                 <h1>{{article.title}}</h1>
             </div>
             <div v-html="article.editContent"></div>
         </div>
+        <!-- 文章简要 -->
         <div class="info articleDetailBox">
-            <p>本文于 {{toTime(article.update_at, '/')}} 下午 发布在，当前已被围观 {{article.meta.views}} 次</p>
+            <p>本文于 {{article.update_time || article._create_time}} 发布在，当前已被围观 {{article.viewCount}} 次</p>
             <p>标签：<nuxt-link
                 v-for="(tag, index) in article.tag"
                 :key="index"
                 to="/article"
                 class="tagLink"
                 >{{tag.name}}</nuxt-link></p>
-            <p>作者：Naice</p>
+            <p>作者：pydw</p>
             <p>链接：https://naice.me/article/{{article._id}}</p>
             <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
         </div>
+        <!-- 平台链接 -->
         <transition name="fade">
             <div class="shearBox articleDetailBox" v-show="isShowShear" style="background: transparent">
                 <shear :title="article.title" :url="`https://blog.naice.me/article/${article._id}`"></shear>
             </div>
         </transition>
+
         <div class="arcMata articleDetailBox" style="background: transparent">
             <div class="arcMataInfo">
                 <div class="like" @click="toLike">
                     <i class="iconfont" v-if="isLike"  style="color: #51ce23">&#xe63b;</i>
                     <i class="iconfont"  v-else>&#xe65c;</i>
-                    <span>{{article.meta.likes}}</span>人喜欢
+                    <span>{{article.likeCount}}</span>人喜欢
                 </div>
-                <div class="view"><span>{{article.meta.comments}}</span>条评论</div>
+                <!-- <div class="view"><span>{{article.meta.comments}}</span>条评论</div> -->
             </div>
             <div class="arcMataShear">
                 <span class="pay iconfont">&#xe614;</span>
                 <span class="shear iconfont" @click="showShear">&#xe6a5;</span>
             </div>
         </div>
+
         <!-- 评论组件 -->
-        <div class="comment articleDetailBox">
+        <!-- <div class="comment articleDetailBox">
             <comment v-on:pushComment="putComment"></comment>
             <div class="arcCommentList">
                 <div class="arcCommentItem" v-for="(comment, index) in comments" :key="index">
@@ -110,7 +115,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
 </template>
 
@@ -120,7 +125,7 @@ import Shear from '../../components/shear'
 import Comment from '../../components/comment'
 import FooterMixin from '../../utils/footer-mixin'
 import TimeMixin from '../../utils/time-mixin'
-import {getArticleId, getComment, addReply, getReply, addComment, articleLike, commentLike} from '../../api'
+import {getArticle, getComment, addReply, getReply, addComment, articleLike, commentLike} from '../../api'
 import {avarterArr} from '../../utils/blowser'
 
 export default {
@@ -139,7 +144,7 @@ export default {
         Comment
     },
     async asyncData ({ params }) {
-        const res = await getArticleId(params.id)
+        const res = await getArticle({id: params.id})
         return {article: res.result}
     },
     data () {
