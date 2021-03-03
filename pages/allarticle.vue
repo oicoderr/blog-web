@@ -2,7 +2,7 @@
   <section class="allArticleBox">
 	  <div class="tags">
 		  <nuxt-link 
-		  	:to="`/article?tag=${item._id}`"
+		  	:to="`/article?tag=${item.id}`"
 		  	v-for="(item, index) in tags.result.list" 
 			:key="index">{{item.name}}<span>({{item.count}})</span></nuxt-link>
 	  </div>
@@ -11,7 +11,7 @@
 			  <div  v-for="(article, j) in item.monthList" :key="j">
 				  	<h2>{{item.year}}/{{article.month}}</h2>
 					<div class="itemLink">
-						<nuxt-link :to="`/article/${a._id}`" v-for="(a,i) in article.articleList" :key="i">{{a.title}}</nuxt-link>
+						<nuxt-link :to="`/article/${a.id}`" v-for="(a,i) in article.articleList" :key="i">{{a.title}}</nuxt-link>
 					</div>
 			  </div>
 		  </div>

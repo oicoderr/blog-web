@@ -16,7 +16,7 @@
                 to="/article"
                 class="tagLink"
                 >{{tag.name}}</nuxt-link></p>
-            <p>作者：Pydw</p>
+            <p>作者：{{article.author.name}}</p>
             <p>链接：https://Pydw.me/article/{{article._id}}</p>
             <p>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。</p>
         </div>
@@ -43,7 +43,7 @@
         </div>
 
         <!-- 评论组件 -->
-        <!-- <div class="comment articleDetailBox">
+        <div class="comment articleDetailBox">
             <comment v-on:pushComment="putComment"></comment>
             <div class="arcCommentList">
                 <div class="arcCommentItem" v-for="(comment, index) in comments" :key="index">
@@ -115,7 +115,7 @@
                     </div>
                 </div>
             </div>
-        </div> -->
+        </div>
     </section>
 </template>
 
@@ -270,7 +270,7 @@ export default {
                 ...user
             }
             const res = await addComment(params)
-            if (res.code === 1) {
+            if (res.code === 200) {
               this.getComment()
               this.article.meta.comments += 1
             }
@@ -288,7 +288,7 @@ export default {
             ...user
           }
           const res = await addReply(params)
-          if (res.code == 1) {
+          if (res.code === 200) {
             const reply = await getReply(cid)
             for (let i = 0, len = this.comments.length; i < len; i++) {
               if (this.comments[i]._id == cid) {
@@ -304,7 +304,7 @@ export default {
             return false
           }
           const res = await articleLike(this.$route.params.id)
-          if (res.code === 1) {
+          if (res.code === 200) {
             const likeArr = JSON.parse(localStorage.getItem('linkArr') || '[]')
             likeArr.push(this.$route.params.id)
             localStorage.setItem('linkArr', JSON.stringify(likeArr))
@@ -317,7 +317,7 @@ export default {
             return false
           }
           const res = await commentLike(id)
-          if (res.code === 1) {
+          if (res.code === 200) {
             const commentLikeArr = JSON.parse(localStorage.getItem('likeComment') || '[]')
             commentLikeArr.push(id)
             this.comments[index].isLike = true

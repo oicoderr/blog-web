@@ -1,7 +1,7 @@
 <template>
 	<div class="arcComment" v-on:click.stop.prevent="() => {}">
 		<div v-if="!reply" class="averter">
-			<img :src="avarterArr[averterNum]" alt="">
+			<img :src="avarterArr[averterNum]" alt="headImg">
 		</div>
 		<div class="inputBox" :style="isShowBtn ? {height: '180px'} : null">
 			<div class="user" v-if="showUserSet">
@@ -43,6 +43,7 @@
 
 <script>
 import {avarterArr} from '../utils/blowser'
+import { Message } from 'element-ui';
 export default {
 	props: {
 		reply: {
@@ -98,7 +99,7 @@ export default {
 		validate() {
 			const {name, email, site} = this.userinfo
 			if (!name.trim()) {
-				alert('请输入昵称哦~~');
+				alert('请输入昵称哦~~'); 
 				return false
 			}
 			if (!email.trim()) {

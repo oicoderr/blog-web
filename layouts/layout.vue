@@ -35,7 +35,7 @@
 			<nuxt/>
 		</div>
 		<footer class="layoutFooter" :class="footerFixed ? 'footerFixed' : ''">
-			© 2021 - <nuxt-link to="/">Pydw的博客</nuxt-link>
+			© 2021 - <nuxt-link to="/">pydw的博客</nuxt-link>
 			 - Powered by Nuxt.js & Tornado
 		</footer>
 	</div>
@@ -68,10 +68,10 @@ export default {
 					path: '/about',
 					text: '关于'
 				},
-				{
-					path: '/music',
-					text: '音乐'
-				}
+				// {
+				// 	path: '/music',
+				// 	text: '音乐'
+				// }
 			]
 		}
 	},
@@ -274,7 +274,7 @@ export default {
 		this.chanrouter(this.$route)
 		const userinfo = localStorage.getItem('userInfo')
 		if (!userinfo) {
-			this.$store.commit('changeAverter', Math.floor(Math.random() * 20))
+			this.$store.commit('changeAverter', Math.floor(Math.random() * 6))
 		} else {
 			let info = JSON.parse(userinfo)
 			this.$store.commit('changeAverter', info.gravatar)

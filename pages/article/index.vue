@@ -39,7 +39,7 @@
                           <nuxt-link
                               v-for="(item, index) in tags.result.list"
                               :key="index"
-                              :to="`/article?tag=${item._id}`">{{item.name}}<span>({{item.count}})</span></nuxt-link>
+                              :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.count}})</span></nuxt-link>
                       </div>
                   </div>
                   <div class="smallNav">
@@ -68,7 +68,7 @@ import TimeMixin from '../../utils/time-mixin'
 let page = 1
 let fetchTags = getTag()
 let fetchHotArticle = getArticle({top: true})
-let fetchArticle = getArticle({current_page: page})
+let fetchArticle = getArticle({current_page: page, publish: true})
 
 export default {
   head () {

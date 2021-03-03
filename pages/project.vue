@@ -3,7 +3,7 @@
 		<div class="item" v-for="(item, index) in project" :key="index">
 			<div class="iconfont icon" :class="item.icon"></div>
 			<h3 class="title">{{item.title}}</h3>
-			<p class="desc">{{item.descript}}</p>
+			<p class="desc">{{item.desc}}</p>
 			<div class="btn">
 				<a class="github" target="_blank" :href="item.github"><i class="iconfont">&#xe8b6;</i>github</a>
 				<a class="view" target="_blank" :href="item.view"><i class="iconfont">&#xe7b9;</i>view</a>
@@ -31,7 +31,7 @@ export default {
 	created() {
 		if (this.project.length == 0) {
 			getProject({}).then(res => {
-				if (res.code === 1) {
+				if (res.code === 200) {
 					this.$store.commit('getProject', res.result.list)
 					this.$nextTick(() => {
 						this.footer()

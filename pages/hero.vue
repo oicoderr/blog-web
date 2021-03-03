@@ -5,9 +5,9 @@
 				:class="btnShow ? 'animate' : ''">我要上墙!</button>
 		<div class="heroList">
 			<div class="item" v-for="(item, index) in hero" :key="index">
-				<div class="time">{{toTime(item.create_time, '-')}}</div>
+				<div class="time">{{item.create_time}}</div>
 				<p class="content">{{item.content}}</p>
-				<div class="author">——{{item.author.name}}</div>
+				<div class="author">——{{item.name}}</div>
 				<div class="bgcircle"></div>
 			</div>
 		</div>
@@ -70,8 +70,8 @@ export default {
 		async getHeroData() {
 			this.page += 1
 			this.loadText = '加载中...'
-			const res = await getHero({current_page: this.page})
-			if (res.code === 1) {
+			const res = await getHero({current_page: this.page, state: 1})
+			if (res.code === 200) {
 				let list = res.result.list || []
 				if (this.page > 1) {
 					list = this.hero.concat(list)
@@ -90,7 +90,7 @@ export default {
 		},
 		async toAddHero(user) {
 			const res = await addHero(user)
-			if (res.code === 1) {
+			if (res.code === 200) {
 				this.showUp = false
 				this.page = 0
 				this.getHeroData()

@@ -1,8 +1,8 @@
 <template>
   <div class="sideIcon">
-	  <i class="iconfont" @click="mail">&#xe654;</i>
-	  <i class="iconfont" @click="scroll(1)">&#xe638;</i>
-	  <i class="iconfont" @click="scroll(0)">&#xe635;</i>
+	  <i class="iconfont" @click="mail" title="聊骚聊骚...">&#xe654;</i>
+	  <i class="iconfont" @click="scroll(1)" title="向上...">&#xe638;</i>
+	  <i class="iconfont" @click="scroll(0)" title="向下...">&#xe635;</i>
   </div>
 </template>
 

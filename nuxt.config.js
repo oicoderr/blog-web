@@ -1,5 +1,19 @@
 module.exports = {
   /*
+   ** Plugins to load before mounting the App
+   ** https://nuxtjs.org/guide/plugins
+   */
+  plugins: [
+    {
+      src: "@/plugins/element-ui",
+      ssr: true  // 关闭ssr
+    }
+  ],
+  /*
+   ** Global CSS
+   */
+  css: [], // 'element-ui/lib/theme-chalk/index.css'
+  /*
   ** Headers of the page
   */
   head: {
@@ -33,6 +47,17 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    babel: {
+      "plugins": [
+        [
+          "component",
+          {
+            "libraryName": "element-ui",
+            "styleLibraryName": "theme-chalk"
+          }
+        ]
+      ]
+    },
     /*
     ** Run ESLint on save
     */
@@ -47,5 +72,5 @@ module.exports = {
       }
     }
   },
-  cache: true
+  cache: true,
 }

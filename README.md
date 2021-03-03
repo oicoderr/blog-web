@@ -29,8 +29,8 @@
 
 ### 相关技术栈：
 
-+ vue + vuex + vue-router +nuxt
-+ react + redux + react-router + ant design
++ web: vue + vuex + vue-router +nuxt
++ admin: react + redux + react-router + ant design
 + token控制
 + 按需加载，ssr
 + ....
