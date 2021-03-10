@@ -31,7 +31,7 @@
 		<transition name="list-fade">
 			<div class="musicList" ref="musicListBox" v-show="showList">
 				<ul ref="musicList">
-					<li v-for="(item, index) in music" :key="item._id" @click="selectMusic(index)">{{item.title}}({{item.name}})</li>
+					<li v-for="(item, index) in music" :key="item.id" @click="selectMusic(index)">{{item.title}}({{item.name}})</li>
 				</ul>
 				<div class="lyricScroll" v-show="showlyricScroll">
 					<div class="lyricScrollBar" :class="isScrolling ? 'active' : ''" ref="lyricScrollBar"></div>

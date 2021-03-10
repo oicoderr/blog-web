@@ -72,6 +72,10 @@ export default {
 				// 	path: '/music',
 				// 	text: '音乐'
 				// }
+        {
+					path: '/allarticle',
+					text: '归档'
+				}
 			]
 		}
 	},

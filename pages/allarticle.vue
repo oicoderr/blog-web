@@ -3,16 +3,15 @@
 	  <div class="tags">
 		  <nuxt-link 
 		  	:to="`/article?tag=${item.id}`"
-		  	v-for="(item, index) in tags.result.list" 
+		  	v-for="(item, index) in tags" 
 			:key="index">{{item.name}}<span>({{item.count}})</span></nuxt-link>
 	  </div>
-	  <div class="articleList" v-if="article.length > 0">
+	  <div class="articleList" v-if="article.length">
 		  <div class="item" v-for="(item, index) in article" :key="index">
-			  <div  v-for="(article, j) in item.monthList" :key="j">
-				  	<h2>{{item.year}}/{{article.month}}</h2>
-					<div class="itemLink">
-						<nuxt-link :to="`/article/${a.id}`" v-for="(a,i) in article.articleList" :key="i">{{a.title}}</nuxt-link>
-					</div>
+        <!-- <h2>{{item.year}}/{{article.month}}</h2> -->
+        <h2>{{item.date.replace('-', '/')}}</h2>
+        <div class="itemLink">
+          <nuxt-link :to="`/article/${a.id}`" v-for="(a,i) in item.article_list" :key="i">{{a.title}}</nuxt-link>
 			  </div>
 		  </div>
 	  </div>
@@ -21,7 +20,7 @@
 
 <script>
 import FooterMixin from '../utils/footer-mixin'
-import {getArticleAll, getTag} from '../api'
+import {getArticle, getTag} from '../api'
 
 export default {
 	head: {
@@ -29,19 +28,24 @@ export default {
 	},
 	layout: 'layout',
 	mixins: [FooterMixin],
-	async asyncData ({ params }) {
-        const tags = await getTag()
-        return {tags}
-	},
+
+  async asyncData ({ params }) {
+    const art = await getArticle({archive: true})
+    const article = art.result.list || []
+    return {article}
+  },
+
 	data() {
 		return {
-			article: []
+			tags: []
 		}
 	},
+
 	created () {
-		getArticleAll().then(res => {
-			this.article = res.result || []
+    getTag().then(res => {
+			this.tags = res.result.list
 		})
+    
 		this.$nextTick(() => {
 			this.footer()
 		})

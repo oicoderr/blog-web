@@ -13,8 +13,6 @@
                         <span class="time">
                           <strong>{{item.viewCount}}</strong>次阅读</span>
                             <i class="iconfont">&#xe600;</i>
-                        <span class="time"><strong>{{item.comments}}</strong>条评论</span>
-                            <i class="iconfont">&#xe600;</i>
                         <span class="time"><strong>{{item.likeCount}}</strong>人喜欢</span>
                     </div>
                 </div>
@@ -37,9 +35,9 @@
                       <div class="hot-title">标签</div>
                       <div class="tag-list">
                           <nuxt-link
-                              v-for="(item, index) in tags.result.list"
-                              :key="index"
-                              :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.count}})</span></nuxt-link>
+                            v-for="(item, index) in tags.result.list"
+                            :key="index"
+                            :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.count}})</span></nuxt-link>
                       </div>
                   </div>
                   <div class="smallNav">
@@ -133,7 +131,6 @@ export default {
     },
     goDetail(id, data) {
       const arr = data.filter(item => item.id == id)
-      console.log('id: ' + id, arr)
       this.$store.commit('selectArticle', arr[0])
       this.$router.push('/article/' + id)
     }

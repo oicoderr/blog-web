@@ -1,14 +1,14 @@
 
 import axios from '../config/axios'
 
-const baseUrl = process.env.NODE_ENV === 'production' ? 'production api' : 'http://127.0.0.1:8100/'
+const baseUrl = process.env.NODE_ENV === 'production' ? 'http://web.stealfood.com/api/' : 'http://127.0.0.1:8100/'
 // const baseUrl = 'http://127.0.0.1:3009/api/'
 
 export const getArticle = (params = {}) => axios.get(`${baseUrl}article/get`, {params})
 
 // export const getArticleId = (params = {}) => axios.get(`${baseUrl}article/get`, {params})
 
-export const getArticleAll = () => axios.get(`${baseUrl}article/getAll`)
+// export const getArticleAll = () => axios.get(`${baseUrl}article/getAll`)
 
 export const articleLike = (id) => axios.post(`${baseUrl}article/like/${id}`)
 
@@ -22,9 +22,11 @@ export const commentLike = (id) => axios.post(`${baseUrl}comment/like/${id}`)
 
 export const addReply = (params) => axios.put(`${baseUrl}reply/add`, {...params})
 
-export const getReply = (cid) => axios.get(`${baseUrl}reply/get/${cid}`)
+export const getReply = (params) => axios.get(`${baseUrl}reply/get`, {params})
 
 export const getHero = (params) => axios.get(`${baseUrl}hero/get`, {params})
+// 注册fans 账户
+export const createFans = (params) => axios.post(`${baseUrl}fans/create`, {...params})
 
 export const addHero = (params) => axios.put(`${baseUrl}hero/add`, {...params})
 

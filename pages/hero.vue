@@ -7,7 +7,7 @@
 			<div class="item" v-for="(item, index) in hero" :key="index">
 				<div class="time">{{item.create_time}}</div>
 				<p class="content">{{item.content}}</p>
-				<div class="author">——{{item.name}}</div>
+				<div class="author">——{{item.fans.name}}</div>
 				<div class="bgcircle"></div>
 			</div>
 		</div>
@@ -29,7 +29,7 @@
 import Comment from '../components/comment'
 import FooterMixin from '../utils/footer-mixin'
 import TimeMixin from '../utils/time-mixin'
-import {getHero, addHero} from '../api'
+import {getHero, addHero } from '../api'
 var timer = null
 
 export default {
@@ -46,7 +46,8 @@ export default {
 			showUp: false,
 			page: 0,
 			hasMore: true,
-			loadText: '加载中...'
+			loadText: '加载中...',
+      userInfo: {},
 		}
 	},
 	mixins: [FooterMixin, TimeMixin],
@@ -89,13 +90,14 @@ export default {
 			})
 		},
 		async toAddHero(user) {
-			const res = await addHero(user)
-			if (res.code === 200) {
-				this.showUp = false
-				this.page = 0
-				this.getHeroData()
-			}
+      const res = await addHero(user)
+      if (res.code === 200) {
+        this.showUp = false
+        this.page = 0
+        this.getHeroData()
+      }
 		}
+
 	},
 	mounted () {
 		if (this.hero.length === 0) {

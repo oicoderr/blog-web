@@ -6,9 +6,11 @@
 		<div class="inputBox" :style="isShowBtn ? {height: '180px'} : null">
 			<div class="user" v-if="showUserSet">
 				<input type="text" v-model="userinfo.name" placeholder="称呼*" />
-				<input type="email" v-model="userinfo.email" placeholder="邮箱(不会公开)*" />
+				<input type="email" v-model="userinfo.email" placeholder="请填写真实邮箱(不会公开)*" />
 				<input type="text" v-model="userinfo.site" placeholder="网站（http, https:// 开头)" />
-				<span class="confirm" v-if="showReset" @click="conform"><i class="iconfont">&#xe640;</i></span>
+				<span class="confirm" @click="conform" title="确认信息后即可发送留言"> <!-- v-if="showReset" -->
+          <i class="iconfont">&#xe640;</i>
+        </span>
 			</div>
 			<div class="hasuser" v-else>
 				<span class="name">{{userinfo.name}}</span>
@@ -33,7 +35,8 @@
 				</div>
 			</div>
 			<transition name="fade">
-				<div class="submit" v-show="isShowBtn" @click="submit">
+        <!-- 多添加: v-if="!showUserSet" -->
+				<div class="submit" v-show="isShowBtn" v-if="!showUserSet" @click="submit">
 					<span>评论</span>
 				</div>
 			</transition>
@@ -43,7 +46,8 @@
 
 <script>
 import {avarterArr} from '../utils/blowser'
-import { Message } from 'element-ui';
+import {createFans} from '../api'
+
 export default {
 	props: {
 		reply: {
@@ -122,8 +126,9 @@ export default {
 					alert('请输入评论内容哦~~');
 					return false
 				}
-				this.userinfo.gravatar = this.averterNum
-				localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
+				// this.userinfo.gravatar = this.averterNum
+			  // localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
+        this.userinfo = JSON.parse(localStorage.getItem('userInfo'))
 				const user = {
 					content: this.content
 				}
@@ -156,17 +161,26 @@ export default {
 				name: '',
 				email: '',
 				site: '',
-				averter: this.averterNum
+				gravatar: this.averterNum
 			}
 			localStorage.setItem('userInfo', '')
 		},
 		conform() {
 			if (this.validate()){
-				localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
+        this.userinfo.gravatar = this.averterNum
+        this.$options.methods.createFans_(this.userinfo)
 				this.showUserSet = false
 				this.showReset = false
 			}
 		},
+    async createFans_(user) {
+      const res = await createFans(user)
+      if (res.code) {
+        this.userinfo = res.result
+        localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
+      }
+    },
+
 		concleReply() {
 			this.$emit('concleReply')
 		}
