@@ -94,7 +94,7 @@ export default {
         const map = new BMap.Map('allmap')
 				var myGeo = new BMap.Geocoder();
 				// 将地址解析结果显示在地图上,并调整地图视野
-				myGeo.getPoint('软件产业基地', (point) => {
+				myGeo.getPoint('中关村软件园', (point) => {
 					if (point) {
 						map.centerAndZoom(point, 16)
 						const marker = new BMap.Marker(point)
@@ -105,7 +105,7 @@ export default {
 					} else{
 						console.info('您选择地址没有解析到结果!')
 					}
-				}, '深圳市');
+				}, '北京市');
       }
 			const script = document.createElement('script')
       script.type = 'text/javascript';
