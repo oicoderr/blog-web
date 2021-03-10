@@ -12,7 +12,7 @@
     <div class="info articleDetailBox">
       <p>
         本文于
-        {{ article.update_time || article._create_time }} 发布在，当前已被围观
+        {{ article.update_time || article.create_time }} 发布，当前已被围观
         {{ article.viewCount }} 次
       </p>
       <p>
@@ -56,8 +56,8 @@
         <div class="view"><span>{{this.comments.length}}</span>条评论</div>
       </div>
       <div class="arcMataShear">
-        <span class="pay iconfont">&#xe614;</span>
-        <span class="shear iconfont" @click="showShear">&#xe6a5;</span>
+        <span class="pay iconfont" title="打赏一下">&#xe614;</span>
+        <span class="shear iconfont" @click="showShear" title="分享呀">&#xe6a5;</span>
       </div>
     </div>
 
