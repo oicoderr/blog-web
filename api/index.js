@@ -1,7 +1,7 @@
 
 import axios from '../config/axios'
 
-const baseUrl = process.env.NODE_ENV === 'production' ? 'http://web.stealfood.com/api/' : 'http://127.0.0.1:8100/'
+const baseUrl = process.env.NODE_ENV === 'production' ? 'http://stealfood.com/api/' : 'http://127.0.0.1:8100/'
 // const baseUrl = 'http://127.0.0.1:3009/api/'
 
 export const getArticle = (params = {}) => axios.get(`${baseUrl}article/get`, {params})
@@ -37,5 +37,3 @@ export const addCommentLike = () => axios.put(`${baseUrl}hero/add`, {...params})
 export const replyCommentLike = () => axios.put(`${baseUrl}hero/add`, {...params})
 
 export const getProject = (params) => axios.get(`${baseUrl}project/get`, {params})
-
-export const getMusic = (params) => axios.get(`${baseUrl}music/get`, {params})

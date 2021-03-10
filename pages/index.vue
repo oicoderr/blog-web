@@ -30,10 +30,6 @@
 						<span class="lt1">文章</span>
 						<span class="lt2">Article</span>
 					</nuxt-link>
-					<!-- <nuxt-link to="/music">
-						<span class="lt1">音乐</span>
-						<span class="lt2">Music</span>
-					</nuxt-link> -->
           <nuxt-link to="/allarticle">
 						<span class="lt1">归档</span>
 						<span class="lt2">ALLArticle</span>

@@ -6,7 +6,6 @@ const _27d4dc97 = () => interopDefault(import('../pages/about.vue' /* webpackChu
 const _55c7ae9b = () => interopDefault(import('../pages/allarticle.vue' /* webpackChunkName: "pages/allarticle" */))
 const _4372fb83 = () => interopDefault(import('../pages/article/index.vue' /* webpackChunkName: "pages/article/index" */))
 const _21280b40 = () => interopDefault(import('../pages/hero.vue' /* webpackChunkName: "pages/hero" */))
-const _e220c9a2 = () => interopDefault(import('../pages/music.vue' /* webpackChunkName: "pages/music" */))
 const _4e17e9a3 = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
 const _18fffaaa = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
 const _478cb75c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -87,10 +86,6 @@ export function createRouter() {
       path: "/hero",
       component: _21280b40,
       name: "hero"
-    }, {
-      path: "/music",
-      component: _e220c9a2,
-      name: "music"
     }, {
       path: "/project",
       component: _4e17e9a3,

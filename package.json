@@ -36,5 +36,11 @@
     "eslint-plugin-vue": "^4.3.0",
     "nodemon": "^1.11.0",
     "scmp": "^2.0.0"
+  },
+  "config": {
+    "nuxt":{
+      "port": "80",
+      "host": "0.0.0.0"
+    }
   }
 }

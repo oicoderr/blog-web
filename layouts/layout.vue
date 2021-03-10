@@ -68,10 +68,6 @@ export default {
 					path: '/about',
 					text: '关于'
 				},
-				// {
-				// 	path: '/music',
-				// 	text: '音乐'
-				// }
         {
 					path: '/allarticle',
 					text: '归档'

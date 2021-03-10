@@ -6,10 +6,9 @@ import '../assets/css/init.css'
 import '../assets/css/codeStyle.css'
 
 import _7c6a36a0 from '../layouts/layout.vue'
-import _40930270 from '../layouts/music-layout.vue'
 import _6f6c098b from './layouts/default.vue'
 
-const layouts = { "_layout": _7c6a36a0,"_music-layout": _40930270,"_default": _6f6c098b }
+const layouts = { "_layout": _7c6a36a0,"_default": _6f6c098b }
 
 export default {
   head: {"title":"Pydw","meta":[{"charset":"utf-8"},{"http-equiv":"cleartype","content":"on"},{"http-equiv":"Cache-Control"},{"name":"viewport","content":"width=device-width, initial-scale=1, user-scalable=no"},{"hid":"description","name":"description","content":"Pydw, 全栈, blog"},{"hid":"keywords","name":"keywords","content":"全栈开发，JavaScript, Python, Vue，nuxt"},{"name":"author","content":"849656290@qq.com"}],"link":[{"rel":"icon","type":"image\u002Fx-icon","href":"\u002Ffavicon.ico"}],"script":[{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fjquery\u002F3.3.1\u002Fjquery.min.js"},{"src":"https:\u002F\u002Fcdn.bootcss.com\u002Fhighlight.js\u002F9.12.0\u002Fhighlight.min.js"}],"style":[]},
@@ -105,8 +104,6 @@ export default {
     },
 
     setLayout(layout) {
-      if(layout && typeof layout !== 'string') throw new Error('[nuxt] Avoid using non-string value as layout property.')
-
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
