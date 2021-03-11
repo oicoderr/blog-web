@@ -37,7 +37,7 @@
                           <nuxt-link
                             v-for="(item, index) in tags.result.list"
                             :key="index"
-                            :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.count}})</span></nuxt-link>
+                            :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.meta.count}})</span></nuxt-link>
                       </div>
                   </div>
                   <div class="smallNav">

@@ -25,7 +25,7 @@
         >
       </p>
       <p>作者：{{ article.author.name }}</p>
-      <p>链接：https://Pydw.me/article/{{ article.id }}</p>
+      <p>链接：http://stealfood.com/article/{{ article.id }}</p>
       <p>
         著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
       </p>

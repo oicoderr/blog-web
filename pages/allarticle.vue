@@ -4,7 +4,7 @@
 		  <nuxt-link 
 		  	:to="`/article?tag=${item.id}`"
 		  	v-for="(item, index) in tags" 
-			:key="index">{{item.name}}<span>({{item.count}})</span></nuxt-link>
+			:key="index">{{item.name}}<span>({{item.meta.count}})</span></nuxt-link>
 	  </div>
 	  <div class="articleList" v-if="article.length">
 		  <div class="item" v-for="(item, index) in article" :key="index">
