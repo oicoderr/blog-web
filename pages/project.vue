@@ -1,7 +1,7 @@
 <template>
 	<section class="projectBox">
 		<div class="item" v-for="(item, index) in project" :key="index">
-			<div class="iconfont icon" :class="item.icon"></div>
+			<div class="iconfont iconfont1 icon" :class="item.icon"></div>
 			<h3 class="title">{{item.title}}</h3>
 			<p class="desc">{{item.desc}}</p>
 			<div class="btn">

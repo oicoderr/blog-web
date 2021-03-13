@@ -197,9 +197,18 @@ i {
   url('//at.alicdn.com/t/font_358841_9aw2a59f7pp.ttf') format('truetype'),
   url('//at.alicdn.com/t/font_358841_9aw2a59f7pp.svg#iconfont') format('svg');
 }
+@font-face {
+  font-family: 'iconfont1';  /* project id 2418292 */
+  src: url('//at.alicdn.com/t/font_2418292_ind9pbwkof.eot');
+  src: url('//at.alicdn.com/t/font_2418292_ind9pbwkof.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2418292_ind9pbwkof.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2418292_ind9pbwkof.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2418292_ind9pbwkof.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2418292_ind9pbwkof.svg#iconfont') format('svg');
+}
 
 .iconfont {
-  font-family: "iconfont" !important;
+  font-family: "iconfont", "iconfont1" !important;
   font-size: 16px;
   font-style: normal;
   -webkit-font-smoothing: antialiased;
@@ -509,4 +518,64 @@ i {
 }
 .icon-jilugeci:before {
   content:"\e70f";
+}
+/* 后添加 */
+.icon-game:before {
+  content:"\e6df";
+}
+
+.icon-activity:before {
+  content:"\e6de";
+}
+
+.icon-JS:before {
+  content:"\e651";
+}
+
+.icon-tornado:before {
+  content:"\e6db";
+}
+
+.icon-code:before {
+  content:"\e60e";
+}
+
+.icon-mysql:before {
+  content:"\e627";
+}
+
+.icon-mongodb:before {
+  content:"\ec21";
+}
+
+.icon-node-js:before {
+  content:"\f1fd";
+}
+
+.icon-react:before {
+  content:"\f21a";
+}
+
+.icon-angular:before {
+  content:"\eb3c";
+}
+
+.icon-django:before {
+  content:"\eb7b";
+}
+
+.icon-flask:before {
+  content:"\eb93";
+}
+
+.icon-nginx:before {
+  content:"\ec30";
+}
+
+.icon-python:before {
+  content:"\ec66";
+}
+
+.icon-redis:before {
+  content:"\ec7c";
 }
