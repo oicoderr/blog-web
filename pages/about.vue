@@ -28,7 +28,7 @@
 				</p>
 				<p>
 					<i class="iconfont icon">&#xe725;</i>
-					<span>要努力成为一个有价值的人。</span>
+					<span>靠运气赢来的东西，往往因为实力输掉。</span>
 				</p>
 			</div>
 			<div class="user">

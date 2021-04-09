@@ -2,13 +2,13 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
-const _27d4dc97 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _55c7ae9b = () => interopDefault(import('../pages/allarticle.vue' /* webpackChunkName: "pages/allarticle" */))
-const _4372fb83 = () => interopDefault(import('../pages/article/index.vue' /* webpackChunkName: "pages/article/index" */))
-const _21280b40 = () => interopDefault(import('../pages/hero.vue' /* webpackChunkName: "pages/hero" */))
-const _4e17e9a3 = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
-const _18fffaaa = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
-const _478cb75c = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _f34b0378 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _25d5110e = () => interopDefault(import('../pages/allarticle.vue' /* webpackChunkName: "pages/allarticle" */))
+const _edf2bfa0 = () => interopDefault(import('../pages/article/index.vue' /* webpackChunkName: "pages/article/index" */))
+const _2404ef13 = () => interopDefault(import('../pages/hero.vue' /* webpackChunkName: "pages/hero" */))
+const _21bbd410 = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
+const _251eee98 = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
+const _b3db4dee = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
 
@@ -72,31 +72,31 @@ export function createRouter() {
 
     routes: [{
       path: "/about",
-      component: _27d4dc97,
+      component: _f34b0378,
       name: "about"
     }, {
       path: "/allarticle",
-      component: _55c7ae9b,
+      component: _25d5110e,
       name: "allarticle"
     }, {
       path: "/article",
-      component: _4372fb83,
+      component: _edf2bfa0,
       name: "article"
     }, {
       path: "/hero",
-      component: _21280b40,
+      component: _2404ef13,
       name: "hero"
     }, {
       path: "/project",
-      component: _4e17e9a3,
+      component: _21bbd410,
       name: "project"
     }, {
       path: "/article/:id",
-      component: _18fffaaa,
+      component: _251eee98,
       name: "article-id"
     }, {
       path: "/",
-      component: _478cb75c,
+      component: _b3db4dee,
       name: "index"
     }],
 

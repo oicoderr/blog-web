@@ -9,7 +9,7 @@
           </a>
           <h1>
             <nuxt-link to="/article?page=0">Pydw</nuxt-link>
-            <p>要努力成为一个有价值的人。</p>
+            <p>靠运气赢来的东西，往往因为实力输掉。</p>
           </h1>
           <slot></slot>
           <div class="aside-icon">
