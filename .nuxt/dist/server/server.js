@@ -1,2 +1,3484 @@
-module.exports=function(e){var t={},n={0:0};function o(n){if(t[n])return t[n].exports;var r=t[n]={i:n,l:!1,exports:{}};return e[n].call(r.exports,r,r.exports,o),r.l=!0,r.exports}return o.e=function(t){if(0!==n[t]){var o=require("./"+{1:"9be795ae85badc51c089",2:"ed4cce87d66eebe7ffd7",3:"3dcd53a6e7b4907c8bf6",4:"989270071cb038618b11",5:"275dbc8d17b840e59788",6:"a720ede73cf31b5afed6",7:"827c4a330df295fd9957"}[t]+".js"),r=o.modules,c=o.ids;for(var l in r)e[l]=r[l];for(var i=0;i<c.length;i++)n[c[i]]=0}return Promise.all([])},o.m=e,o.c=t,o.d=function(e,t,n){o.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:n})},o.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},o.t=function(e,t){if(1&t&&(e=o(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var n=Object.create(null);if(o.r(n),Object.defineProperty(n,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)o.d(n,r,function(t){return e[t]}.bind(null,r));return n},o.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return o.d(t,"a",t),t},o.o=function(object,e){return Object.prototype.hasOwnProperty.call(object,e)},o.p="/_nuxt/",o.oe=function(e){process.nextTick(function(){throw e})},o(o.s=15)}([function(e,t){e.exports=require("vue")},function(e,t,n){"use strict";function o(e,t,n,o,r,c,l,f){var d,h="function"==typeof e?e.options:e;if(t&&(h.render=t,h.staticRenderFns=n,h._compiled=!0),o&&(h.functional=!0),c&&(h._scopeId="data-v-"+c),l?(d=function(e){(e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext)||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),r&&r.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(l)},h._ssrRegister=d):r&&(d=f?function(){r.call(this,this.$root.$options.shadowRoot)}:r),d)if(h.functional){h._injectStyles=d;var m=h.render;h.render=function(e,t){return d.call(t),m(e,t)}}else{var x=h.beforeCreate;h.beforeCreate=x?[].concat(x,d):[d]}return{exports:e,options:h}}n.d(t,"a",function(){return o})},function(e,t){e.exports=require("vuex")},function(e,t,n){"use strict";e.exports=function(e){var t=[];return t.toString=function(){return this.map(function(t){var content=function(e,t){var content=e[1]||"",n=e[3];if(!n)return content;if(t&&"function"==typeof btoa){var o=(c=n,"/*# sourceMappingURL=data:application/json;charset=utf-8;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(c))))+" */"),r=n.sources.map(function(source){return"/*# sourceURL="+n.sourceRoot+source+" */"});return[content].concat(r).concat([o]).join("\n")}var c;return[content].join("\n")}(t,e);return t[2]?"@media "+t[2]+"{"+content+"}":content}).join("")},t.i=function(e,n){"string"==typeof e&&(e=[[null,e,""]]);for(var o={},i=0;i<this.length;i++){var r=this[i][0];null!=r&&(o[r]=!0)}for(i=0;i<e.length;i++){var c=e[i];null!=c[0]&&o[c[0]]||(n&&!c[2]?c[2]=n:n&&(c[2]="("+c[2]+") and ("+n+")"),t.push(c))}},t}},function(e,t,n){"use strict";function o(e,t,n,o){if(o||"undefined"==typeof __VUE_SSR_CONTEXT__||(o=__VUE_SSR_CONTEXT__),o){o.hasOwnProperty("styles")||(Object.defineProperty(o,"styles",{enumerable:!0,get:function(){return r(o._styles)}}),o._renderStyles=r);var c=o._styles||(o._styles={});t=function(e,t){for(var n=[],o={},i=0;i<t.length;i++){var r=t[i],c=r[0],l={id:e+":"+i,css:r[1],media:r[2],sourceMap:r[3]};o[c]?o[c].parts.push(l):n.push(o[c]={id:c,parts:[l]})}return n}(e,t),n?function(e,t){for(var i=0;i<t.length;i++)for(var n=t[i].parts,o=0;o<n.length;o++){var r=n[o],c=r.media||"default",style=e[c];style?style.ids.indexOf(r.id)<0&&(style.ids.push(r.id),style.css+="\n"+r.css):e[c]={ids:[r.id],css:r.css,media:r.media}}}(c,t):function(e,t){for(var i=0;i<t.length;i++)for(var n=t[i].parts,o=0;o<n.length;o++){var r=n[o];e[r.id]={ids:[r.id],css:r.css,media:r.media}}}(c,t)}}function r(e){var t="";for(var n in e){var style=e[n];t+='<style data-vue-ssr-id="'+style.ids.join(" ")+'"'+(style.media?' media="'+style.media+'"':"")+">"+style.css+"</style>"}return t}n.r(t),n.d(t,"default",function(){return o})},function(e,t,n){var content=n(17);"string"==typeof content&&(content=[[e.i,content,""]]),content.locals&&(e.exports=content.locals);var o=n(4).default;e.exports.__inject__=function(e){o("b675d82e",content,!0,e)}},function(e,t,n){var content=n(19);"string"==typeof content&&(content=[[e.i,content,""]]),content.locals&&(e.exports=content.locals);var o=n(4).default;e.exports.__inject__=function(e){o("17cfdfa9",content,!0,e)}},function(e,t,n){var content=n(25);"string"==typeof content&&(content=[[e.i,content,""]]),content.locals&&(e.exports=content.locals);var o=n(4).default;e.exports.__inject__=function(e){o("4845a2d0",content,!0,e)}},function(e,t,n){"use strict";n.r(t),t.default={state:{data:[],hotData:[],selectArticle:{meta:{}}},mutations:{getArticle(e,data){e.data=data||[]},getHotArticle(e,data){e.hotData=data||[]},selectArticle(e,data){e.selectArticle=data||{}}}}},function(e,t,n){"use strict";n.r(t),t.default={state:{data:[]},mutations:{getProject(e,data){e.data=data||[]}}}},function(e,t,n){"use strict";n.r(t),t.default={state:{data:[]},mutations:{getHero(e,data){e.data=data}}}},function(e,t){e.exports=require("vue-router")},function(e,t){e.exports=require("querystring")},function(e,t){e.exports=require("vue-meta")},function(e,t){e.exports=require("vue-no-ssr")},function(e,t,n){e.exports=n(29)},function(e,t,n){"use strict";n.r(t);var o=n(5),r=n.n(o);for(var c in o)"default"!==c&&function(e){n.d(t,e,function(){return o[e]})}(c);t.default=r.a},function(e,t,n){(e.exports=n(3)(!1)).push([e.i,".__nuxt-error-page{padding:1rem;background:#f7f8fb;color:#47494e;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}",""])},function(e,t,n){"use strict";n.r(t);var o=n(6),r=n.n(o);for(var c in o)"default"!==c&&function(e){n.d(t,e,function(){return o[e]})}(c);t.default=r.a},function(e,t,n){(e.exports=n(3)(!1)).push([e.i,".nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#3b8070;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}",""])},function(e,t,n){var content=n(21);"string"==typeof content&&(content=[[e.i,content,""]]),content.locals&&(e.exports=content.locals),n(4).default("5d5bcebe",content,!0)},function(e,t,n){(e.exports=n(3)(!1)).push([e.i,'html{font-size:14px;word-spacing:1px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;color:#555;letter-spacing:.5px;font-family:Futura,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;-webkit-font-smoothing:antialiased}*,:after,:before,html{box-sizing:border-box;margin:0}*,:after,:before{padding:0}blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}button,input,select,textarea{font:14px/1.5 tahoma,arial,\\5b8b\\4f53,sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}ol,ul{list-style:none}a:hover{text-decoration:underline}a{color:#555;text-decoration:none}strong{font-weight:400}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}@font-face{font-family:iconfont;src:url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.eot);src:url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.woff2) format("woff2"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.woff) format("woff"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.ttf) format("truetype"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.svg#iconfont) format("svg")}@font-face{font-family:iconfont1;src:url(//at.alicdn.com/t/font_2418292_ind9pbwkof.eot);src:url(//at.alicdn.com/t/font_2418292_ind9pbwkof.eot#iefix) format("embedded-opentype"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.woff2) format("woff2"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.woff) format("woff"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.ttf) format("truetype"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.svg#iconfont) format("svg")}.iconfont,i{font-style:normal}.iconfont{font-family:iconfont,iconfont1!important;font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}::selection{background:#3fb76c;color:#fff}::-moz-selection{background:#3fb76c;color:#fff}::-webkit-selection{background:#3fb76c;color:#fff}.fade-enter-active,.fade-leave-active{transition:opacity .5s}.fade-enter,.fade-leave-to{opacity:0}.icon-T:before{content:"\\e607"}.icon-yingdaicon04:before{content:"\\e643"}.icon-icon8:before{content:"\\e608"}.icon-qqkongjian1:before{content:"\\e7dc"}.icon-weibiaoti1:before{content:"\\e637"}.icon-lianjie2:before{content:"\\e665"}.icon-4:before{content:"\\e601"}.icon-shu:before{content:"\\e604"}.icon-home:before{content:"\\e73a"}.icon-douban:before{content:"\\e663"}.icon-xihuan:before{content:"\\e63b"}.icon-windows:before{content:"\\ec83"}.icon-twitter:before{content:"\\ec9c"}.icon-douban1:before{content:"\\e649"}.icon-02:before{content:"\\e64a"}.icon-daima:before{content:"\\e605"}.icon-tupian:before{content:"\\e626"}.icon-code:before{content:"\\e725"}.icon-iconsf-copy:before{content:"\\e610"}.icon-shang:before{content:"\\e614"}.icon-iconfont21:before{content:"\\e613"}.icon-fenxiang:before{content:"\\e6a5"}.icon-bianji1:before{content:"\\e654"}.icon-nodejs:before{content:"\\e989"}.icon-dingwei1:before{content:"\\e615"}.icon-lianjie:before{content:"\\e609"}.icon-jiacu:before{content:"\\e61e"}.icon-mac:before{content:"\\e61b"}.icon-icon:before{content:"\\e65b"}.icon-dingwei:before{content:"\\e662"}.icon-qq:before{content:"\\e602"}.icon-sanjiaotop:before{content:"\\e6b4"}.icon-jingyin:before{content:"\\e65e"}.icon-bofang:before{content:"\\e60d"}.icon-youxiang:before{content:"\\e64d"}.icon-like:before{content:"\\e65c"}.icon-code1:before{content:"\\e69f"}.icon-facebookf:before{content:"\\e6e2"}.icon-duigou:before{content:"\\e640"}.icon-bianji:before{content:"\\e636"}.icon-weibo:before{content:"\\e63d"}.icon-iconstop:before{content:"\\e69d"}.icon-ai09:before{content:"\\e67d"}.icon-ai10:before{content:"\\e67f"}.icon-google:before{content:"\\e6b2"}.icon-iconfontyouxihudong:before{content:"\\e639"}.icon-bushu:before{content:"\\e77f"}.icon-yulanguanbi:before{content:"\\e650"}.icon-704bianjiqi_Ixieti:before{content:"\\e65a"}.icon-434-npm:before{content:"\\e6d9"}.icon-shezhi:before{content:"\\e60e"}.icon-quotation_marks:before{content:"\\e715"}.icon-sousuo:before{content:"\\e603"}.icon-qqkongjian:before{content:"\\e624"}.icon-danjiantoushang:before{content:"\\e635"}.icon-danjiantouxia:before{content:"\\e638"}.icon-wuxuliebiao:before{content:"\\e645"}.icon-youxuliebiao:before{content:"\\e67e"}.icon-ic_code_px:before{content:"\\e8b6"}.icon-yulan:before{content:"\\e7b9"}.icon-zhixiangzuo:before{content:"\\e8f4"}.icon-zhixiangyou:before{content:"\\e8f5"}.icon-lianjie1:before{content:"\\e60b"}.icon-biaoqing:before{content:"\\e60c"}.icon-fabu:before{content:"\\e62a"}.icon-youjian:before{content:"\\e60a"}.icon-xiangmu:before{content:"\\e671"}.icon-xiaoxi:before{content:"\\e65d"}.icon-xinlang:before{content:"\\e832"}.icon-weixin:before{content:"\\e62e"}.icon-ios:before{content:"\\e64b"}.icon-yinxiangbiji:before{content:"\\e764"}.icon-github:before{content:"\\e621"}.icon-hebingfenping:before{content:"\\e612"}.icon-yonghu-tianchong:before{content:"\\e670"}.icon-linkedin:before{content:"\\e627"}.icon-biaoqian:before{content:"\\e8cb"}.icon-dian1:before{content:"\\e600"}.icon-icon-test:before{content:"\\e617"}.icon-gengduo:before{content:"\\e606"}.icon-liulanqi:before{content:"\\e68f"}.icon-icon-:before{content:"\\e611"}.icon-mingxingxianchang:before{content:"\\e6c3"}.icon-benzihebi:before{content:"\\e60f"}.icon-angular:before{content:"\\e616"}.icon-nginx:before{content:"\\e63c"}.icon-vuejs:before{content:"\\e641"}.icon-react:before{content:"\\e64c"}.icon-zanting:before{content:"\\e618"}.icon-prev:before{content:"\\e619"}.icon--liebiao:before{content:"\\e628"}.icon-xiayiqu101:before{content:"\\e61a"}.icon-jilugeci:before{content:"\\e70f"}.icon-game:before{content:"\\e6df"}.icon-activity:before{content:"\\e6de"}.icon-JS:before{content:"\\e651"}.icon-tornado:before{content:"\\e6db"}.icon-code:before{content:"\\e60e"}.icon-mysql:before{content:"\\e627"}.icon-mongodb:before{content:"\\ec21"}.icon-node-js:before{content:"\\f1fd"}.icon-react:before{content:"\\f21a"}.icon-angular:before{content:"\\eb3c"}.icon-django:before{content:"\\eb7b"}.icon-flask:before{content:"\\eb93"}.icon-nginx:before{content:"\\ec30"}.icon-python:before{content:"\\ec66"}.icon-redis:before{content:"\\ec7c"}',""])},function(e,t,n){var content=n(23);"string"==typeof content&&(content=[[e.i,content,""]]),content.locals&&(e.exports=content.locals),n(4).default("61354ba8",content,!0)},function(e,t,n){(e.exports=n(3)(!1)).push([e.i,"/*!\n * Agate by Taufik Nurrohman <https://github.com/tovic>\n * ----------------------------------------------------\n *\n * #ade5fc\n * #a2fca2\n * #c6b4f0\n * #d36363\n * #fcc28c\n * #fc9b9b\n * #ffa\n * #fff\n * #333\n * #62c8f3\n * #888\n *\n */.hljs{display:block;overflow-x:auto;padding:1em;background:#333;color:#fff}.hljs-name,.hljs-strong{font-weight:700}.hljs-code,.hljs-emphasis{font-style:italic}.hljs-tag{color:#62c8f3}.hljs-selector-class,.hljs-selector-id,.hljs-template-variable,.hljs-variable{color:#ade5fc}.hljs-bullet,.hljs-string{color:#a2fca2}.hljs-attribute,.hljs-built_in,.hljs-builtin-name,.hljs-quote,.hljs-section,.hljs-title,.hljs-type{color:#ffa}.hljs-bullet,.hljs-number,.hljs-symbol{color:#d36363}.hljs-keyword,.hljs-literal,.hljs-selector-tag{color:#fcc28c}.hljs-code,.hljs-comment,.hljs-deletion{color:#888}.hljs-link,.hljs-regexp{color:#c6b4f0}.hljs-meta{color:#fc9b9b}.hljs-deletion{background-color:#fc9b9b;color:#333}.hljs-addition{background-color:#a2fca2;color:#333}.hljs a{color:inherit}.hljs a:focus,.hljs a:hover{color:inherit;text-decoration:underline}code,kbd,pre,samp{font-family:Monaco,Menlo,Consolas,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif}",""])},function(e,t,n){"use strict";n.r(t);var o=n(7),r=n.n(o);for(var c in o)"default"!==c&&function(e){n.d(t,e,function(){return o[e]})}(c);t.default=r.a},function(e,t,n){(e.exports=n(3)(!1)).push([e.i,"#canvas{position:fixed;left:0;top:0;z-index:-1}.layoutBox{overflow-x:hidden;overflow-y:scroll}.navUp{-webkit-transform:translate3d(0,-60px,0);transform:translate3d(0,-60px,0)}.navDown{-webkit-transform:translateZ(0);transform:translateZ(0)}.header{background:#fff;border-bottom:1px solid #f1f1f1;color:#909090;height:60px;overflow:hidden;width:100%;position:fixed;z-index:2;transition:.3s}.box{width:900px;margin:0 auto}.header-content{display:flex;height:59px;justify-content:space-between}.header-content nav{height:59px;line-height:59px;font-size:20px}.header-content nav a{display:inline-block;height:59px;transition:.3s;padding:0 20px;position:relative;color:#8c8c8c;text-decoration:none}.header-content nav a.active,.header-content nav a:hover{color:#3fb76c}.searchBox{display:flex;align-items:center}.search{height:30px;border-bottom:1px solid #ddd;display:flex;overflow:hidden;padding-left:5px}.search input{width:100%;height:100%;border:none;outline:none;background:transparent}.search .text{width:158px;-webkit-transform-origin:right center;transform-origin:right center;transition:.3s}.search .showText{width:158px}.search .hiddenText{width:0;padding-left:0}.search .searchIcon{width:30px;height:30px;line-height:30px;text-align:center;cursor:pointer}.rightIcon{color:#3fb76c}.mailContent{padding-top:70px;padding-bottom:20px}.layoutFooter{height:50px;background:#fff;border-top:1px solid #f1f1f1;text-align:center;line-height:50px;font-size:12px;color:#666;width:100%}.footerFixed{position:fixed;bottom:0;left:0}",""])},function(e,t,n){var map={"./index.js":27,"./modules/article.js":8,"./modules/hero.js":10,"./modules/project.js":9};function o(e){var t=r(e);return n(t)}function r(e){if(!n.o(map,e)){var t=new Error("Cannot find module '"+e+"'");throw t.code="MODULE_NOT_FOUND",t}return map[e]}o.keys=function(){return Object.keys(map)},o.resolve=r,e.exports=o,o.id=26},function(e,t,n){"use strict";n.r(t);var o=n(0),r=n.n(o),c=n(2),l=n.n(c),f=n(8),d=n(9),h=n(10);r.a.use(l.a);t.default=(()=>new l.a.Store({state:{scrollTop:0,footerFixed:!1,averterNum:0},modules:{article:f.default,project:d.default,hero:h.default},mutations:{changeScroll(e,t){e.scrollTop=t},changeFooterFixed(e,t){e.footerFixed=t},changeAverter(e,t){e.averterNum=t}}}))},function(e,t){e.exports=require("debug")},function(e,t,n){"use strict";n.r(t);var o=n(12),r=n(0),c=n.n(r),l={};const f=()=>({});function d(e){return e.then(e=>e.default||e)}function h(e){return e.options&&e._Ctor===e?e:(e.options?(e._Ctor=e,e.extendOptions=e.options):(e=c.a.extend(e))._Ctor=e,!e.options.name&&e.options.__file&&(e.options.name=e.options.__file),e)}function m(e,t=!1){return Array.prototype.concat.apply([],e.matched.map((e,n)=>Object.keys(e.components).map(o=>(t&&t.push(n),e.components[o]))))}function x(e){return Promise.all(function(e,t){return Array.prototype.concat.apply([],e.matched.map((e,n)=>Object.keys(e.components).reduce((o,r)=>(e.components[r]?o.push(t(e.components[r],e.instances[r],e,r,n)):delete e.components[r],o),[])))}(e,async(e,t,n,o)=>("function"!=typeof e||e.options||(e=await e()),n.components[o]=h(e),n.components[o])))}async function y(e){return await x(e),{...e,meta:m(e).map((t,n)=>({...t.options.meta,...(e.matched[n]||{}).meta}))}}async function v(e,t){e.context||(e.context={isStatic:!1,isDev:!1,isHMR:!1,app:e,store:e.store,payload:t.payload,error:t.error,base:"/",env:{}},t.req&&(e.context.req=t.req),t.res&&(e.context.res=t.res),e.context.redirect=((t,path,n)=>{if(!t)return;e.context._redirected=!0;let o=typeof path;"number"==typeof t||"undefined"!==o&&"object"!==o||(n=path||{},o=typeof(path=t),t=302),"object"===o&&(path=e.router.resolve(path).href),/(^[.]{1,2}\/)|(^\/(?!\/))/.test(path)?e.context.next({path:path,query:n,status:t}):(path=function(e,t){let n;const o=e.indexOf("://");-1!==o?(n=e.substring(0,o),e=e.substring(o+3)):e.startsWith("//")&&(e=e.substring(2));let r,c=e.split("/"),l=(n?n+"://":"//")+c.shift(),path=c.filter(Boolean).join("/");2===(c=path.split("#")).length&&(path=c[0],r=c[1]);l+=path?"/"+path:"",t&&"{}"!==JSON.stringify(t)&&(l+=(2===e.split("?").length?"&":"?")+function(e){return Object.keys(e).sort().map(t=>{const n=e[t];return null==n?"":Array.isArray(n)?n.slice().map(e=>[t,"=",e].join("")).join("&"):t+"="+n}).filter(Boolean).join("&")}(t));return l+=r?"#"+r:""}(path,n),e.context.next({path:path,status:t}))}),e.context.beforeNuxtRender=(e=>t.beforeRenderFns.push(e))),e.context.next=t.next,e.context._redirected=!1,e.context._errored=!1,e.context.isHMR=!!t.isHMR,t.route&&(e.context.route=await y(t.route)),e.context.params=e.context.route.params||{},e.context.query=e.context.route.query||{},t.from&&(e.context.from=await y(t.from))}function w(e,t){return!e.length||t._redirected||t._errored?Promise.resolve():_(e[0],t).then(()=>w(e.slice(1),t))}function _(e,t){let n;return(n=2===e.length?new Promise(n=>{e(t,function(e,data){e&&t.error(e),n(data=data||{})})}):e(t))&&(n instanceof Promise||"function"==typeof n.then)||(n=Promise.resolve(n)),n}function j(e,t){return function(e){const t=new Array(e.length);for(let i=0;i<e.length;i++)"object"==typeof e[i]&&(t[i]=new RegExp("^(?:"+e[i].pattern+")$"));return function(n,o){let path="";const data=n||{},r=o||{},c=r.pretty?k:encodeURIComponent;for(let i=0;i<e.length;i++){const n=e[i];if("string"==typeof n){path+=n;continue}const o=data[n.name||"pathMatch"];let r;if(null==o){if(n.optional){n.partial&&(path+=n.prefix);continue}throw new TypeError('Expected "'+n.name+'" to be defined')}if(Array.isArray(o)){if(!n.repeat)throw new TypeError('Expected "'+n.name+'" to not repeat, but received `'+JSON.stringify(o)+"`");if(0===o.length){if(n.optional)continue;throw new TypeError('Expected "'+n.name+'" to not be empty')}for(let e=0;e<o.length;e++){if(r=c(o[e]),!t[i].test(r))throw new TypeError('Expected all "'+n.name+'" to match "'+n.pattern+'", but received `'+JSON.stringify(r)+"`");path+=(0===e?n.prefix:n.delimiter)+r}}else{if(r=n.asterisk?encodeURI(o).replace(/[?#]/g,e=>"%"+e.charCodeAt(0).toString(16).toUpperCase()):c(o),!t[i].test(r))throw new TypeError('Expected "'+n.name+'" to match "'+n.pattern+'", but received "'+r+'"');path+=n.prefix+r}}return path}}(function(e,t){const n=[];let o=0,r=0,path="";const c=t&&t.delimiter||"/";let l;for(;null!=(l=C.exec(e));){const t=l[0],f=l[1],d=l.index;if(path+=e.slice(r,d),r=d+t.length,f){path+=f[1];continue}const h=e[r],m=l[2],x=l[3],y=l[4],v=l[5],w=l[6],_=l[7];path&&(n.push(path),path="");const j=null!=m&&null!=h&&h!==m,C="+"===w||"*"===w,k="?"===w||"*"===w,$=l[2]||c,pattern=y||v;n.push({name:x||o++,prefix:m||"",delimiter:$,optional:k,repeat:C,partial:j,asterisk:!!_,pattern:pattern?T(pattern):_?".*":"[^"+S($)+"]+?"})}r<e.length&&(path+=e.substr(r));path&&n.push(path);return n}(e,t))}const C=new RegExp(["(\\\\.)","([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))"].join("|"),"g");function k(e){return encodeURI(e).replace(/[/?#]/g,e=>"%"+e.charCodeAt(0).toString(16).toUpperCase())}function S(e){return e.replace(/([.+*?=^!:${}()[\]|/\\])/g,"\\$1")}function T(e){return e.replace(/([=!:$/()])/g,"\\$1")}var N=n(13),O=n.n(N),E=n(11),A=n.n(E);const P=()=>d(n.e(1).then(n.bind(null,78))),R=()=>d(n.e(2).then(n.bind(null,79))),M=()=>d(n.e(4).then(n.bind(null,76))),z=()=>d(n.e(5).then(n.bind(null,80))),F=()=>d(n.e(7).then(n.bind(null,81))),I=()=>d(n.e(3).then(n.bind(null,77))),D=()=>d(n.e(6).then(n.bind(null,82)));c.a.use(A.a);const L=function(e,t,n){let o=!1;return e.matched.length<2&&e.matched.every(e=>!1!==e.components.default.options.scrollToTop)?o={x:0,y:0}:e.matched.some(e=>e.components.default.options.scrollToTop)&&(o={x:0,y:0}),n&&(o=n),new Promise(t=>{window.$nuxt.$once("triggerScroll",()=>{if(e.hash){let t=e.hash;void 0!==window.CSS&&void 0!==window.CSS.escape&&(t="#"+window.CSS.escape(t.substr(1)));try{document.querySelector(t)&&(o={selector:t})}catch(e){console.warn("Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).")}}t(o)})})};var U=n(14),B={...n.n(U).a,name:"NoSsr"},H={name:"NuxtChild",functional:!0,props:{nuxtChildKey:{type:String,default:""},keepAlive:Boolean,keepAliveProps:{type:Object,default:void 0}},render(e,{parent:t,data:data,props:n}){data.nuxtChild=!0;const o=t,r=t.$nuxt.nuxt.transitions,c=t.$nuxt.nuxt.defaultTransition;let l=0;for(;t;)t.$vnode&&t.$vnode.data.nuxtChild&&l++,t=t.$parent;data.nuxtChildDepth=l;const f=r[l]||c,d={};J.forEach(e=>{void 0!==f[e]&&(d[e]=f[e])});const h={};V.forEach(e=>{"function"==typeof f[e]&&(h[e]=f[e].bind(o))});const m=h.beforeEnter;h.beforeEnter=(e=>{if(window.$nuxt.$nextTick(()=>{window.$nuxt.$emit("triggerScroll")}),m)return m.call(o,e)});let x=[e("router-view",data)];return n.keepAlive&&(x=[e("keep-alive",{props:n.keepAliveProps},x)]),e("transition",{props:d,on:h},x)}};const J=["name","mode","appear","css","type","duration","enterClass","leaveClass","appearClass","enterActiveClass","enterActiveClass","leaveActiveClass","appearActiveClass","enterToClass","leaveToClass","appearToClass"],V=["beforeEnter","enter","afterEnter","enterCancelled","beforeLeave","leave","afterLeave","leaveCancelled","beforeAppear","appear","afterAppear","appearCancelled"];var K={name:"NuxtError",props:{error:{type:Object,default:null}},head(){return{title:this.message,meta:[{name:"viewport",content:"width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"}]}},computed:{statusCode(){return this.error&&this.error.statusCode||500},message(){return this.error.message||"Error"}}},W=n(1);var X=Object(W.a)(K,function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"__nuxt-error-page"},[e._ssrNode('<div class="error">',"</div>",[e._ssrNode('<svg xmlns="http://www.w3.org/2000/svg" width="90" height="90" fill="#DBE1EC" viewBox="0 0 48 48"><path d="M22 30h4v4h-4zm0-16h4v12h-4zm1.99-10C12.94 4 4 12.95 4 24s8.94 20 19.99 20S44 35.05 44 24 35.04 4 23.99 4zM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16z"></path></svg> <div class="title">'+e._ssrEscape(e._s(e.message))+"</div> "),404===e.statusCode?e._ssrNode('<p class="description">',"</p>",[n("NuxtLink",{staticClass:"error-link",attrs:{to:"/"}},[e._v("Back to the home page")])],1):e._e(),e._ssrNode(' <div class="logo"><a href="https://nuxtjs.org" target="_blank" rel="noopener">Nuxt.js</a></div>')],2)])},[],!1,function(e){var t=n(16);t.__inject__&&t.__inject__(e)},null,"8344e0e0").exports,Y={name:"Nuxt",components:{NuxtChild:H,NuxtError:X},props:{nuxtChildKey:{type:String,default:void 0},keepAlive:Boolean,keepAliveProps:{type:Object,default:void 0},name:{type:String,default:"default"}},computed:{routerViewKey(){if(void 0!==this.nuxtChildKey||this.$route.matched.length>1)return this.nuxtChildKey||j(this.$route.matched[0].path)(this.$route.params);const e=this.$route.matched[0]&&this.$route.matched[0].components.default;return e&&e.options&&e.options.key?"function"==typeof e.options.key?e.options.key(this.$route):e.options.key:this.$route.path}},beforeCreate(){c.a.util.defineReactive(this,"nuxt",this.$root.$options.nuxt)},render(e){return this.nuxt.err?e("NuxtError",{props:{error:this.nuxt.err}}):e("NuxtChild",{key:this.routerViewKey,props:this.$props})}},G={name:"NuxtLoading",data:()=>({percent:0,show:!1,canSucceed:!0,reversed:!1,skipTimerCount:0,rtl:!1,throttle:200,duration:5e3,continuous:!1}),computed:{left(){return!(!this.continuous&&!this.rtl)&&(this.rtl?this.reversed?"0px":"auto":this.reversed?"auto":"0px")}},beforeDestroy(){this.clear()},methods:{clear(){clearInterval(this._timer),clearTimeout(this._throttle),this._timer=null},start(){return this.clear(),this.percent=0,this.reversed=!1,this.skipTimerCount=0,this.canSucceed=!0,this.throttle?this._throttle=setTimeout(()=>this.startTimer(),this.throttle):this.startTimer(),this},set(e){return this.show=!0,this.canSucceed=!0,this.percent=Math.min(100,Math.max(0,Math.floor(e))),this},get(){return this.percent},increase(e){return this.percent=Math.min(100,Math.floor(this.percent+e)),this},decrease(e){return this.percent=Math.max(0,Math.floor(this.percent-e)),this},pause(){return clearInterval(this._timer),this},resume(){return this.startTimer(),this},finish(){return this.percent=this.reversed?0:100,this.hide(),this},hide(){return this.clear(),setTimeout(()=>{this.show=!1,this.$nextTick(()=>{this.percent=0,this.reversed=!1})},500),this},fail(){return this.canSucceed=!1,this},startTimer(){this.show||(this.show=!0),void 0===this._cut&&(this._cut=1e4/Math.floor(this.duration)),this._timer=setInterval(()=>{this.skipTimerCount>0?this.skipTimerCount--:(this.reversed?this.decrease(this._cut):this.increase(this._cut),this.continuous&&(this.percent>=100?(this.skipTimerCount=1,this.reversed=!this.reversed):this.percent<=0&&(this.skipTimerCount=1,this.reversed=!this.reversed)))},100)}},render(e){let t=e(!1);return this.show&&(t=e("div",{staticClass:"nuxt-progress",class:{"nuxt-progress-notransition":this.skipTimerCount>0,"nuxt-progress-failed":!this.canSucceed},style:{width:this.percent+"%",left:this.left}})),t}};var Q=Object(W.a)(G,void 0,void 0,!1,function(e){var t=n(18);t.__inject__&&t.__inject__(e)},null,"138ee8c4").exports,Z=(n(20),n(22),{data:()=>({searchStr:"",showSearch:!1,canvasDom:null,isNavHidden:!1,layoutBox:null,navIndex:0,nav:[{path:"/",text:"首页"},{path:"/article",text:"文章"},{path:"/project",text:"项目"},{path:"/about",text:"关于"},{path:"/allarticle",text:"归档"}]}),computed:{footerFixed(){return this.$store.state.footerFixed}},methods:{toShowSearch(){this.showSearch=!0},tohiddenSearch(){this.$router.push(`/article?keyword=${this.searchStr}`),this.searchStr="",this.showSearch=!1},bgCanvas(){let canvas=null;this.canvasDom?canvas=this.canvasDom:(this.canvasDom=document.querySelector("#canvas"),canvas=this.canvasDom);let e=canvas.getContext("2d"),t=canvas.width=window.innerWidth,n=t/2,o=canvas.height=window.innerHeight,r=o/2;e.fillStyle="#ccc";const c=16;let l=[],f=null;function d(n){this.flag=n,this.a={},this.b={},"v"==n?(this.a.y=0,this.b.y=o,this.a.x=v(0,o),this.b.x=v(0,o)):"h"==n&&(this.a.x=0,this.b.x=t,this.a.y=v(0,t),this.b.y=v(0,t)),this.va=v(25,100)/100,this.vb=v(25,100)/100,this.draw=function(){e.strokeStyle="#f4f4f4",e.beginPath(),e.moveTo(this.a.x,this.a.y),e.lineTo(this.b.x,this.b.y),e.stroke()},this.update=function(){"v"==this.flag?(this.a.x+=this.va,this.b.x+=this.vb):"h"==n&&(this.a.y+=this.va,this.b.y+=this.vb),this.edges()},this.edges=function(){"v"==this.flag?((this.a.x<0||this.a.x>t)&&(this.va*=-1),(this.b.x<0||this.b.x>t)&&(this.vb*=-1)):"h"==n&&((this.a.y<0||this.a.y>o)&&(this.va*=-1),(this.b.y<0||this.b.y>o)&&(this.vb*=-1))}}for(var i=0;i<c;i++){var h=new d(i%2==0?"h":"v");l.push(h)}function m(){f=window.requestAnimationFrame(m),e.clearRect(0,0,t,o);for(var i=0;i<l.length;i++){(n=l[i]).draw(),n.update()}for(i=0;i<l.length;i++)for(var n=l[i],r=i+1;r<l.length;r++){y(n,l[r])}}function x(){l.length=0;for(var i=0;i<c;i++){var e=new d(i%2==0?"h":"v");l.push(e)}f&&(window.cancelAnimationFrame(f),f=null),t=canvas.width=window.innerWidth,n=t/2,o=canvas.height=window.innerHeight,r=o/2,m()}function y(t,n){var p,o=t.a,r=t.b,c=n.a,l=n.b,f=(l.y-c.y)*(r.x-o.x)-(l.x-c.x)*(r.y-o.y),d=((l.x-c.x)*(o.y-c.y)-(l.y-c.y)*(o.x-c.x))/f,h=((r.x-o.x)*(o.y-c.y)-(r.y-o.y)*(o.x-c.x))/f,m=o.x+d*(r.x-o.x),x=o.y+d*(r.y-o.y);d>0&&h>0&&(p={x:m,y:x},e.beginPath(),e.arc(p.x,p.y,2,0,2*Math.PI),e.fillStyle="#eeeeee",e.fill())}function v(e,t){return~~(Math.random()*(t-e+1)+e)}setTimeout(function(){x(),addEventListener("resize",x,!1)},15)},scroll(){window.addEventListener("scroll",e=>{const t=$(document).scrollTop();this.isNavHidden=t>=100})},chanrouter(e){let t=9;this.nav.forEach((n,i)=>{n.path==e.path&&(t=i)}),this.navIndex=t}},mounted(){this.$nextTick(function(){window.scrollTop=0,this.bgCanvas(),this.scroll()}),this.chanrouter(this.$route);const e=localStorage.getItem("userInfo");if(e){let t=JSON.parse(e);this.$store.commit("changeAverter",t.gravatar)}else this.$store.commit("changeAverter",Math.floor(6*Math.random()))},watch:{$route(e){this.chanrouter(e)}}});const ee={_layout:Object(W.a)(Z,function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"layoutBox",attrs:{id:"layoutBox"}},[e._ssrNode('<canvas id="canvas" width="1011" height="803"></canvas> '),e._ssrNode("<header"+e._ssrClass("header",e.isNavHidden?"navUp":"navDown")+">","</header>",[e._ssrNode('<section class="box header-content">',"</section>",[e._ssrNode("<nav>","</nav>",e._l(e.nav,function(t,o){return n("nuxt-link",{key:o,class:e.navIndex==o?"active":"",attrs:{to:t.path}},[e._v(e._s(t.text))])}),1),e._ssrNode(' <div class="searchBox"><div class="search"'+e._ssrStyle(null,e.showSearch?{paddingLeft:"5px"}:{paddingLeft:"0"},null)+"><div"+e._ssrClass("text",e.showSearch?"showText":"hiddenText")+'><input type="text" placeholder="你心所想..."'+e._ssrAttr("value",e.searchStr)+'></div> <div class="searchIcon">'+(e.showSearch?'<i class="iconfont rightIcon"></i>':'<i class="iconfont"></i>')+"</div></div></div>")],2)]),e._ssrNode(" "),e._ssrNode('<div id="mailContent" class="mailContent">',"</div>",[n("nuxt")],1),e._ssrNode(" "),e._ssrNode("<footer"+e._ssrClass("layoutFooter",e.footerFixed?"footerFixed":"")+">","</footer>",[e._ssrNode("\n\t\t© 2021 - "),n("nuxt-link",{attrs:{to:"/"}},[e._v("pydw的博客")]),e._ssrNode("\n\t\t - Powered by Nuxt.js &amp; Tornado\n\t")],2)],2)},[],!1,function(e){var t=n(24);t.__inject__&&t.__inject__(e)},null,"30268829").exports,_default:Object(W.a)({},function(){var e=this.$createElement;return(this._self._c||e)("Nuxt")},[],!1,null,null,"a749e898").exports};var te={head:{title:"Pydw",meta:[{charset:"utf-8"},{"http-equiv":"cleartype",content:"on"},{"http-equiv":"Cache-Control"},{name:"viewport",content:"width=device-width, initial-scale=1, user-scalable=no"},{hid:"description",name:"description",content:"Pydw, 全栈, blog"},{hid:"keywords",name:"keywords",content:"全栈开发，JavaScript, Python, Vue，nuxt"},{name:"author",content:"849656290@qq.com"}],link:[{rel:"icon",type:"image/x-icon",href:"/favicon.ico"}],script:[{src:"https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"},{src:"https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"}],style:[]},render(e,t){const n=e("NuxtLoading",{ref:"loading"}),o=e(this.layout||"nuxt"),r=e("div",{domProps:{id:"__layout"},key:this.layoutName},[o]),c=e("transition",{props:{name:"layout",mode:"out-in"},on:{beforeEnter(e){window.$nuxt.$nextTick(()=>{window.$nuxt.$emit("triggerScroll")})}}},[r]);return e("div",{domProps:{id:"__nuxt"}},[n,c])},data:()=>({isOnline:!0,layout:null,layoutName:""}),beforeCreate(){c.a.util.defineReactive(this,"nuxt",this.$options.nuxt)},created(){c.a.prototype.$nuxt=this,this.error=this.nuxt.error},mounted(){this.$loading=this.$refs.loading},watch:{"nuxt.err":"errorChanged"},computed:{isOffline(){return!this.isOnline}},methods:{refreshOnlineStatus(){0},errorChanged(){this.nuxt.err&&this.$loading&&(this.$loading.fail&&this.$loading.fail(),this.$loading.finish&&this.$loading.finish())},setLayout(e){return e&&ee["_"+e]||(e="default"),this.layoutName=e,this.layout=ee["_"+e],this.layout},loadLayout:e=>(e&&ee["_"+e]||(e="default"),Promise.resolve(ee["_"+e]))},components:{NuxtLoading:Q}},ne=n(2),oe=n.n(ne);c.a.use(oe.a);const re=console,ie=["state","getters","actions","mutations"];let ae,se={};!function(){const e=(ae=n(26)).keys().sort((e,t)=>{let n=e.split("/").length-t.split("/").length;return 0===n&&e.includes("/index.")?n=-1:0===n&&t.includes("/index.")&&(n=1),n}),t=e.find(path=>path.includes("./index."));if(t&&(se=le(t,{isRoot:!0})),"function"==typeof se)return re.warn("Classic mode for store/ is deprecated and will be removed in Nuxt 3.");se.modules=se.modules||{};for(const path of e){const e=path.replace(/^\.\//,"").replace(/\.(js|mjs|ts)$/,"");if("index"===e)continue;const t=e.split("/");let n=t[t.length-1];const o=le(path,{isState:"state"===n});if(ie.includes(n)){const e=n;fe(ue(se,t,{isProperty:!0}),o,e);continue}"index"===n&&(t.pop(),n=t[t.length-1]);const r=ue(se,t);for(const e of ie)fe(r,o[e],e)}}();const ce=se instanceof Function?se:()=>new oe.a.Store(Object.assign({strict:!1},se));function le(path,{isRoot:e=!1,isState:t=!1}={}){const n=ae(path);let o=n.default||n;if(t&&"function"!=typeof o){re.warn(`${path} should export a method that returns an object`);const e=Object.assign({},o);return()=>e}if(e&&o.commit)throw new Error("[nuxt] store/"+path.replace("./","")+" should export a method that returns a Vuex instance.");if(e&&"function"!=typeof o&&(o=Object.assign({},o)),o.state&&"function"!=typeof o.state){re.warn(`'state' should be a method that returns an object in ${path}`);const e=Object.assign({},o.state);o=Object.assign({},o,{state:()=>e})}return o}function ue(e,t,{isProperty:n=!1}={}){if(!t.length||n&&1===t.length)return e;const o=t.shift();return e.modules[o]=e.modules[o]||{},e.modules[o].namespaced=!0,e.modules[o].modules=e.modules[o].modules||{},ue(e.modules[o],t,{isProperty:n})}function fe(e,t,n){t&&("state"===n?e.state=t||e.state:e[n]=Object.assign({},e[n],t))}c.a.component(B.name,B),c.a.component(H.name,H),c.a.component("NChild",H),c.a.component(Y.name,Y),c.a.use(O.a,{keyName:"head",attribute:"data-n-head",ssrAttribute:"data-n-head-ssr",tagIDKeyName:"hid"});const de={name:"page",mode:"out-in",appear:!1,appearClass:"appear",appearActiveClass:"appear-active",appearToClass:"appear-to"};async function he(e){const t=await new A.a({mode:"history",base:"/",linkActiveClass:"nuxt-link-active",linkExactActiveClass:"nuxt-link-exact-active",scrollBehavior:L,routes:[{path:"/about",component:P,name:"about"},{path:"/allarticle",component:R,name:"allarticle"},{path:"/article",component:M,name:"article"},{path:"/hero",component:z,name:"hero"},{path:"/project",component:F,name:"project"},{path:"/article/:id",component:I,name:"article-id"},{path:"/",component:D,name:"index"}],fallback:!1}),n=ce(e);n.$router=t;const o=n.registerModule;n.registerModule=((path,e,t)=>o.call(n,path,e,Object.assign({preserveState:!1},t)));const r={router:t,store:n,nuxt:{defaultTransition:de,transitions:[de],setTransitions(e){return Array.isArray(e)||(e=[e]),e=e.map(e=>e=e?"string"==typeof e?Object.assign({},de,{name:e}):Object.assign({},de,e):de),this.$options.nuxt.transitions=e,e},err:null,dateErr:null,error(t){t=t||null,r.context._errored=!!t,t=t?function(e){let t;if(e.message||"string"==typeof e)t=e.message||e;else try{t=JSON.stringify(e,null,2)}catch(n){t=`[${e.constructor.name}]`}return{...e,message:t,statusCode:e.statusCode||e.status||e.response&&e.response.status||500}}(t):null;const n=this.nuxt||this.$options.nuxt;return n.dateErr=Date.now(),n.err=t,e&&(e.nuxt.error=t),t}},...te};n.app=r;const c=e?e.next:e=>r.router.push(e);let l;if(e)l=t.resolve(e.url).route;else{const path=function(base,e){let path=window.location.pathname;return"hash"===e?window.location.hash.replace(/^#\//,""):(base&&0===path.indexOf(base)&&(path=path.slice(base.length)),decodeURI(path||"/")+window.location.search+window.location.hash)}(t.options.base);l=t.resolve(path).route}return await v(r,{route:l,next:c,error:r.nuxt.error.bind(r),store:n,payload:e?e.payload:void 0,req:e?e.req:void 0,res:e?e.res:void 0,beforeRenderFns:e?e.beforeRenderFns:void 0}),e&&e.url&&await new Promise((n,o)=>{t.push(e.url,n,()=>{const o=t.afterEach(async(t,c,l)=>{e.url=t.fullPath,r.context.route=await y(t),r.context.params=t.params||{},r.context.query=t.query||{},o(),n()})})}),{app:r,store:n,router:t}}var pe={name:"NuxtLink",extends:c.a.component("RouterLink"),props:{noPrefetch:{type:Boolean,default:!1}}};c.a.component(pe.name,pe),c.a.component("NLink",pe);const me=n(28)("nuxt:render");me.color=4;const xe=()=>new c.a({render:e=>e("div")}),be=e=>t=>{if(e.redirected=t,!e.res)return void(e.nuxt.serverRendered=!1);t.query=Object(o.stringify)(t.query),t.path=t.path+(t.query?"?"+t.query:"");t.path.startsWith("http"),t.path!==e.url?(e.res.writeHead(t.status,{Location:t.path}),e.res.end()):e.redirected=!1};t.default=(async e=>{e.redirected=!1,e.next=be(e),e.beforeRenderFns=[],e.nuxt={layout:"default",data:[],error:null,state:null,serverRendered:!0};const{app:t,router:n,store:o}=await he(e),r=new c.a(t);e.meta=r.$meta(),e.asyncData={};const d=async()=>{await Promise.all(e.beforeRenderFns.map(t=>_(t,{Components:v,nuxtState:e.nuxt}))),e.nuxt.state=o.state},x=async()=>{const n="function"==typeof X.layout?X.layout(t.context):X.layout;return e.nuxt.layout=n||"default",await r.loadLayout(n),r.setLayout(n),await d(),r},y=()=>(t.context.error({statusCode:404,path:e.url,message:"This page could not be found"}),x()),v=m(n.match(e.url));if(o._actions&&o._actions.nuxtServerInit)try{await o.dispatch("nuxtServerInit",t.context)}catch(e){throw me("error occurred when calling nuxtServerInit: ",e.message),e}if(e.redirected)return xe();if(e.nuxt.error)return x();let j=[];if(j=j.map(e=>"function"==typeof e?e:("function"!=typeof l[e]&&t.context.error({statusCode:500,message:"Unknown middleware "+e}),l[e])),await w(j,t.context),e.redirected)return xe();if(e.nuxt.error)return x();let C=v.length?v[0].options.layout:X.layout;if("function"==typeof C&&(C=C(t.context)),await r.loadLayout(C),e.nuxt.error)return x();if(C=r.setLayout(C),e.nuxt.layout=r.layoutName,j=[],(C=h(C)).options.middleware&&(j=j.concat(C.options.middleware)),v.forEach(e=>{e.options.middleware&&(j=j.concat(e.options.middleware))}),j=j.map(e=>"function"==typeof e?e:("function"!=typeof l[e]&&t.context.error({statusCode:500,message:"Unknown middleware "+e}),l[e])),await w(j,t.context),e.redirected)return xe();if(e.nuxt.error)return x();let k=!0;try{for(const e of v)if("function"==typeof e.options.validate&&!(k=await e.options.validate(t.context)))break}catch(e){return t.context.error({statusCode:e.statusCode||"500",message:e.message}),x()}if(!k)return e._generate&&(e.nuxt.serverRendered=!1),y();if(!v.length)return y();const S=await Promise.all(v.map(n=>{const o=[];if(n.options.asyncData&&"function"==typeof n.options.asyncData){const r=_(n.options.asyncData,t.context);r.then(t=>(e.asyncData[n.cid]=t,function(e,t){const n=e.options.data||f;!t&&e.options.hasAsyncData||(e.options.hasAsyncData=!0,e.options.data=function(){const data=n.call(this);return this.$ssrContext&&(t=this.$ssrContext.asyncData[e.cid]),{...data,...t}},e._Ctor&&e._Ctor.options&&(e._Ctor.options.data=e.options.data))}(n),t)),o.push(r)}else o.push(null);return n.options.fetch?o.push(n.options.fetch(t.context)):o.push(null),Promise.all(o)}));return e.nuxt.data=S.map(e=>e[0]||{}),e.redirected?xe():e.nuxt.error?x():(await d(),r)})},function(e,t){e.exports=require("axios")},function(e,t){e.exports=require("clipboard")}]);
+module.exports =
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// object to store loaded chunks
+/******/ 	// "0" means "already loaded"
+/******/ 	var installedChunks = {
+/******/ 		0: 0
+/******/ 	};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/ 	// This file contains only the entry chunk.
+/******/ 	// The chunk loading function for additional chunks
+/******/ 	__webpack_require__.e = function requireEnsure(chunkId) {
+/******/ 		var promises = [];
+/******/
+/******/
+/******/ 		// require() chunk loading for javascript
+/******/
+/******/ 		// "0" is the signal for "already loaded"
+/******/ 		if(installedChunks[chunkId] !== 0) {
+/******/ 			var chunk = require("./" + ({"1":"pages/about","2":"pages/allarticle","3":"pages/article/_id","4":"pages/article/index","5":"pages/hero","6":"pages/index","7":"pages/project"}[chunkId]||chunkId) + ".js");
+/******/ 			var moreModules = chunk.modules, chunkIds = chunk.ids;
+/******/ 			for(var moduleId in moreModules) {
+/******/ 				modules[moduleId] = moreModules[moduleId];
+/******/ 			}
+/******/ 			for(var i = 0; i < chunkIds.length; i++)
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 		}
+/******/ 		return Promise.all(promises);
+/******/ 	};
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "/_nuxt/";
+/******/
+/******/ 	// uncaught error handler for webpack runtime
+/******/ 	__webpack_require__.oe = function(err) {
+/******/ 		process.nextTick(function() {
+/******/ 			throw err; // catch this error by using import().catch()
+/******/ 		});
+/******/ 	};
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue");
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("ufo");
+
+/***/ }),
+/* 2 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return normalizeComponent; });
+/* globals __VUE_SSR_CONTEXT__ */
+
+// IMPORTANT: Do NOT use ES2015 features in this file (except for modules).
+// This module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle.
+
+function normalizeComponent (
+  scriptExports,
+  render,
+  staticRenderFns,
+  functionalTemplate,
+  injectStyles,
+  scopeId,
+  moduleIdentifier, /* server only */
+  shadowMode /* vue-cli only */
+) {
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (render) {
+    options.render = render
+    options.staticRenderFns = staticRenderFns
+    options._compiled = true
+  }
+
+  // functional template
+  if (functionalTemplate) {
+    options.functional = true
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = 'data-v-' + scopeId
+  }
+
+  var hook
+  if (moduleIdentifier) { // server build
+    hook = function (context) {
+      // 2.3 injection
+      context =
+        context || // cached call
+        (this.$vnode && this.$vnode.ssrContext) || // stateful
+        (this.parent && this.parent.$vnode && this.parent.$vnode.ssrContext) // functional
+      // 2.2 with runInNewContext: true
+      if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+        context = __VUE_SSR_CONTEXT__
+      }
+      // inject component styles
+      if (injectStyles) {
+        injectStyles.call(this, context)
+      }
+      // register component module identifier for async chunk inferrence
+      if (context && context._registeredComponents) {
+        context._registeredComponents.add(moduleIdentifier)
+      }
+    }
+    // used by ssr in case component is cached and beforeCreate
+    // never gets called
+    options._ssrRegister = hook
+  } else if (injectStyles) {
+    hook = shadowMode
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
+      : injectStyles
+  }
+
+  if (hook) {
+    if (options.functional) {
+      // for template-only hot-reload because in that case the render fn doesn't
+      // go through the normalizer
+      options._injectStyles = hook
+      // register for functional component in vue file
+      var originalRender = options.render
+      options.render = function renderWithStyleInjection (h, context) {
+        hook.call(context)
+        return originalRender(h, context)
+      }
+    } else {
+      // inject component registration as beforeCreate hook
+      var existing = options.beforeCreate
+      options.beforeCreate = existing
+        ? [].concat(existing, hook)
+        : [hook]
+    }
+  }
+
+  return {
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+module.exports = require("vuex");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+/*
+  MIT License http://www.opensource.org/licenses/mit-license.php
+  Author Tobias Koppers @sokra
+*/
+// css base code, injected by the css-loader
+// eslint-disable-next-line func-names
+module.exports = function (useSourceMap) {
+  var list = []; // return the list of modules as css string
+
+  list.toString = function toString() {
+    return this.map(function (item) {
+      var content = cssWithMappingToString(item, useSourceMap);
+
+      if (item[2]) {
+        return "@media ".concat(item[2], " {").concat(content, "}");
+      }
+
+      return content;
+    }).join('');
+  }; // import a list of modules into the list
+  // eslint-disable-next-line func-names
+
+
+  list.i = function (modules, mediaQuery, dedupe) {
+    if (typeof modules === 'string') {
+      // eslint-disable-next-line no-param-reassign
+      modules = [[null, modules, '']];
+    }
+
+    var alreadyImportedModules = {};
+
+    if (dedupe) {
+      for (var i = 0; i < this.length; i++) {
+        // eslint-disable-next-line prefer-destructuring
+        var id = this[i][0];
+
+        if (id != null) {
+          alreadyImportedModules[id] = true;
+        }
+      }
+    }
+
+    for (var _i = 0; _i < modules.length; _i++) {
+      var item = [].concat(modules[_i]);
+
+      if (dedupe && alreadyImportedModules[item[0]]) {
+        // eslint-disable-next-line no-continue
+        continue;
+      }
+
+      if (mediaQuery) {
+        if (!item[2]) {
+          item[2] = mediaQuery;
+        } else {
+          item[2] = "".concat(mediaQuery, " and ").concat(item[2]);
+        }
+      }
+
+      list.push(item);
+    }
+  };
+
+  return list;
+};
+
+function cssWithMappingToString(item, useSourceMap) {
+  var content = item[1] || ''; // eslint-disable-next-line prefer-destructuring
+
+  var cssMapping = item[3];
+
+  if (!cssMapping) {
+    return content;
+  }
+
+  if (useSourceMap && typeof btoa === 'function') {
+    var sourceMapping = toComment(cssMapping);
+    var sourceURLs = cssMapping.sources.map(function (source) {
+      return "/*# sourceURL=".concat(cssMapping.sourceRoot || '').concat(source, " */");
+    });
+    return [content].concat(sourceURLs).concat([sourceMapping]).join('\n');
+  }
+
+  return [content].join('\n');
+} // Adapted from convert-source-map (MIT)
+
+
+function toComment(sourceMap) {
+  // eslint-disable-next-line no-undef
+  var base64 = btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap))));
+  var data = "sourceMappingURL=data:application/json;charset=utf-8;base64,".concat(base64);
+  return "/*# ".concat(data, " */");
+}
+
+/***/ }),
+/* 5 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXPORTS
+__webpack_require__.d(__webpack_exports__, "default", function() { return /* binding */ addStylesServer; });
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/listToStyles.js
+/**
+ * Translates the list format produced by css-loader into something
+ * easier to manipulate.
+ */
+function listToStyles (parentId, list) {
+  var styles = []
+  var newStyles = {}
+  for (var i = 0; i < list.length; i++) {
+    var item = list[i]
+    var id = item[0]
+    var css = item[1]
+    var media = item[2]
+    var sourceMap = item[3]
+    var part = {
+      id: parentId + ':' + i,
+      css: css,
+      media: media,
+      sourceMap: sourceMap
+    }
+    if (!newStyles[id]) {
+      styles.push(newStyles[id] = { id: id, parts: [part] })
+    } else {
+      newStyles[id].parts.push(part)
+    }
+  }
+  return styles
+}
+
+// CONCATENATED MODULE: ./node_modules/vue-style-loader/lib/addStylesServer.js
+
+
+function addStylesServer (parentId, list, isProduction, context) {
+  if (!context && typeof __VUE_SSR_CONTEXT__ !== 'undefined') {
+    context = __VUE_SSR_CONTEXT__
+  }
+  if (context) {
+    if (!context.hasOwnProperty('styles')) {
+      Object.defineProperty(context, 'styles', {
+        enumerable: true,
+        get: function() {
+          return renderStyles(context._styles)
+        }
+      })
+      // expose renderStyles for vue-server-renderer (vuejs/#6353)
+      context._renderStyles = renderStyles
+    }
+
+    var styles = context._styles || (context._styles = {})
+    list = listToStyles(parentId, list)
+    if (isProduction) {
+      addStyleProd(styles, list)
+    } else {
+      addStyleDev(styles, list)
+    }
+  }
+}
+
+// In production, render as few style tags as possible.
+// (mostly because IE9 has a limit on number of style tags)
+function addStyleProd (styles, list) {
+  for (var i = 0; i < list.length; i++) {
+    var parts = list[i].parts
+    for (var j = 0; j < parts.length; j++) {
+      var part = parts[j]
+      // group style tags by media types.
+      var id = part.media || 'default'
+      var style = styles[id]
+      if (style) {
+        if (style.ids.indexOf(part.id) < 0) {
+          style.ids.push(part.id)
+          style.css += '\n' + part.css
+        }
+      } else {
+        styles[id] = {
+          ids: [part.id],
+          css: part.css,
+          media: part.media
+        }
+      }
+    }
+  }
+}
+
+// In dev we use individual style tag for each module for hot-reload
+// and source maps.
+function addStyleDev (styles, list) {
+  for (var i = 0; i < list.length; i++) {
+    var parts = list[i].parts
+    for (var j = 0; j < parts.length; j++) {
+      var part = parts[j]
+      styles[part.id] = {
+        ids: [part.id],
+        css: part.css,
+        media: part.media
+      }
+    }
+  }
+}
+
+function renderStyles (styles) {
+  var css = ''
+  for (var key in styles) {
+    var style = styles[key]
+    css += '<style data-vue-ssr-id="' + style.ids.join(' ') + '"' +
+        (style.media ? ( ' media="' + style.media + '"' ) : '') + '>' +
+        style.css + '</style>'
+  }
+  return css
+}
+
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue-no-ssr");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: {
+    data: [],
+    hotData: [],
+    selectArticle: {
+      meta: {}
+    }
+  },
+  mutations: {
+    getArticle(state, data) {
+      state.data = data || [];
+    },
+
+    getHotArticle(state, data) {
+      state.hotData = data || [];
+    },
+
+    selectArticle(state, data) {
+      state.selectArticle = data || {};
+    }
+
+  }
+});
+
+/***/ }),
+/* 8 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: {
+    data: []
+  },
+  mutations: {
+    getProject(state, data) {
+      state.data = data || [];
+    }
+
+  }
+});
+
+/***/ }),
+/* 9 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = ({
+  state: {
+    data: []
+  },
+  mutations: {
+    getHero(state, data) {
+      state.data = data;
+    }
+
+  }
+});
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue-client-only");
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue-router");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(19);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to SSR context
+var add = __webpack_require__(5).default
+module.exports.__inject__ = function (context) {
+  add("72daabed", content, true, context)
+};
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(21);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to SSR context
+var add = __webpack_require__(5).default
+module.exports.__inject__ = function (context) {
+  add("3191d5ad", content, true, context)
+};
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(27);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add CSS to SSR context
+var add = __webpack_require__(5).default
+module.exports.__inject__ = function (context) {
+  add("2eb5fe54", content, true, context)
+};
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("node-fetch");
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = require("vue-meta");
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(29);
+
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(12);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_error_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+/* 19 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".__nuxt-error-page{padding:1rem;background:#f7f8fb;color:#47494e;text-align:center;display:flex;justify-content:center;align-items:center;flex-direction:column;font-family:sans-serif;font-weight:100!important;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-font-smoothing:antialiased;position:absolute;top:0;left:0;right:0;bottom:0}.__nuxt-error-page .error{max-width:450px}.__nuxt-error-page .title{font-size:1.5rem;margin-top:15px;color:#47494e;margin-bottom:8px}.__nuxt-error-page .description{color:#7f828b;line-height:21px;margin-bottom:10px}.__nuxt-error-page a{color:#7f828b!important;text-decoration:none}.__nuxt-error-page .logo{position:fixed;left:12px;bottom:12px}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 20 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(13);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_nuxt_loading_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, ".nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#3b8070;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 22 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(23);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(5).default("fa573204", content, true)
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "html{font-size:14px;word-spacing:1px;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-moz-osx-font-smoothing:grayscale;color:#555;letter-spacing:.5px;font-family:Futura,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif;-webkit-font-smoothing:antialiased}*,:after,:before,html{box-sizing:border-box;margin:0}*,:after,:before{padding:0}blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul{margin:0;padding:0}button,input,select,textarea{font:14px/1.5 tahoma,arial,\\5b8b\\4f53,sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%}address,cite,dfn,em,var{font-style:normal}code,kbd,pre,samp{font-family:courier new,courier,monospace}small{font-size:12px}ol,ul{list-style:none}a:hover{text-decoration:underline}a{color:#555;text-decoration:none}strong{font-weight:400}legend{color:#000}fieldset,img{border:0}button,input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}@font-face{font-family:\"iconfont\";src:url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.eot);src:url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.eot#iefix) format(\"embedded-opentype\"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.woff2) format(\"woff2\"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.woff) format(\"woff\"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.ttf) format(\"truetype\"),url(//at.alicdn.com/t/font_358841_9aw2a59f7pp.svg#iconfont) format(\"svg\")}@font-face{font-family:\"iconfont1\";src:url(//at.alicdn.com/t/font_2418292_ind9pbwkof.eot);src:url(//at.alicdn.com/t/font_2418292_ind9pbwkof.eot#iefix) format(\"embedded-opentype\"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.woff2) format(\"woff2\"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.woff) format(\"woff\"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.ttf) format(\"truetype\"),url(//at.alicdn.com/t/font_2418292_ind9pbwkof.svg#iconfont) format(\"svg\")}.iconfont,i{font-style:normal}.iconfont{font-family:\"iconfont\",\"iconfont1\"!important;font-size:16px;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}::selection{background:#3fb76c;color:#fff}::-moz-selection{background:#3fb76c;color:#fff}::-webkit-selection{background:#3fb76c;color:#fff}.fade-enter-active,.fade-leave-active{transition:opacity .5s}.fade-enter,.fade-leave-to{opacity:0}.icon-T:before{content:\"\\e607\"}.icon-yingdaicon04:before{content:\"\\e643\"}.icon-icon8:before{content:\"\\e608\"}.icon-qqkongjian1:before{content:\"\\e7dc\"}.icon-weibiaoti1:before{content:\"\\e637\"}.icon-lianjie2:before{content:\"\\e665\"}.icon-4:before{content:\"\\e601\"}.icon-shu:before{content:\"\\e604\"}.icon-home:before{content:\"\\e73a\"}.icon-douban:before{content:\"\\e663\"}.icon-xihuan:before{content:\"\\e63b\"}.icon-windows:before{content:\"\\ec83\"}.icon-twitter:before{content:\"\\ec9c\"}.icon-douban1:before{content:\"\\e649\"}.icon-02:before{content:\"\\e64a\"}.icon-daima:before{content:\"\\e605\"}.icon-tupian:before{content:\"\\e626\"}.icon-code:before{content:\"\\e725\"}.icon-iconsf-copy:before{content:\"\\e610\"}.icon-shang:before{content:\"\\e614\"}.icon-iconfont21:before{content:\"\\e613\"}.icon-fenxiang:before{content:\"\\e6a5\"}.icon-bianji1:before{content:\"\\e654\"}.icon-nodejs:before{content:\"\\e989\"}.icon-dingwei1:before{content:\"\\e615\"}.icon-lianjie:before{content:\"\\e609\"}.icon-jiacu:before{content:\"\\e61e\"}.icon-mac:before{content:\"\\e61b\"}.icon-icon:before{content:\"\\e65b\"}.icon-dingwei:before{content:\"\\e662\"}.icon-qq:before{content:\"\\e602\"}.icon-sanjiaotop:before{content:\"\\e6b4\"}.icon-jingyin:before{content:\"\\e65e\"}.icon-bofang:before{content:\"\\e60d\"}.icon-youxiang:before{content:\"\\e64d\"}.icon-like:before{content:\"\\e65c\"}.icon-code1:before{content:\"\\e69f\"}.icon-facebookf:before{content:\"\\e6e2\"}.icon-duigou:before{content:\"\\e640\"}.icon-bianji:before{content:\"\\e636\"}.icon-weibo:before{content:\"\\e63d\"}.icon-iconstop:before{content:\"\\e69d\"}.icon-ai09:before{content:\"\\e67d\"}.icon-ai10:before{content:\"\\e67f\"}.icon-google:before{content:\"\\e6b2\"}.icon-iconfontyouxihudong:before{content:\"\\e639\"}.icon-bushu:before{content:\"\\e77f\"}.icon-yulanguanbi:before{content:\"\\e650\"}.icon-704bianjiqi_Ixieti:before{content:\"\\e65a\"}.icon-434-npm:before{content:\"\\e6d9\"}.icon-shezhi:before{content:\"\\e60e\"}.icon-quotation_marks:before{content:\"\\e715\"}.icon-sousuo:before{content:\"\\e603\"}.icon-qqkongjian:before{content:\"\\e624\"}.icon-danjiantoushang:before{content:\"\\e635\"}.icon-danjiantouxia:before{content:\"\\e638\"}.icon-wuxuliebiao:before{content:\"\\e645\"}.icon-youxuliebiao:before{content:\"\\e67e\"}.icon-ic_code_px:before{content:\"\\e8b6\"}.icon-yulan:before{content:\"\\e7b9\"}.icon-zhixiangzuo:before{content:\"\\e8f4\"}.icon-zhixiangyou:before{content:\"\\e8f5\"}.icon-lianjie1:before{content:\"\\e60b\"}.icon-biaoqing:before{content:\"\\e60c\"}.icon-fabu:before{content:\"\\e62a\"}.icon-youjian:before{content:\"\\e60a\"}.icon-xiangmu:before{content:\"\\e671\"}.icon-xiaoxi:before{content:\"\\e65d\"}.icon-xinlang:before{content:\"\\e832\"}.icon-weixin:before{content:\"\\e62e\"}.icon-ios:before{content:\"\\e64b\"}.icon-yinxiangbiji:before{content:\"\\e764\"}.icon-github:before{content:\"\\e621\"}.icon-hebingfenping:before{content:\"\\e612\"}.icon-yonghu-tianchong:before{content:\"\\e670\"}.icon-linkedin:before{content:\"\\e627\"}.icon-biaoqian:before{content:\"\\e8cb\"}.icon-dian1:before{content:\"\\e600\"}.icon-icon-test:before{content:\"\\e617\"}.icon-gengduo:before{content:\"\\e606\"}.icon-liulanqi:before{content:\"\\e68f\"}.icon-icon-:before{content:\"\\e611\"}.icon-mingxingxianchang:before{content:\"\\e6c3\"}.icon-benzihebi:before{content:\"\\e60f\"}.icon-angular:before{content:\"\\e616\"}.icon-nginx:before{content:\"\\e63c\"}.icon-vuejs:before{content:\"\\e641\"}.icon-react:before{content:\"\\e64c\"}.icon-zanting:before{content:\"\\e618\"}.icon-prev:before{content:\"\\e619\"}.icon--liebiao:before{content:\"\\e628\"}.icon-xiayiqu101:before{content:\"\\e61a\"}.icon-jilugeci:before{content:\"\\e70f\"}.icon-game:before{content:\"\\e6df\"}.icon-activity:before{content:\"\\e6de\"}.icon-JS:before{content:\"\\e651\"}.icon-tornado:before{content:\"\\e6db\"}.icon-code:before{content:\"\\e60e\"}.icon-mysql:before{content:\"\\e627\"}.icon-mongodb:before{content:\"\\ec21\"}.icon-node-js:before{content:\"\\f1fd\"}.icon-react:before{content:\"\\f21a\"}.icon-angular:before{content:\"\\eb3c\"}.icon-django:before{content:\"\\eb7b\"}.icon-flask:before{content:\"\\eb93\"}.icon-nginx:before{content:\"\\ec30\"}.icon-python:before{content:\"\\ec66\"}.icon-redis:before{content:\"\\ec7c\"}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(25);
+if(content.__esModule) content = content.default;
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+__webpack_require__(5).default("13fc93e8", content, true)
+
+/***/ }),
+/* 25 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "/*!\n * Agate by Taufik Nurrohman <https://github.com/tovic>\n * ----------------------------------------------------\n *\n * #ade5fc\n * #a2fca2\n * #c6b4f0\n * #d36363\n * #fcc28c\n * #fc9b9b\n * #ffa\n * #fff\n * #333\n * #62c8f3\n * #888\n *\n */.hljs{display:block;overflow-x:auto;padding:1em;background:#333;color:#fff}.hljs-name,.hljs-strong{font-weight:700}.hljs-code,.hljs-emphasis{font-style:italic}.hljs-tag{color:#62c8f3}.hljs-selector-class,.hljs-selector-id,.hljs-template-variable,.hljs-variable{color:#ade5fc}.hljs-bullet,.hljs-string{color:#a2fca2}.hljs-attribute,.hljs-built_in,.hljs-builtin-name,.hljs-quote,.hljs-section,.hljs-title,.hljs-type{color:#ffa}.hljs-bullet,.hljs-number,.hljs-symbol{color:#d36363}.hljs-keyword,.hljs-literal,.hljs-selector-tag{color:#fcc28c}.hljs-code,.hljs-comment,.hljs-deletion{color:#888}.hljs-link,.hljs-regexp{color:#c6b4f0}.hljs-meta{color:#fc9b9b}.hljs-deletion{background-color:#fc9b9b;color:#333}.hljs-addition{background-color:#a2fca2;color:#333}.hljs a{color:inherit}.hljs a:focus,.hljs a:hover{color:inherit;text-decoration:underline}code,kbd,pre,samp{font-family:Monaco,Menlo,Consolas,-apple-system,SF UI Text,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 26 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_layout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(14);
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_layout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_layout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_layout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(["default"].indexOf(__WEBPACK_IMPORT_KEY__) < 0) (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_vue_style_loader_index_js_ref_3_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_3_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_3_oneOf_1_2_node_modules_vue_loader_lib_index_js_vue_loader_options_layout_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// Imports
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(4);
+var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(false);
+// Module
+___CSS_LOADER_EXPORT___.push([module.i, "#canvas{position:fixed;left:0;top:0;z-index:-1}.layoutBox{overflow-x:hidden;overflow-y:scroll}.navUp{transform:translate3d(0,-60px,0)}.navDown{transform:translateZ(0)}.header{background:#fff;border-bottom:1px solid #f1f1f1;color:#909090;height:60px;overflow:hidden;width:100%;position:fixed;z-index:2;transition:.3s}.box{width:900px;margin:0 auto}.header-content{display:flex;height:59px;justify-content:space-between}.header-content nav{height:59px;line-height:59px;font-size:20px}.header-content nav a{display:inline-block;height:59px;transition:.3s;padding:0 20px;position:relative;color:#8c8c8c;text-decoration:none}.header-content nav a.active,.header-content nav a:hover{color:#3fb76c}.searchBox{display:flex;align-items:center}.search{height:30px;border-bottom:1px solid #ddd;display:flex;overflow:hidden;padding-left:5px}.search input{width:100%;height:100%;border:none;outline:none;background:transparent}.search .text{width:158px;transform-origin:right center;transition:.3s}.search .showText{width:158px}.search .hiddenText{width:0;padding-left:0}.search .searchIcon{width:30px;height:30px;line-height:30px;text-align:center;cursor:pointer}.rightIcon{color:#3fb76c}.mailContent{padding-top:70px;padding-bottom:20px}.layoutFooter{height:50px;background:#fff;border-top:1px solid #f1f1f1;text-align:center;line-height:50px;font-size:12px;color:#666;width:100%}.footerFixed{position:fixed;bottom:0;left:0}", ""]);
+// Exports
+module.exports = ___CSS_LOADER_EXPORT___;
+
+
+/***/ }),
+/* 28 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(0);
+/* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vuex__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_article__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(7);
+/* harmony import */ var _modules_project__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(8);
+/* harmony import */ var _modules_hero__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(9);
+
+
+
+
+
+vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1___default.a);
+
+const store = () => new vuex__WEBPACK_IMPORTED_MODULE_1___default.a.Store({
+  state: {
+    scrollTop: 0,
+    footerFixed: false,
+    averterNum: 0
+  },
+  modules: {
+    article: _modules_article__WEBPACK_IMPORTED_MODULE_2__["default"],
+    project: _modules_project__WEBPACK_IMPORTED_MODULE_3__["default"],
+    hero: _modules_hero__WEBPACK_IMPORTED_MODULE_4__["default"]
+  },
+  mutations: {
+    changeScroll(state, num) {
+      state.scrollTop = num;
+    },
+
+    changeFooterFixed(state, isb) {
+      state.footerFixed = isb;
+    },
+
+    changeAverter(state, num) {
+      state.averterNum = num;
+    }
+
+  }
+});
+
+/* harmony default export */ __webpack_exports__["default"] = (store);
+
+/***/ }),
+/* 29 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: external "vue"
+var external_vue_ = __webpack_require__(0);
+var external_vue_default = /*#__PURE__*/__webpack_require__.n(external_vue_);
+
+// EXTERNAL MODULE: external "ufo"
+var external_ufo_ = __webpack_require__(1);
+
+// EXTERNAL MODULE: external "node-fetch"
+var external_node_fetch_ = __webpack_require__(15);
+var external_node_fetch_default = /*#__PURE__*/__webpack_require__.n(external_node_fetch_);
+
+// CONCATENATED MODULE: ./.nuxt/middleware.js
+const middleware = {};
+/* harmony default export */ var _nuxt_middleware = (middleware);
+// CONCATENATED MODULE: ./.nuxt/utils.js
+
+ // window.{{globals.loadedCallback}} hook
+// Useful for jsdom testing or plugins (https://github.com/tmpvar/jsdom#dealing-with-asynchronous-script-loading)
+
+if (false) {}
+
+function createGetCounter(counterObject, defaultKey = '') {
+  return function getCounter(id = defaultKey) {
+    if (counterObject[id] === undefined) {
+      counterObject[id] = 0;
+    }
+
+    return counterObject[id]++;
+  };
+}
+function empty() {}
+function globalHandleError(error) {
+  if (external_vue_default.a.config.errorHandler) {
+    external_vue_default.a.config.errorHandler(error);
+  }
+}
+function interopDefault(promise) {
+  return promise.then(m => m.default || m);
+}
+function hasFetch(vm) {
+  return vm.$options && typeof vm.$options.fetch === 'function' && !vm.$options.fetch.length;
+}
+function purifyData(data) {
+  if (true) {
+    return data;
+  }
+
+  return Object.entries(data).filter(([key, value]) => {
+    const valid = !(value instanceof Function) && !(value instanceof Promise);
+
+    if (!valid) {
+      console.warn(`${key} is not able to be stringified. This will break in a production environment.`);
+    }
+
+    return valid;
+  }).reduce((obj, [key, value]) => {
+    obj[key] = value;
+    return obj;
+  }, {});
+}
+function getChildrenComponentInstancesUsingFetch(vm, instances = []) {
+  const children = vm.$children || [];
+
+  for (const child of children) {
+    if (child.$fetch) {
+      instances.push(child);
+      continue; // Don't get the children since it will reload the template
+    }
+
+    if (child.$children) {
+      getChildrenComponentInstancesUsingFetch(child, instances);
+    }
+  }
+
+  return instances;
+}
+function applyAsyncData(Component, asyncData) {
+  if ( // For SSR, we once all this function without second param to just apply asyncData
+  // Prevent doing this for each SSR request
+  !asyncData && Component.options.__hasNuxtData) {
+    return;
+  }
+
+  const ComponentData = Component.options._originDataFn || Component.options.data || function () {
+    return {};
+  };
+
+  Component.options._originDataFn = ComponentData;
+
+  Component.options.data = function () {
+    const data = ComponentData.call(this, this);
+
+    if (this.$ssrContext) {
+      asyncData = this.$ssrContext.asyncData[Component.cid];
+    }
+
+    return { ...data,
+      ...asyncData
+    };
+  };
+
+  Component.options.__hasNuxtData = true;
+
+  if (Component._Ctor && Component._Ctor.options) {
+    Component._Ctor.options.data = Component.options.data;
+  }
+}
+function sanitizeComponent(Component) {
+  // If Component already sanitized
+  if (Component.options && Component._Ctor === Component) {
+    return Component;
+  }
+
+  if (!Component.options) {
+    Component = external_vue_default.a.extend(Component); // fix issue #6
+
+    Component._Ctor = Component;
+  } else {
+    Component._Ctor = Component;
+    Component.extendOptions = Component.options;
+  } // If no component name defined, set file path as name, (also fixes #5703)
+
+
+  if (!Component.options.name && Component.options.__file) {
+    Component.options.name = Component.options.__file;
+  }
+
+  return Component;
+}
+function getMatchedComponents(route, matches = false, prop = 'components') {
+  return Array.prototype.concat.apply([], route.matched.map((m, index) => {
+    return Object.keys(m[prop]).map(key => {
+      matches && matches.push(index);
+      return m[prop][key];
+    });
+  }));
+}
+function getMatchedComponentsInstances(route, matches = false) {
+  return getMatchedComponents(route, matches, 'instances');
+}
+function flatMapComponents(route, fn) {
+  return Array.prototype.concat.apply([], route.matched.map((m, index) => {
+    return Object.keys(m.components).reduce((promises, key) => {
+      if (m.components[key]) {
+        promises.push(fn(m.components[key], m.instances[key], m, key, index));
+      } else {
+        delete m.components[key];
+      }
+
+      return promises;
+    }, []);
+  }));
+}
+function resolveRouteComponents(route, fn) {
+  return Promise.all(flatMapComponents(route, async (Component, instance, match, key) => {
+    // If component is a function, resolve it
+    if (typeof Component === 'function' && !Component.options) {
+      try {
+        Component = await Component();
+      } catch (error) {
+        // Handle webpack chunk loading errors
+        // This may be due to a new deployment or a network problem
+        if (error && error.name === 'ChunkLoadError' && typeof window !== 'undefined' && window.sessionStorage) {
+          const timeNow = Date.now();
+          const previousReloadTime = parseInt(window.sessionStorage.getItem('nuxt-reload')); // check for previous reload time not to reload infinitely
+
+          if (!previousReloadTime || previousReloadTime + 60000 < timeNow) {
+            window.sessionStorage.setItem('nuxt-reload', timeNow);
+            window.location.reload(true
+            /* skip cache */
+            );
+          }
+        }
+
+        throw error;
+      }
+    }
+
+    match.components[key] = Component = sanitizeComponent(Component);
+    return typeof fn === 'function' ? fn(Component, instance, match, key) : Component;
+  }));
+}
+async function getRouteData(route) {
+  if (!route) {
+    return;
+  } // Make sure the components are resolved (code-splitting)
+
+
+  await resolveRouteComponents(route); // Send back a copy of route with meta based on Component definition
+
+  return { ...route,
+    meta: getMatchedComponents(route).map((Component, index) => {
+      return { ...Component.options.meta,
+        ...(route.matched[index] || {}).meta
+      };
+    })
+  };
+}
+async function setContext(app, context) {
+  // If context not defined, create it
+  if (!app.context) {
+    app.context = {
+      isStatic: false,
+      isDev: false,
+      isHMR: false,
+      app,
+      store: app.store,
+      payload: context.payload,
+      error: context.error,
+      base: app.router.options.base,
+      env: {}
+    }; // Only set once
+
+    if (context.req) {
+      app.context.req = context.req;
+    }
+
+    if (context.res) {
+      app.context.res = context.res;
+    }
+
+    if (context.ssrContext) {
+      app.context.ssrContext = context.ssrContext;
+    }
+
+    app.context.redirect = (status, path, query) => {
+      if (!status) {
+        return;
+      }
+
+      app.context._redirected = true; // if only 1 or 2 arguments: redirect('/') or redirect('/', { foo: 'bar' })
+
+      let pathType = typeof path;
+
+      if (typeof status !== 'number' && (pathType === 'undefined' || pathType === 'object')) {
+        query = path || {};
+        path = status;
+        pathType = typeof path;
+        status = 302;
+      }
+
+      if (pathType === 'object') {
+        path = app.router.resolve(path).route.fullPath;
+      } // "/absolute/route", "./relative/route" or "../relative/route"
+
+
+      if (/(^[.]{1,2}\/)|(^\/(?!\/))/.test(path)) {
+        app.context.next({
+          path,
+          query,
+          status
+        });
+      } else {
+        path = Object(external_ufo_["withQuery"])(path, query);
+
+        if (true) {
+          app.context.next({
+            path,
+            status
+          });
+        }
+
+        if (false) {}
+      }
+    };
+
+    if (true) {
+      app.context.beforeNuxtRender = fn => context.beforeRenderFns.push(fn);
+    }
+
+    if (false) {}
+  } // Dynamic keys
+
+
+  const [currentRouteData, fromRouteData] = await Promise.all([getRouteData(context.route), getRouteData(context.from)]);
+
+  if (context.route) {
+    app.context.route = currentRouteData;
+  }
+
+  if (context.from) {
+    app.context.from = fromRouteData;
+  }
+
+  app.context.next = context.next;
+  app.context._redirected = false;
+  app.context._errored = false;
+  app.context.isHMR = false;
+  app.context.params = app.context.route.params || {};
+  app.context.query = app.context.route.query || {};
+}
+function middlewareSeries(promises, appContext) {
+  if (!promises.length || appContext._redirected || appContext._errored) {
+    return Promise.resolve();
+  }
+
+  return promisify(promises[0], appContext).then(() => {
+    return middlewareSeries(promises.slice(1), appContext);
+  });
+}
+function promisify(fn, context) {
+  let promise;
+
+  if (fn.length === 2) {
+    // fn(context, callback)
+    promise = new Promise(resolve => {
+      fn(context, function (err, data) {
+        if (err) {
+          context.error(err);
+        }
+
+        data = data || {};
+        resolve(data);
+      });
+    });
+  } else {
+    promise = fn(context);
+  }
+
+  if (promise && promise instanceof Promise && typeof promise.then === 'function') {
+    return promise;
+  }
+
+  return Promise.resolve(promise);
+} // Imported from vue-router
+
+function getLocation(base, mode) {
+  if (mode === 'hash') {
+    return window.location.hash.replace(/^#\//, '');
+  }
+
+  base = decodeURI(base).slice(0, -1); // consideration is base is normalized with trailing slash
+
+  let path = decodeURI(window.location.pathname);
+
+  if (base && path.startsWith(base)) {
+    path = path.slice(base.length);
+  }
+
+  const fullPath = (path || '/') + window.location.search + window.location.hash;
+  return Object(external_ufo_["normalizeURL"])(fullPath);
+} // Imported from path-to-regexp
+
+/**
+ * Compile a string to a template function for the path.
+ *
+ * @param  {string}             str
+ * @param  {Object=}            options
+ * @return {!function(Object=, Object=)}
+ */
+
+function compile(str, options) {
+  return tokensToFunction(parse(str, options), options);
+}
+function getQueryDiff(toQuery, fromQuery) {
+  const diff = {};
+  const queries = { ...toQuery,
+    ...fromQuery
+  };
+
+  for (const k in queries) {
+    if (String(toQuery[k]) !== String(fromQuery[k])) {
+      diff[k] = true;
+    }
+  }
+
+  return diff;
+}
+function normalizeError(err) {
+  let message;
+
+  if (!(err.message || typeof err === 'string')) {
+    try {
+      message = JSON.stringify(err, null, 2);
+    } catch (e) {
+      message = `[${err.constructor.name}]`;
+    }
+  } else {
+    message = err.message || err;
+  }
+
+  return { ...err,
+    message,
+    statusCode: err.statusCode || err.status || err.response && err.response.status || 500
+  };
+}
+/**
+ * The main path matching regexp utility.
+ *
+ * @type {RegExp}
+ */
+
+const PATH_REGEXP = new RegExp([// Match escaped characters that would otherwise appear in future matches.
+// This allows the user to escape special characters that won't transform.
+'(\\\\.)', // Match Express-style parameters and un-named parameters with a prefix
+// and optional suffixes. Matches appear as:
+//
+// "/:test(\\d+)?" => ["/", "test", "\d+", undefined, "?", undefined]
+// "/route(\\d+)"  => [undefined, undefined, undefined, "\d+", undefined, undefined]
+// "/*"            => ["/", undefined, undefined, undefined, undefined, "*"]
+'([\\/.])?(?:(?:\\:(\\w+)(?:\\(((?:\\\\.|[^\\\\()])+)\\))?|\\(((?:\\\\.|[^\\\\()])+)\\))([+*?])?|(\\*))'].join('|'), 'g');
+/**
+ * Parse a string for the raw tokens.
+ *
+ * @param  {string}  str
+ * @param  {Object=} options
+ * @return {!Array}
+ */
+
+function parse(str, options) {
+  const tokens = [];
+  let key = 0;
+  let index = 0;
+  let path = '';
+  const defaultDelimiter = options && options.delimiter || '/';
+  let res;
+
+  while ((res = PATH_REGEXP.exec(str)) != null) {
+    const m = res[0];
+    const escaped = res[1];
+    const offset = res.index;
+    path += str.slice(index, offset);
+    index = offset + m.length; // Ignore already escaped sequences.
+
+    if (escaped) {
+      path += escaped[1];
+      continue;
+    }
+
+    const next = str[index];
+    const prefix = res[2];
+    const name = res[3];
+    const capture = res[4];
+    const group = res[5];
+    const modifier = res[6];
+    const asterisk = res[7]; // Push the current path onto the tokens.
+
+    if (path) {
+      tokens.push(path);
+      path = '';
+    }
+
+    const partial = prefix != null && next != null && next !== prefix;
+    const repeat = modifier === '+' || modifier === '*';
+    const optional = modifier === '?' || modifier === '*';
+    const delimiter = res[2] || defaultDelimiter;
+    const pattern = capture || group;
+    tokens.push({
+      name: name || key++,
+      prefix: prefix || '',
+      delimiter,
+      optional,
+      repeat,
+      partial,
+      asterisk: Boolean(asterisk),
+      pattern: pattern ? escapeGroup(pattern) : asterisk ? '.*' : '[^' + escapeString(delimiter) + ']+?'
+    });
+  } // Match any characters still remaining.
+
+
+  if (index < str.length) {
+    path += str.substr(index);
+  } // If the path exists, push it onto the end.
+
+
+  if (path) {
+    tokens.push(path);
+  }
+
+  return tokens;
+}
+/**
+ * Prettier encoding of URI path segments.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+
+
+function encodeURIComponentPretty(str, slashAllowed) {
+  const re = slashAllowed ? /[?#]/g : /[/?#]/g;
+  return encodeURI(str).replace(re, c => {
+    return '%' + c.charCodeAt(0).toString(16).toUpperCase();
+  });
+}
+/**
+ * Encode the asterisk parameter. Similar to `pretty`, but allows slashes.
+ *
+ * @param  {string}
+ * @return {string}
+ */
+
+
+function encodeAsterisk(str) {
+  return encodeURIComponentPretty(str, true);
+}
+/**
+ * Escape a regular expression string.
+ *
+ * @param  {string} str
+ * @return {string}
+ */
+
+
+function escapeString(str) {
+  return str.replace(/([.+*?=^!:${}()[\]|/\\])/g, '\\$1');
+}
+/**
+ * Escape the capturing group by escaping special characters and meaning.
+ *
+ * @param  {string} group
+ * @return {string}
+ */
+
+
+function escapeGroup(group) {
+  return group.replace(/([=!:$/()])/g, '\\$1');
+}
+/**
+ * Expose a method for transforming tokens into the path function.
+ */
+
+
+function tokensToFunction(tokens, options) {
+  // Compile all the tokens into regexps.
+  const matches = new Array(tokens.length); // Compile all the patterns before compilation.
+
+  for (let i = 0; i < tokens.length; i++) {
+    if (typeof tokens[i] === 'object') {
+      matches[i] = new RegExp('^(?:' + tokens[i].pattern + ')$', flags(options));
+    }
+  }
+
+  return function (obj, opts) {
+    let path = '';
+    const data = obj || {};
+    const options = opts || {};
+    const encode = options.pretty ? encodeURIComponentPretty : encodeURIComponent;
+
+    for (let i = 0; i < tokens.length; i++) {
+      const token = tokens[i];
+
+      if (typeof token === 'string') {
+        path += token;
+        continue;
+      }
+
+      const value = data[token.name || 'pathMatch'];
+      let segment;
+
+      if (value == null) {
+        if (token.optional) {
+          // Prepend partial segment prefixes.
+          if (token.partial) {
+            path += token.prefix;
+          }
+
+          continue;
+        } else {
+          throw new TypeError('Expected "' + token.name + '" to be defined');
+        }
+      }
+
+      if (Array.isArray(value)) {
+        if (!token.repeat) {
+          throw new TypeError('Expected "' + token.name + '" to not repeat, but received `' + JSON.stringify(value) + '`');
+        }
+
+        if (value.length === 0) {
+          if (token.optional) {
+            continue;
+          } else {
+            throw new TypeError('Expected "' + token.name + '" to not be empty');
+          }
+        }
+
+        for (let j = 0; j < value.length; j++) {
+          segment = encode(value[j]);
+
+          if (!matches[i].test(segment)) {
+            throw new TypeError('Expected all "' + token.name + '" to match "' + token.pattern + '", but received `' + JSON.stringify(segment) + '`');
+          }
+
+          path += (j === 0 ? token.prefix : token.delimiter) + segment;
+        }
+
+        continue;
+      }
+
+      segment = token.asterisk ? encodeAsterisk(value) : encode(value);
+
+      if (!matches[i].test(segment)) {
+        throw new TypeError('Expected "' + token.name + '" to match "' + token.pattern + '", but received "' + segment + '"');
+      }
+
+      path += token.prefix + segment;
+    }
+
+    return path;
+  };
+}
+/**
+ * Get the flags for a regexp from the options.
+ *
+ * @param  {Object} options
+ * @return {string}
+ */
+
+
+function flags(options) {
+  return options && options.sensitive ? '' : 'i';
+}
+
+function addLifecycleHook(vm, hook, fn) {
+  if (!vm.$options[hook]) {
+    vm.$options[hook] = [];
+  }
+
+  if (!vm.$options[hook].includes(fn)) {
+    vm.$options[hook].push(fn);
+  }
+}
+const urlJoin = external_ufo_["joinURL"];
+const stripTrailingSlash = external_ufo_["withoutTrailingSlash"];
+const isSamePath = external_ufo_["isSamePath"];
+function setScrollRestoration(newVal) {
+  try {
+    window.history.scrollRestoration = newVal;
+  } catch (e) {}
+}
+// CONCATENATED MODULE: ./.nuxt/mixins/fetch.server.js
+
+
+
+async function serverPrefetch() {
+  if (!this._fetchOnServer) {
+    return;
+  } // Call and await on $fetch
+
+
+  try {
+    await this.$options.fetch.call(this);
+  } catch (err) {
+    if (false) {}
+
+    this.$fetchState.error = normalizeError(err);
+  }
+
+  this.$fetchState.pending = false; // Define an ssrKey for hydration
+
+  this._fetchKey = this._fetchKey || this.$ssrContext.fetchCounters['']++; // Add data-fetch-key on parent element of Component
+
+  const attrs = this.$vnode.data.attrs = this.$vnode.data.attrs || {};
+  attrs['data-fetch-key'] = this._fetchKey; // Add to ssrContext for window.__NUXT__.fetch
+
+  this.$ssrContext.nuxt.fetch[this._fetchKey] = this.$fetchState.error ? {
+    _error: this.$fetchState.error
+  } : purifyData(this._data);
+}
+
+/* harmony default export */ var fetch_server = ({
+  created() {
+    if (!hasFetch(this)) {
+      return;
+    }
+
+    if (typeof this.$options.fetchOnServer === 'function') {
+      this._fetchOnServer = this.$options.fetchOnServer.call(this) !== false;
+    } else {
+      this._fetchOnServer = this.$options.fetchOnServer !== false;
+    }
+
+    const defaultKey = this.$options._scopeId || this.$options.name || '';
+    const getCounter = createGetCounter(this.$ssrContext.fetchCounters, defaultKey);
+
+    if (typeof this.$options.fetchKey === 'function') {
+      this._fetchKey = this.$options.fetchKey.call(this, getCounter);
+    } else {
+      const key = 'string' === typeof this.$options.fetchKey ? this.$options.fetchKey : defaultKey;
+      this._fetchKey = key ? key + ':' + getCounter(key) : String(getCounter(key));
+    } // Added for remove vue undefined warning while ssr
+
+
+    this.$fetch = () => {}; // issue #8043
+
+
+    external_vue_default.a.util.defineReactive(this, '$fetchState', {
+      pending: true,
+      error: null,
+      timestamp: Date.now()
+    });
+    addLifecycleHook(this, 'serverPrefetch', serverPrefetch);
+  }
+
+});
+// EXTERNAL MODULE: external "vuex"
+var external_vuex_ = __webpack_require__(3);
+var external_vuex_default = /*#__PURE__*/__webpack_require__.n(external_vuex_);
+
+// EXTERNAL MODULE: external "vue-meta"
+var external_vue_meta_ = __webpack_require__(16);
+var external_vue_meta_default = /*#__PURE__*/__webpack_require__.n(external_vue_meta_);
+
+// EXTERNAL MODULE: external "vue-client-only"
+var external_vue_client_only_ = __webpack_require__(10);
+var external_vue_client_only_default = /*#__PURE__*/__webpack_require__.n(external_vue_client_only_);
+
+// EXTERNAL MODULE: external "vue-no-ssr"
+var external_vue_no_ssr_ = __webpack_require__(6);
+var external_vue_no_ssr_default = /*#__PURE__*/__webpack_require__.n(external_vue_no_ssr_);
+
+// EXTERNAL MODULE: external "vue-router"
+var external_vue_router_ = __webpack_require__(11);
+var external_vue_router_default = /*#__PURE__*/__webpack_require__.n(external_vue_router_);
+
+// CONCATENATED MODULE: ./.nuxt/router.scrollBehavior.js
+
+
+if (false) {}
+
+function shouldScrollToTop(route) {
+  const Pages = getMatchedComponents(route);
+
+  if (Pages.length === 1) {
+    const {
+      options = {}
+    } = Pages[0];
+    return options.scrollToTop !== false;
+  }
+
+  return Pages.some(({
+    options
+  }) => options && options.scrollToTop);
+}
+
+/* harmony default export */ var router_scrollBehavior = (function (to, from, savedPosition) {
+  // If the returned position is falsy or an empty object, will retain current scroll position
+  let position = false;
+  const isRouteChanged = to !== from; // savedPosition is only available for popstate navigations (back button)
+
+  if (savedPosition) {
+    position = savedPosition;
+  } else if (isRouteChanged && shouldScrollToTop(to)) {
+    position = {
+      x: 0,
+      y: 0
+    };
+  }
+
+  const nuxt = window.$nuxt;
+
+  if ( // Initial load (vuejs/vue-router#3199)
+  !isRouteChanged || // Route hash changes
+  to.path === from.path && to.hash !== from.hash) {
+    nuxt.$nextTick(() => nuxt.$emit('triggerScroll'));
+  }
+
+  return new Promise(resolve => {
+    // wait for the out transition to complete (if necessary)
+    nuxt.$once('triggerScroll', () => {
+      // coords will be used if no selector is provided,
+      // or if the selector didn't match any element.
+      if (to.hash) {
+        let hash = to.hash; // CSS.escape() is not supported with IE and Edge.
+
+        if (typeof window.CSS !== 'undefined' && typeof window.CSS.escape !== 'undefined') {
+          hash = '#' + window.CSS.escape(hash.substr(1));
+        }
+
+        try {
+          if (document.querySelector(hash)) {
+            // scroll to anchor by returning the selector
+            position = {
+              selector: hash
+            };
+          }
+        } catch (e) {
+          console.warn('Failed to save scroll position. Please add CSS.escape() polyfill (https://github.com/mathiasbynens/CSS.escape).');
+        }
+      }
+
+      resolve(position);
+    });
+  });
+});
+// CONCATENATED MODULE: ./.nuxt/router.js
+
+
+
+
+
+
+const _f34b0378 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 1).then(__webpack_require__.bind(null, 78)));
+
+const _25d5110e = () => interopDefault(__webpack_require__.e(/* import() | pages/allarticle */ 2).then(__webpack_require__.bind(null, 79)));
+
+const _edf2bfa0 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/index */ 4).then(__webpack_require__.bind(null, 76)));
+
+const _2404ef13 = () => interopDefault(__webpack_require__.e(/* import() | pages/hero */ 5).then(__webpack_require__.bind(null, 80)));
+
+const _21bbd410 = () => interopDefault(__webpack_require__.e(/* import() | pages/project */ 7).then(__webpack_require__.bind(null, 81)));
+
+const _251eee98 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 3).then(__webpack_require__.bind(null, 77)));
+
+const _b3db4dee = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 82)));
+
+const emptyFn = () => {};
+
+external_vue_default.a.use(external_vue_router_default.a);
+const routerOptions = {
+  mode: 'history',
+  base: '/',
+  linkActiveClass: 'nuxt-link-active',
+  linkExactActiveClass: 'nuxt-link-exact-active',
+  scrollBehavior: router_scrollBehavior,
+  routes: [{
+    path: "/about",
+    component: _f34b0378,
+    name: "about"
+  }, {
+    path: "/allarticle",
+    component: _25d5110e,
+    name: "allarticle"
+  }, {
+    path: "/article",
+    component: _edf2bfa0,
+    name: "article"
+  }, {
+    path: "/hero",
+    component: _2404ef13,
+    name: "hero"
+  }, {
+    path: "/project",
+    component: _21bbd410,
+    name: "project"
+  }, {
+    path: "/article/:id",
+    component: _251eee98,
+    name: "article-id"
+  }, {
+    path: "/",
+    component: _b3db4dee,
+    name: "index"
+  }],
+  fallback: false
+};
+function createRouter(ssrContext, config) {
+  const base = config._app && config._app.basePath || routerOptions.base;
+  const router = new external_vue_router_default.a({ ...routerOptions,
+    base
+  }); // TODO: remove in Nuxt 3
+
+  const originalPush = router.push;
+
+  router.push = function push(location, onComplete = emptyFn, onAbort) {
+    return originalPush.call(this, location, onComplete, onAbort);
+  };
+
+  const resolve = router.resolve.bind(router);
+
+  router.resolve = (to, current, append) => {
+    if (typeof to === 'string') {
+      to = Object(external_ufo_["normalizeURL"])(to);
+    }
+
+    return resolve(to, current, append);
+  };
+
+  return router;
+}
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-child.js
+/* harmony default export */ var nuxt_child = ({
+  name: 'NuxtChild',
+  functional: true,
+  props: {
+    nuxtChildKey: {
+      type: String,
+      default: ''
+    },
+    keepAlive: Boolean,
+    keepAliveProps: {
+      type: Object,
+      default: undefined
+    }
+  },
+
+  render(_, {
+    parent,
+    data,
+    props
+  }) {
+    const h = parent.$createElement;
+    data.nuxtChild = true;
+    const _parent = parent;
+    const transitions = parent.$nuxt.nuxt.transitions;
+    const defaultTransition = parent.$nuxt.nuxt.defaultTransition;
+    let depth = 0;
+
+    while (parent) {
+      if (parent.$vnode && parent.$vnode.data.nuxtChild) {
+        depth++;
+      }
+
+      parent = parent.$parent;
+    }
+
+    data.nuxtChildDepth = depth;
+    const transition = transitions[depth] || defaultTransition;
+    const transitionProps = {};
+    transitionsKeys.forEach(key => {
+      if (typeof transition[key] !== 'undefined') {
+        transitionProps[key] = transition[key];
+      }
+    });
+    const listeners = {};
+    listenersKeys.forEach(key => {
+      if (typeof transition[key] === 'function') {
+        listeners[key] = transition[key].bind(_parent);
+      }
+    });
+
+    if (false) {} // make sure that leave is called asynchronous (fix #5703)
+
+
+    if (transition.css === false) {
+      const leave = listeners.leave; // only add leave listener when user didnt provide one
+      // or when it misses the done argument
+
+      if (!leave || leave.length < 2) {
+        listeners.leave = (el, done) => {
+          if (leave) {
+            leave.call(_parent, el);
+          }
+
+          _parent.$nextTick(done);
+        };
+      }
+    }
+
+    let routerView = h('routerView', data);
+
+    if (props.keepAlive) {
+      routerView = h('keep-alive', {
+        props: props.keepAliveProps
+      }, [routerView]);
+    }
+
+    return h('transition', {
+      props: transitionProps,
+      on: listeners
+    }, [routerView]);
+  }
+
+});
+const transitionsKeys = ['name', 'mode', 'appear', 'css', 'type', 'duration', 'enterClass', 'leaveClass', 'appearClass', 'enterActiveClass', 'enterActiveClass', 'leaveActiveClass', 'appearActiveClass', 'enterToClass', 'leaveToClass', 'appearToClass'];
+const listenersKeys = ['beforeEnter', 'enter', 'afterEnter', 'enterCancelled', 'beforeLeave', 'leave', 'afterLeave', 'leaveCancelled', 'beforeAppear', 'appear', 'afterAppear', 'appearCancelled'];
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./.nuxt/components/nuxt-error.vue?vue&type=template&id=5eb69f1c&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"__nuxt-error-page"},[_vm._ssrNode("<div class=\"error\">","</div>",[_vm._ssrNode("<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"90\" height=\"90\" fill=\"#DBE1EC\" viewBox=\"0 0 48 48\"><path d=\"M22 30h4v4h-4zm0-16h4v12h-4zm1.99-10C12.94 4 4 12.95 4 24s8.94 20 19.99 20S44 35.05 44 24 35.04 4 23.99 4zM24 40c-8.84 0-16-7.16-16-16S15.16 8 24 8s16 7.16 16 16-7.16 16-16 16z\"></path></svg> <div class=\"title\">"+_vm._ssrEscape(_vm._s(_vm.message))+"</div> "),(_vm.statusCode === 404)?_vm._ssrNode("<p class=\"description\">","</p>",[(typeof _vm.$route === 'undefined')?_vm._ssrNode("<a href=\"/\" class=\"error-link\">","</a>"):_c('NuxtLink',{staticClass:"error-link",attrs:{"to":"/"}},[_vm._v("Back to the home page")])],1):_vm._e(),_vm._ssrNode(" <div class=\"logo\"><a href=\"https://nuxtjs.org\" target=\"_blank\" rel=\"noopener\">Nuxt</a></div>")],2)])}
+var staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-error.vue?vue&type=template&id=5eb69f1c&
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./.nuxt/components/nuxt-error.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var nuxt_errorvue_type_script_lang_js_ = ({
+  name: 'NuxtError',
+  props: {
+    error: {
+      type: Object,
+      default: null
+    }
+  },
+  computed: {
+    statusCode() {
+      return this.error && this.error.statusCode || 500;
+    },
+
+    message() {
+      return this.error.message || 'Error';
+    }
+
+  },
+
+  head() {
+    return {
+      title: this.message,
+      meta: [{
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1.0,minimum-scale=1.0'
+      }]
+    };
+  }
+
+});
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-error.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_nuxt_errorvue_type_script_lang_js_ = (nuxt_errorvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
+var componentNormalizer = __webpack_require__(2);
+
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-error.vue
+
+
+
+function injectStyles (context) {
+  
+  var style0 = __webpack_require__(18)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var nuxt_error_component = Object(componentNormalizer["a" /* default */])(
+  components_nuxt_errorvue_type_script_lang_js_,
+  render,
+  staticRenderFns,
+  false,
+  injectStyles,
+  null,
+  "8344e0e0"
+  
+)
+
+/* harmony default export */ var nuxt_error = (nuxt_error_component.exports);
+// CONCATENATED MODULE: ./.nuxt/components/nuxt.js
+
+
+
+
+/* harmony default export */ var components_nuxt = ({
+  name: 'Nuxt',
+  components: {
+    NuxtChild: nuxt_child,
+    NuxtError: nuxt_error
+  },
+  props: {
+    nuxtChildKey: {
+      type: String,
+      default: undefined
+    },
+    keepAlive: Boolean,
+    keepAliveProps: {
+      type: Object,
+      default: undefined
+    },
+    name: {
+      type: String,
+      default: 'default'
+    }
+  },
+
+  errorCaptured(error) {
+    // if we receive and error while showing the NuxtError component
+    // capture the error and force an immediate update so we re-render
+    // without the NuxtError component
+    if (this.displayingNuxtError) {
+      this.errorFromNuxtError = error;
+      this.$forceUpdate();
+    }
+  },
+
+  computed: {
+    routerViewKey() {
+      // If nuxtChildKey prop is given or current route has children
+      if (typeof this.nuxtChildKey !== 'undefined' || this.$route.matched.length > 1) {
+        return this.nuxtChildKey || compile(this.$route.matched[0].path)(this.$route.params);
+      }
+
+      const [matchedRoute] = this.$route.matched;
+
+      if (!matchedRoute) {
+        return this.$route.path;
+      }
+
+      const Component = matchedRoute.components.default;
+
+      if (Component && Component.options) {
+        const {
+          options
+        } = Component;
+
+        if (options.key) {
+          return typeof options.key === 'function' ? options.key(this.$route) : options.key;
+        }
+      }
+
+      const strict = /\/$/.test(matchedRoute.path);
+      return strict ? this.$route.path : this.$route.path.replace(/\/$/, '');
+    }
+
+  },
+
+  beforeCreate() {
+    external_vue_default.a.util.defineReactive(this, 'nuxt', this.$root.$options.nuxt);
+  },
+
+  render(h) {
+    // if there is no error
+    if (!this.nuxt.err) {
+      // Directly return nuxt child
+      return h('NuxtChild', {
+        key: this.routerViewKey,
+        props: this.$props
+      });
+    } // if an error occurred within NuxtError show a simple
+    // error message instead to prevent looping
+
+
+    if (this.errorFromNuxtError) {
+      this.$nextTick(() => this.errorFromNuxtError = false);
+      return h('div', {}, [h('h2', 'An error occurred while showing the error page'), h('p', 'Unfortunately an error occurred and while showing the error page another error occurred'), h('p', `Error details: ${this.errorFromNuxtError.toString()}`), h('nuxt-link', {
+        props: {
+          to: '/'
+        }
+      }, 'Go back to home')]);
+    } // track if we are showing the NuxtError component
+
+
+    this.displayingNuxtError = true;
+    this.$nextTick(() => this.displayingNuxtError = false);
+    return h(nuxt_error, {
+      props: {
+        error: this.nuxt.err
+      }
+    });
+  }
+
+});
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./.nuxt/components/nuxt-loading.vue?vue&type=script&lang=js&
+/* harmony default export */ var nuxt_loadingvue_type_script_lang_js_ = ({
+  name: 'NuxtLoading',
+
+  data() {
+    return {
+      percent: 0,
+      show: false,
+      canSucceed: true,
+      reversed: false,
+      skipTimerCount: 0,
+      rtl: false,
+      throttle: 200,
+      duration: 5000,
+      continuous: false
+    };
+  },
+
+  computed: {
+    left() {
+      if (!this.continuous && !this.rtl) {
+        return false;
+      }
+
+      return this.rtl ? this.reversed ? '0px' : 'auto' : !this.reversed ? '0px' : 'auto';
+    }
+
+  },
+
+  beforeDestroy() {
+    this.clear();
+  },
+
+  methods: {
+    clear() {
+      clearInterval(this._timer);
+      clearTimeout(this._throttle);
+      this._timer = null;
+    },
+
+    start() {
+      this.clear();
+      this.percent = 0;
+      this.reversed = false;
+      this.skipTimerCount = 0;
+      this.canSucceed = true;
+
+      if (this.throttle) {
+        this._throttle = setTimeout(() => this.startTimer(), this.throttle);
+      } else {
+        this.startTimer();
+      }
+
+      return this;
+    },
+
+    set(num) {
+      this.show = true;
+      this.canSucceed = true;
+      this.percent = Math.min(100, Math.max(0, Math.floor(num)));
+      return this;
+    },
+
+    get() {
+      return this.percent;
+    },
+
+    increase(num) {
+      this.percent = Math.min(100, Math.floor(this.percent + num));
+      return this;
+    },
+
+    decrease(num) {
+      this.percent = Math.max(0, Math.floor(this.percent - num));
+      return this;
+    },
+
+    pause() {
+      clearInterval(this._timer);
+      return this;
+    },
+
+    resume() {
+      this.startTimer();
+      return this;
+    },
+
+    finish() {
+      this.percent = this.reversed ? 0 : 100;
+      this.hide();
+      return this;
+    },
+
+    hide() {
+      this.clear();
+      setTimeout(() => {
+        this.show = false;
+        this.$nextTick(() => {
+          this.percent = 0;
+          this.reversed = false;
+        });
+      }, 500);
+      return this;
+    },
+
+    fail(error) {
+      this.canSucceed = false;
+      return this;
+    },
+
+    startTimer() {
+      if (!this.show) {
+        this.show = true;
+      }
+
+      if (typeof this._cut === 'undefined') {
+        this._cut = 10000 / Math.floor(this.duration);
+      }
+
+      this._timer = setInterval(() => {
+        /**
+         * When reversing direction skip one timers
+         * so 0, 100 are displayed for two iterations
+         * also disable css width transitioning
+         * which otherwise interferes and shows
+         * a jojo effect
+         */
+        if (this.skipTimerCount > 0) {
+          this.skipTimerCount--;
+          return;
+        }
+
+        if (this.reversed) {
+          this.decrease(this._cut);
+        } else {
+          this.increase(this._cut);
+        }
+
+        if (this.continuous) {
+          if (this.percent >= 100) {
+            this.skipTimerCount = 1;
+            this.reversed = !this.reversed;
+          } else if (this.percent <= 0) {
+            this.skipTimerCount = 1;
+            this.reversed = !this.reversed;
+          }
+        }
+      }, 100);
+    }
+
+  },
+
+  render(h) {
+    let el = h(false);
+
+    if (this.show) {
+      el = h('div', {
+        staticClass: 'nuxt-progress',
+        class: {
+          'nuxt-progress-notransition': this.skipTimerCount > 0,
+          'nuxt-progress-failed': !this.canSucceed
+        },
+        style: {
+          width: this.percent + '%',
+          left: this.left
+        }
+      });
+    }
+
+    return el;
+  }
+
+});
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-loading.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_nuxt_loadingvue_type_script_lang_js_ = (nuxt_loadingvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-loading.vue
+var nuxt_loading_render, nuxt_loading_staticRenderFns
+
+
+function nuxt_loading_injectStyles (context) {
+  
+  var style0 = __webpack_require__(20)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
+  components_nuxt_loadingvue_type_script_lang_js_,
+  nuxt_loading_render,
+  nuxt_loading_staticRenderFns,
+  false,
+  nuxt_loading_injectStyles,
+  null,
+  "138ee8c4"
+  
+)
+
+/* harmony default export */ var nuxt_loading = (nuxt_loading_component.exports);
+// EXTERNAL MODULE: ./assets/css/init.css
+var init = __webpack_require__(22);
+
+// EXTERNAL MODULE: ./assets/css/codeStyle.css
+var codeStyle = __webpack_require__(24);
+
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./layouts/layout.vue?vue&type=template&id=4977de61&
+var layoutvue_type_template_id_4977de61_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"layoutBox",attrs:{"id":"layoutBox"}},[_vm._ssrNode("<canvas id=\"canvas\" width=\"1011\" height=\"803\"></canvas> "),_vm._ssrNode("<header"+(_vm._ssrClass("header",_vm.isNavHidden ? 'navUp' : 'navDown'))+">","</header>",[_vm._ssrNode("<section class=\"box header-content\">","</section>",[_vm._ssrNode("<nav>","</nav>",_vm._l((_vm.nav),function(item,index){return _c('nuxt-link',{key:index,class:_vm.navIndex == index ? 'active' : '',attrs:{"to":item.path}},[_vm._v(_vm._s(item.text))])}),1),_vm._ssrNode(" <div class=\"searchBox\"><div class=\"search\""+(_vm._ssrStyle(null,_vm.showSearch ? {paddingLeft: '5px'} : {paddingLeft: '0'}, null))+"><div"+(_vm._ssrClass("text",_vm.showSearch ? 'showText' : 'hiddenText'))+"><input type=\"text\" placeholder=\"你心所想...\""+(_vm._ssrAttr("value",(_vm.searchStr)))+"></div> <div class=\"searchIcon\">"+((!_vm.showSearch)?("<i class=\"iconfont\"></i>"):("<i class=\"iconfont rightIcon\"></i>"))+"</div></div></div>")],2)]),_vm._ssrNode(" "),_vm._ssrNode("<div id=\"mailContent\" class=\"mailContent\">","</div>",[_c('nuxt')],1),_vm._ssrNode(" "),_vm._ssrNode("<footer"+(_vm._ssrClass("layoutFooter",_vm.footerFixed ? 'footerFixed' : ''))+">","</footer>",[_vm._ssrNode("\n\t\t© 2021 - "),_c('nuxt-link',{attrs:{"to":"/"}},[_vm._v("pydw的博客")]),_vm._ssrNode("\n\t\t - Powered by Nuxt.js &amp; Tornado\n\t")],2)],2)}
+var layoutvue_type_template_id_4977de61_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./layouts/layout.vue?vue&type=template&id=4977de61&
+
+// CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/vue-loader/lib??vue-loader-options!./layouts/layout.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ var layoutvue_type_script_lang_js_ = ({
+  data() {
+    return {
+      searchStr: '',
+      showSearch: false,
+      canvasDom: null,
+      isNavHidden: false,
+      layoutBox: null,
+      navIndex: 0,
+      nav: [{
+        path: '/',
+        text: '首页'
+      }, {
+        path: '/article',
+        text: '文章'
+      }, {
+        path: '/project',
+        text: '项目'
+      }, {
+        path: '/about',
+        text: '关于'
+      }, {
+        path: '/allarticle',
+        text: '归档'
+      }]
+    };
+  },
+
+  computed: {
+    footerFixed() {
+      return this.$store.state.footerFixed;
+    }
+
+  },
+  methods: {
+    toShowSearch() {
+      this.showSearch = true;
+    },
+
+    tohiddenSearch() {
+      this.$router.push(`/article?keyword=${this.searchStr}`);
+      this.searchStr = '';
+      this.showSearch = false;
+    },
+
+    bgCanvas() {
+      let canvas = null;
+
+      if (!this.canvasDom) {
+        this.canvasDom = document.querySelector('#canvas');
+        canvas = this.canvasDom;
+      } else {
+        canvas = this.canvasDom;
+      }
+
+      let ctx = canvas.getContext("2d");
+      let cw = canvas.width = window.innerWidth;
+      let cx = cw / 2;
+      let ch = canvas.height = window.innerHeight;
+      let cy = ch / 2;
+      ctx.fillStyle = "#ccc";
+      const linesNum = 16;
+      let linesRy = [];
+      let requestId = null;
+
+      function Line(flag) {
+        this.flag = flag;
+        this.a = {};
+        this.b = {};
+
+        if (flag == "v") {
+          this.a.y = 0;
+          this.b.y = ch;
+          this.a.x = randomIntFromInterval(0, ch);
+          this.b.x = randomIntFromInterval(0, ch);
+        } else if (flag == "h") {
+          this.a.x = 0;
+          this.b.x = cw;
+          this.a.y = randomIntFromInterval(0, cw);
+          this.b.y = randomIntFromInterval(0, cw);
+        }
+
+        this.va = randomIntFromInterval(25, 100) / 100;
+        this.vb = randomIntFromInterval(25, 100) / 100;
+
+        this.draw = function () {
+          ctx.strokeStyle = "#f4f4f4";
+          ctx.beginPath();
+          ctx.moveTo(this.a.x, this.a.y);
+          ctx.lineTo(this.b.x, this.b.y);
+          ctx.stroke();
+        };
+
+        this.update = function () {
+          if (this.flag == "v") {
+            this.a.x += this.va;
+            this.b.x += this.vb;
+          } else if (flag == "h") {
+            this.a.y += this.va;
+            this.b.y += this.vb;
+          }
+
+          this.edges();
+        };
+
+        this.edges = function () {
+          if (this.flag == "v") {
+            if (this.a.x < 0 || this.a.x > cw) {
+              this.va *= -1;
+            }
+
+            if (this.b.x < 0 || this.b.x > cw) {
+              this.vb *= -1;
+            }
+          } else if (flag == "h") {
+            if (this.a.y < 0 || this.a.y > ch) {
+              this.va *= -1;
+            }
+
+            if (this.b.y < 0 || this.b.y > ch) {
+              this.vb *= -1;
+            }
+          }
+        };
+      }
+
+      for (var i = 0; i < linesNum; i++) {
+        var flag = i % 2 == 0 ? "h" : "v";
+        var l = new Line(flag);
+        linesRy.push(l);
+      }
+
+      function Draw() {
+        requestId = window.requestAnimationFrame(Draw);
+        ctx.clearRect(0, 0, cw, ch);
+
+        for (var i = 0; i < linesRy.length; i++) {
+          var l = linesRy[i];
+          l.draw();
+          l.update();
+        }
+
+        for (var i = 0; i < linesRy.length; i++) {
+          var l = linesRy[i];
+
+          for (var j = i + 1; j < linesRy.length; j++) {
+            var l1 = linesRy[j];
+            Intersect2lines(l, l1);
+          }
+        }
+      }
+
+      function Init() {
+        linesRy.length = 0;
+
+        for (var i = 0; i < linesNum; i++) {
+          var flag = i % 2 == 0 ? "h" : "v";
+          var l = new Line(flag);
+          linesRy.push(l);
+        }
+
+        if (requestId) {
+          window.cancelAnimationFrame(requestId);
+          requestId = null;
+        }
+
+        cw = canvas.width = window.innerWidth;
+        cx = cw / 2;
+        ch = canvas.height = window.innerHeight;
+        cy = ch / 2;
+        Draw();
+      }
+
+      ;
+      setTimeout(function () {
+        Init();
+        addEventListener('resize', Init, false);
+      }, 15);
+
+      function Intersect2lines(l1, l2) {
+        var p1 = l1.a,
+            p2 = l1.b,
+            p3 = l2.a,
+            p4 = l2.b;
+        var denominator = (p4.y - p3.y) * (p2.x - p1.x) - (p4.x - p3.x) * (p2.y - p1.y);
+        var ua = ((p4.x - p3.x) * (p1.y - p3.y) - (p4.y - p3.y) * (p1.x - p3.x)) / denominator;
+        var ub = ((p2.x - p1.x) * (p1.y - p3.y) - (p2.y - p1.y) * (p1.x - p3.x)) / denominator;
+        var x = p1.x + ua * (p2.x - p1.x);
+        var y = p1.y + ua * (p2.y - p1.y);
+
+        if (ua > 0 && ub > 0) {
+          markPoint({
+            x: x,
+            y: y
+          });
+        }
+      }
+
+      function markPoint(p) {
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, 2, 0, 2 * Math.PI);
+        ctx.fillStyle = "#eeeeee";
+        ctx.fill();
+      }
+
+      function randomIntFromInterval(mn, mx) {
+        return ~~(Math.random() * (mx - mn + 1) + mn);
+      }
+    },
+
+    scroll() {
+      window.addEventListener('scroll', e => {
+        const top = $(document).scrollTop();
+
+        if (top >= 100) {
+          this.isNavHidden = true;
+        } else {
+          this.isNavHidden = false;
+        }
+      });
+    },
+
+    chanrouter(router) {
+      let index = 9;
+      this.nav.forEach((item, i) => {
+        if (item.path == router.path) {
+          index = i;
+        }
+      });
+      this.navIndex = index;
+    }
+
+  },
+
+  mounted() {
+    this.$nextTick(function () {
+      window.scrollTop = 0;
+      this.bgCanvas();
+      this.scroll();
+    });
+    this.chanrouter(this.$route);
+    const userinfo = localStorage.getItem('userInfo');
+
+    if (!userinfo) {
+      this.$store.commit('changeAverter', Math.floor(Math.random() * 6));
+    } else {
+      let info = JSON.parse(userinfo);
+      this.$store.commit('changeAverter', info.gravatar);
+    }
+  },
+
+  watch: {
+    $route(router) {
+      this.chanrouter(router);
+    }
+
+  }
+});
+// CONCATENATED MODULE: ./layouts/layout.vue?vue&type=script&lang=js&
+ /* harmony default export */ var layouts_layoutvue_type_script_lang_js_ = (layoutvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./layouts/layout.vue
+
+
+
+function layout_injectStyles (context) {
+  
+  var style0 = __webpack_require__(26)
+if (style0.__inject__) style0.__inject__(context)
+
+}
+
+/* normalize component */
+
+var layout_component = Object(componentNormalizer["a" /* default */])(
+  layouts_layoutvue_type_script_lang_js_,
+  layoutvue_type_template_id_4977de61_render,
+  layoutvue_type_template_id_4977de61_staticRenderFns,
+  false,
+  layout_injectStyles,
+  null,
+  "30268829"
+  
+)
+
+/* harmony default export */ var layouts_layout = (layout_component.exports);
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./.nuxt/layouts/default.vue?vue&type=template&id=0040005c&
+var defaultvue_type_template_id_0040005c_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Nuxt')}
+var defaultvue_type_template_id_0040005c_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./.nuxt/layouts/default.vue?vue&type=template&id=0040005c&
+
+// CONCATENATED MODULE: ./.nuxt/layouts/default.vue
+
+var script = {}
+
+
+/* normalize component */
+
+var default_component = Object(componentNormalizer["a" /* default */])(
+  script,
+  defaultvue_type_template_id_0040005c_render,
+  defaultvue_type_template_id_0040005c_staticRenderFns,
+  false,
+  null,
+  null,
+  "a749e898"
+  
+)
+
+/* harmony default export */ var layouts_default = (default_component.exports);
+// CONCATENATED MODULE: ./.nuxt/App.js
+
+
+
+
+
+
+
+
+
+const layouts = {
+  "_layout": sanitizeComponent(layouts_layout),
+  "_default": sanitizeComponent(layouts_default)
+};
+/* harmony default export */ var App = ({
+  render(h, props) {
+    const loadingEl = h('NuxtLoading', {
+      ref: 'loading'
+    });
+    const layoutEl = h(this.layout || 'nuxt');
+    const templateEl = h('div', {
+      domProps: {
+        id: '__layout'
+      },
+      key: this.layoutName
+    }, [layoutEl]);
+    const transitionEl = h('transition', {
+      props: {
+        name: 'layout',
+        mode: 'out-in'
+      },
+      on: {
+        beforeEnter(el) {
+          // Ensure to trigger scroll event after calling scrollBehavior
+          window.$nuxt.$nextTick(() => {
+            window.$nuxt.$emit('triggerScroll');
+          });
+        }
+
+      }
+    }, [templateEl]);
+    return h('div', {
+      domProps: {
+        id: '__nuxt'
+      }
+    }, [loadingEl, transitionEl]);
+  },
+
+  data: () => ({
+    isOnline: true,
+    layout: null,
+    layoutName: '',
+    nbFetching: 0
+  }),
+
+  beforeCreate() {
+    external_vue_default.a.util.defineReactive(this, 'nuxt', this.$options.nuxt);
+  },
+
+  created() {
+    // Add this.$nuxt in child instances
+    this.$root.$options.$nuxt = this;
+
+    if (false) {} // Add $nuxt.error()
+
+
+    this.error = this.nuxt.error; // Add $nuxt.context
+
+    this.context = this.$options.context;
+  },
+
+  async mounted() {
+    this.$loading = this.$refs.loading;
+  },
+
+  watch: {
+    'nuxt.err': 'errorChanged'
+  },
+  computed: {
+    isOffline() {
+      return !this.isOnline;
+    },
+
+    isFetching() {
+      return this.nbFetching > 0;
+    }
+
+  },
+  methods: {
+    refreshOnlineStatus() {
+      if (false) {}
+    },
+
+    async refresh() {
+      const pages = getMatchedComponentsInstances(this.$route);
+
+      if (!pages.length) {
+        return;
+      }
+
+      this.$loading.start();
+      const promises = pages.map(page => {
+        const p = []; // Old fetch
+
+        if (page.$options.fetch && page.$options.fetch.length) {
+          p.push(promisify(page.$options.fetch, this.context));
+        }
+
+        if (page.$fetch) {
+          p.push(page.$fetch());
+        } else {
+          // Get all component instance to call $fetch
+          for (const component of getChildrenComponentInstancesUsingFetch(page.$vnode.componentInstance)) {
+            p.push(component.$fetch());
+          }
+        }
+
+        if (page.$options.asyncData) {
+          p.push(promisify(page.$options.asyncData, this.context).then(newData => {
+            for (const key in newData) {
+              external_vue_default.a.set(page.$data, key, newData[key]);
+            }
+          }));
+        }
+
+        return Promise.all(p);
+      });
+
+      try {
+        await Promise.all(promises);
+      } catch (error) {
+        this.$loading.fail(error);
+        globalHandleError(error);
+        this.error(error);
+      }
+
+      this.$loading.finish();
+    },
+
+    errorChanged() {
+      if (this.nuxt.err) {
+        if (this.$loading) {
+          if (this.$loading.fail) {
+            this.$loading.fail(this.nuxt.err);
+          }
+
+          if (this.$loading.finish) {
+            this.$loading.finish();
+          }
+        }
+
+        let errorLayout = (nuxt_error.options || nuxt_error).layout;
+
+        if (typeof errorLayout === 'function') {
+          errorLayout = errorLayout(this.context);
+        }
+
+        this.setLayout(errorLayout);
+      }
+    },
+
+    setLayout(layout) {
+      if (!layout || !layouts['_' + layout]) {
+        layout = 'default';
+      }
+
+      this.layoutName = layout;
+      this.layout = layouts['_' + layout];
+      return this.layout;
+    },
+
+    loadLayout(layout) {
+      if (!layout || !layouts['_' + layout]) {
+        layout = 'default';
+      }
+
+      return Promise.resolve(layouts['_' + layout]);
+    }
+
+  },
+  components: {
+    NuxtLoading: nuxt_loading
+  }
+});
+// CONCATENATED MODULE: ./.nuxt/store.js
+
+
+external_vue_default.a.use(external_vuex_default.a);
+const VUEX_PROPERTIES = ['state', 'getters', 'actions', 'mutations'];
+let store_store = {};
+
+(function updateModules() {
+  store_store = normalizeRoot(__webpack_require__(28), 'store/index.js'); // If store is an exported method = classic mode (deprecated)
+  // Enforce store modules
+
+  store_store.modules = store_store.modules || {};
+  resolveStoreModules(__webpack_require__(7), 'modules/article.js');
+  resolveStoreModules(__webpack_require__(9), 'modules/hero.js');
+  resolveStoreModules(__webpack_require__(8), 'modules/project.js'); // If the environment supports hot reloading...
+})(); // createStore
+
+
+const createStore = store_store instanceof Function ? store_store : () => {
+  return new external_vuex_default.a.Store(Object.assign({
+    strict: "production" !== 'production'
+  }, store_store));
+};
+
+function normalizeRoot(moduleData, filePath) {
+  moduleData = moduleData.default || moduleData;
+
+  if (moduleData.commit) {
+    throw new Error(`[nuxt] ${filePath} should export a method that returns a Vuex instance.`);
+  }
+
+  if (typeof moduleData !== 'function') {
+    // Avoid TypeError: setting a property that has only a getter when overwriting top level keys
+    moduleData = Object.assign({}, moduleData);
+  }
+
+  return normalizeModule(moduleData, filePath);
+}
+
+function normalizeModule(moduleData, filePath) {
+  if (moduleData.state && typeof moduleData.state !== 'function') {
+    console.warn(`'state' should be a method that returns an object in ${filePath}`);
+    const state = Object.assign({}, moduleData.state); // Avoid TypeError: setting a property that has only a getter when overwriting top level keys
+
+    moduleData = Object.assign({}, moduleData, {
+      state: () => state
+    });
+  }
+
+  return moduleData;
+}
+
+function resolveStoreModules(moduleData, filename) {
+  moduleData = moduleData.default || moduleData; // Remove store src + extension (./foo/index.js -> foo/index)
+
+  const namespace = filename.replace(/\.(js|mjs)$/, '');
+  const namespaces = namespace.split('/');
+  let moduleName = namespaces[namespaces.length - 1];
+  const filePath = `store/${filename}`;
+  moduleData = moduleName === 'state' ? normalizeState(moduleData, filePath) : normalizeModule(moduleData, filePath); // If src is a known Vuex property
+
+  if (VUEX_PROPERTIES.includes(moduleName)) {
+    const property = moduleName;
+    const propertyStoreModule = getStoreModule(store_store, namespaces, {
+      isProperty: true
+    }); // Replace state since it's a function
+
+    mergeProperty(propertyStoreModule, moduleData, property);
+    return;
+  } // If file is foo/index.js, it should be saved as foo
+
+
+  const isIndexModule = moduleName === 'index';
+
+  if (isIndexModule) {
+    namespaces.pop();
+    moduleName = namespaces[namespaces.length - 1];
+  }
+
+  const storeModule = getStoreModule(store_store, namespaces);
+
+  for (const property of VUEX_PROPERTIES) {
+    mergeProperty(storeModule, moduleData[property], property);
+  }
+
+  if (moduleData.namespaced === false) {
+    delete storeModule.namespaced;
+  }
+}
+
+function normalizeState(moduleData, filePath) {
+  if (typeof moduleData !== 'function') {
+    console.warn(`${filePath} should export a method that returns an object`);
+    const state = Object.assign({}, moduleData);
+    return () => state;
+  }
+
+  return normalizeModule(moduleData, filePath);
+}
+
+function getStoreModule(storeModule, namespaces, {
+  isProperty = false
+} = {}) {
+  // If ./mutations.js
+  if (!namespaces.length || isProperty && namespaces.length === 1) {
+    return storeModule;
+  }
+
+  const namespace = namespaces.shift();
+  storeModule.modules[namespace] = storeModule.modules[namespace] || {};
+  storeModule.modules[namespace].namespaced = true;
+  storeModule.modules[namespace].modules = storeModule.modules[namespace].modules || {};
+  return getStoreModule(storeModule.modules[namespace], namespaces, {
+    isProperty
+  });
+}
+
+function mergeProperty(storeModule, moduleData, property) {
+  if (!moduleData) {
+    return;
+  }
+
+  if (property === 'state') {
+    storeModule.state = moduleData || storeModule.state;
+  } else {
+    storeModule[property] = Object.assign({}, storeModule[property], moduleData);
+  }
+}
+// CONCATENATED MODULE: ./.nuxt/index.js
+
+
+
+
+
+
+
+
+
+
+
+
+/* Plugins */
+// Component: <ClientOnly>
+
+external_vue_default.a.component(external_vue_client_only_default.a.name, external_vue_client_only_default.a); // TODO: Remove in Nuxt 3: <NoSsr>
+
+external_vue_default.a.component(external_vue_no_ssr_default.a.name, { ...external_vue_no_ssr_default.a,
+
+  render(h, ctx) {
+    if (false) {}
+
+    return external_vue_no_ssr_default.a.render(h, ctx);
+  }
+
+}); // Component: <NuxtChild>
+
+external_vue_default.a.component(nuxt_child.name, nuxt_child);
+external_vue_default.a.component('NChild', nuxt_child); // Component NuxtLink is imported in server.js or client.js
+// Component: <Nuxt>
+
+external_vue_default.a.component(components_nuxt.name, components_nuxt);
+Object.defineProperty(external_vue_default.a.prototype, '$nuxt', {
+  get() {
+    const globalNuxt = this.$root.$options.$nuxt;
+
+    if (false) {}
+
+    return globalNuxt;
+  },
+
+  configurable: true
+});
+external_vue_default.a.use(external_vue_meta_default.a, {
+  "keyName": "head",
+  "attribute": "data-n-head",
+  "ssrAttribute": "data-n-head-ssr",
+  "tagIDKeyName": "hid"
+});
+const defaultTransition = {
+  "name": "page",
+  "mode": "out-in",
+  "appear": false,
+  "appearClass": "appear",
+  "appearActiveClass": "appear-active",
+  "appearToClass": "appear-to"
+};
+const originalRegisterModule = external_vuex_default.a.Store.prototype.registerModule;
+
+function registerModule(path, rawModule, options = {}) {
+  const preserveState =  false && (false);
+  return originalRegisterModule.call(this, path, rawModule, {
+    preserveState,
+    ...options
+  });
+}
+
+async function createApp(ssrContext, config = {}) {
+  const router = await createRouter(ssrContext, config);
+  const store = createStore(ssrContext); // Add this.$router into store actions/mutations
+
+  store.$router = router; // Fix SSR caveat https://github.com/nuxt/nuxt.js/issues/3757#issuecomment-414689141
+
+  store.registerModule = registerModule; // Create Root instance
+  // here we inject the router and store to all child components,
+  // making them available everywhere as `this.$router` and `this.$store`.
+
+  const app = {
+    head: {
+      "title": "Pydw",
+      "meta": [{
+        "charset": "utf-8"
+      }, {
+        "http-equiv": "cleartype",
+        "content": "on"
+      }, {
+        "http-equiv": "Cache-Control"
+      }, {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1, user-scalable=no"
+      }, {
+        "hid": "description",
+        "name": "description",
+        "content": "Pydw, 前端开发, blog"
+      }, {
+        "hid": "keywords",
+        "name": "keywords",
+        "content": "前端开发，JavaScript, Python, Vue，nuxt"
+      }, {
+        "name": "author",
+        "content": "849656290@qq.com"
+      }],
+      "link": [{
+        "rel": "icon",
+        "type": "image\u002Fx-icon",
+        "href": "\u002Ffavicon.ico"
+      }],
+      "script": [{
+        "src": "https:\u002F\u002Fcdn.bootcss.com\u002Fjquery\u002F3.3.1\u002Fjquery.min.js"
+      }, {
+        "src": "https:\u002F\u002Fcdn.bootcss.com\u002Fhighlight.js\u002F9.12.0\u002Fhighlight.min.js"
+      }],
+      "style": []
+    },
+    store,
+    router,
+    nuxt: {
+      defaultTransition,
+      transitions: [defaultTransition],
+
+      setTransitions(transitions) {
+        if (!Array.isArray(transitions)) {
+          transitions = [transitions];
+        }
+
+        transitions = transitions.map(transition => {
+          if (!transition) {
+            transition = defaultTransition;
+          } else if (typeof transition === 'string') {
+            transition = Object.assign({}, defaultTransition, {
+              name: transition
+            });
+          } else {
+            transition = Object.assign({}, defaultTransition, transition);
+          }
+
+          return transition;
+        });
+        this.$options.nuxt.transitions = transitions;
+        return transitions;
+      },
+
+      err: null,
+      dateErr: null,
+
+      error(err) {
+        err = err || null;
+        app.context._errored = Boolean(err);
+        err = err ? normalizeError(err) : null;
+        let nuxt = app.nuxt; // to work with @vue/composition-api, see https://github.com/nuxt/nuxt.js/issues/6517#issuecomment-573280207
+
+        if (this) {
+          nuxt = this.nuxt || this.$options.nuxt;
+        }
+
+        nuxt.dateErr = Date.now();
+        nuxt.err = err; // Used in src/server.js
+
+        if (ssrContext) {
+          ssrContext.nuxt.error = err;
+        }
+
+        return err;
+      }
+
+    },
+    ...App
+  }; // Make app available into store via this.app
+
+  store.app = app;
+  const next = ssrContext ? ssrContext.next : location => app.router.push(location); // Resolve route
+
+  let route;
+
+  if (ssrContext) {
+    route = router.resolve(ssrContext.url).route;
+  } else {
+    const path = getLocation(router.options.base, router.options.mode);
+    route = router.resolve(path).route;
+  } // Set context to app.context
+
+
+  await setContext(app, {
+    store,
+    route,
+    next,
+    error: app.nuxt.error.bind(app),
+    payload: ssrContext ? ssrContext.payload : undefined,
+    req: ssrContext ? ssrContext.req : undefined,
+    res: ssrContext ? ssrContext.res : undefined,
+    beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined,
+    ssrContext
+  });
+
+  function inject(key, value) {
+    if (!key) {
+      throw new Error('inject(key, value) has no key provided');
+    }
+
+    if (value === undefined) {
+      throw new Error(`inject('${key}', value) has no value provided`);
+    }
+
+    key = '$' + key; // Add into app
+
+    app[key] = value; // Add into context
+
+    if (!app.context[key]) {
+      app.context[key] = value;
+    } // Add into store
+
+
+    store[key] = app[key]; // Check if plugin not already installed
+
+    const installKey = '__nuxt_' + key + '_installed__';
+
+    if (external_vue_default.a[installKey]) {
+      return;
+    }
+
+    external_vue_default.a[installKey] = true; // Call Vue.use() to install the plugin into vm
+
+    external_vue_default.a.use(() => {
+      if (!Object.prototype.hasOwnProperty.call(external_vue_default.a.prototype, key)) {
+        Object.defineProperty(external_vue_default.a.prototype, key, {
+          get() {
+            return this.$root.$options[key];
+          }
+
+        });
+      }
+    });
+  } // Inject runtime config as $config
+
+
+  inject('config', config);
+
+  if (false) {} // Add enablePreview(previewData = {}) in context for plugins
+
+
+  if (false) {} // Plugin execution
+  // Lock enablePreview in context
+
+
+  if (false) {} // Wait for async component to be resolved first
+
+
+  await new Promise((resolve, reject) => {
+    const {
+      route
+    } = router.resolve(app.context.route.fullPath); // Ignore 404s rather than blindly replacing URL
+
+    if (!route.matched.length && false) {
+      return resolve();
+    }
+
+    router.replace(route, resolve, err => {
+      // https://github.com/vuejs/vue-router/blob/v3.4.3/src/util/errors.js
+      if (!err._isRouter) return reject(err);
+      if (err.type !== 2
+      /* NavigationFailureType.redirected */
+      ) return resolve(); // navigated to a different route in router guard
+
+      const unregister = router.afterEach(async (to, from) => {
+        if ( true && ssrContext && ssrContext.url) {
+          ssrContext.url = to.fullPath;
+        }
+
+        app.context.route = await getRouteData(to);
+        app.context.params = to.params || {};
+        app.context.query = to.query || {};
+        unregister();
+        resolve();
+      });
+    });
+  });
+  return {
+    store,
+    app,
+    router
+  };
+}
+
+
+// CONCATENATED MODULE: ./.nuxt/components/nuxt-link.server.js
+
+/* harmony default export */ var nuxt_link_server = ({
+  name: 'NuxtLink',
+  extends: external_vue_default.a.component('RouterLink'),
+  props: {
+    prefetch: {
+      type: Boolean,
+      default: true
+    },
+    noPrefetch: {
+      type: Boolean,
+      default: false
+    }
+  }
+});
+// CONCATENATED MODULE: ./.nuxt/server.js
+
+
+
+
+
+
+
+ // should be included after ./index.js
+// Update serverPrefetch strategy
+
+external_vue_default.a.config.optionMergeStrategies.serverPrefetch = external_vue_default.a.config.optionMergeStrategies.created; // Fetch mixin
+
+if (!external_vue_default.a.__nuxt__fetch__mixin__) {
+  external_vue_default.a.mixin(fetch_server);
+  external_vue_default.a.__nuxt__fetch__mixin__ = true;
+} // Component: <NuxtLink>
+
+
+external_vue_default.a.component(nuxt_link_server.name, nuxt_link_server);
+external_vue_default.a.component('NLink', nuxt_link_server);
+
+if (!global.fetch) {
+  global.fetch = external_node_fetch_default.a;
+}
+
+const noopApp = () => new external_vue_default.a({
+  render: h => h('div', {
+    domProps: {
+      id: '__nuxt'
+    }
+  })
+});
+
+const createNext = ssrContext => opts => {
+  // If static target, render on client-side
+  ssrContext.redirected = opts;
+
+  if (ssrContext.target === 'static' || !ssrContext.res) {
+    ssrContext.nuxt.serverRendered = false;
+    return;
+  }
+
+  let fullPath = Object(external_ufo_["withQuery"])(opts.path, opts.query);
+  const $config = ssrContext.runtimeConfig || {};
+  const routerBase = $config._app && $config._app.basePath || '/';
+
+  if (!fullPath.startsWith('http') && routerBase !== '/' && !fullPath.startsWith(routerBase)) {
+    fullPath = Object(external_ufo_["joinURL"])(routerBase, fullPath);
+  } // Avoid loop redirect
+
+
+  if (decodeURI(fullPath) === decodeURI(ssrContext.url)) {
+    ssrContext.redirected = false;
+    return;
+  }
+
+  ssrContext.res.writeHead(opts.status, {
+    Location: Object(external_ufo_["normalizeURL"])(fullPath)
+  });
+  ssrContext.res.end();
+}; // This exported function will be called by `bundleRenderer`.
+// This is where we perform data-prefetching to determine the
+// state of our application before actually rendering it.
+// Since data fetching is async, this function is expected to
+// return a Promise that resolves to the app instance.
+
+
+/* harmony default export */ var server = __webpack_exports__["default"] = (async ssrContext => {
+  // Create ssrContext.next for simulate next() of beforeEach() when wanted to redirect
+  ssrContext.redirected = false;
+  ssrContext.next = createNext(ssrContext); // Used for beforeNuxtRender({ Components, nuxtState })
+
+  ssrContext.beforeRenderFns = []; // Nuxt object (window.{{globals.context}}, defaults to window.__NUXT__)
+
+  ssrContext.nuxt = {
+    layout: 'default',
+    data: [],
+    fetch: {},
+    error: null,
+    state: null,
+    serverRendered: true,
+    routePath: ''
+  };
+  ssrContext.fetchCounters = {}; // Remove query from url is static target
+  // Public runtime config
+
+  ssrContext.nuxt.config = ssrContext.runtimeConfig.public;
+
+  if (ssrContext.nuxt.config._app) {
+    __webpack_require__.p = Object(external_ufo_["joinURL"])(ssrContext.nuxt.config._app.cdnURL, ssrContext.nuxt.config._app.assetsPath);
+  } // Create the app definition and the instance (created for each request)
+
+
+  const {
+    app,
+    router,
+    store
+  } = await createApp(ssrContext, ssrContext.runtimeConfig.private);
+
+  const _app = new external_vue_default.a(app); // Add ssr route path to nuxt context so we can account for page navigation between ssr and csr
+
+
+  ssrContext.nuxt.routePath = app.context.route.path; // Add meta infos (used in renderer.js)
+
+  ssrContext.meta = _app.$meta(); // Keep asyncData for each matched component in ssrContext (used in app/utils.js via this.$ssrContext)
+
+  ssrContext.asyncData = {};
+
+  const beforeRender = async () => {
+    // Call beforeNuxtRender() methods
+    await Promise.all(ssrContext.beforeRenderFns.map(fn => promisify(fn, {
+      Components,
+      nuxtState: ssrContext.nuxt
+    })));
+
+    ssrContext.rendered = () => {
+      // Add the state from the vuex store
+      ssrContext.nuxt.state = store.state;
+    };
+  };
+
+  const renderErrorPage = async () => {
+    // Don't server-render the page in static target
+    if (ssrContext.target === 'static') {
+      ssrContext.nuxt.serverRendered = false;
+    } // Load layout for error page
+
+
+    const layout = (nuxt_error.options || nuxt_error).layout;
+    const errLayout = typeof layout === 'function' ? layout.call(nuxt_error, app.context) : layout;
+    ssrContext.nuxt.layout = errLayout || 'default';
+    await _app.loadLayout(errLayout);
+
+    _app.setLayout(errLayout);
+
+    await beforeRender();
+    return _app;
+  };
+
+  const render404Page = () => {
+    app.context.error({
+      statusCode: 404,
+      path: ssrContext.url,
+      message: 'This page could not be found'
+    });
+    return renderErrorPage();
+  }; // Components are already resolved by setContext -> getRouteData (app/utils.js)
+
+
+  const Components = getMatchedComponents(app.context.route);
+  /*
+  ** Dispatch store nuxtServerInit
+  */
+
+  if (store._actions && store._actions.nuxtServerInit) {
+    try {
+      await store.dispatch('nuxtServerInit', app.context);
+    } catch (err) {
+      console.debug('Error occurred when calling nuxtServerInit: ', err.message);
+      throw err;
+    }
+  } // ...If there is a redirect or an error, stop the process
+
+
+  if (ssrContext.redirected) {
+    return noopApp();
+  }
+
+  if (ssrContext.nuxt.error) {
+    return renderErrorPage();
+  }
+  /*
+  ** Call global middleware (nuxt.config.js)
+  */
+
+
+  let midd = [];
+  midd = midd.map(name => {
+    if (typeof name === 'function') {
+      return name;
+    }
+
+    if (typeof _nuxt_middleware[name] !== 'function') {
+      app.context.error({
+        statusCode: 500,
+        message: 'Unknown middleware ' + name
+      });
+    }
+
+    return _nuxt_middleware[name];
+  });
+  await middlewareSeries(midd, app.context); // ...If there is a redirect or an error, stop the process
+
+  if (ssrContext.redirected) {
+    return noopApp();
+  }
+
+  if (ssrContext.nuxt.error) {
+    return renderErrorPage();
+  }
+  /*
+  ** Set layout
+  */
+
+
+  let layout = Components.length ? Components[0].options.layout : nuxt_error.layout;
+
+  if (typeof layout === 'function') {
+    layout = layout(app.context);
+  }
+
+  await _app.loadLayout(layout);
+
+  if (ssrContext.nuxt.error) {
+    return renderErrorPage();
+  }
+
+  layout = _app.setLayout(layout);
+  ssrContext.nuxt.layout = _app.layoutName;
+  /*
+  ** Call middleware (layout + pages)
+  */
+
+  midd = [];
+  layout = sanitizeComponent(layout);
+
+  if (layout.options.middleware) {
+    midd = midd.concat(layout.options.middleware);
+  }
+
+  Components.forEach(Component => {
+    if (Component.options.middleware) {
+      midd = midd.concat(Component.options.middleware);
+    }
+  });
+  midd = midd.map(name => {
+    if (typeof name === 'function') {
+      return name;
+    }
+
+    if (typeof _nuxt_middleware[name] !== 'function') {
+      app.context.error({
+        statusCode: 500,
+        message: 'Unknown middleware ' + name
+      });
+    }
+
+    return _nuxt_middleware[name];
+  });
+  await middlewareSeries(midd, app.context); // ...If there is a redirect or an error, stop the process
+
+  if (ssrContext.redirected) {
+    return noopApp();
+  }
+
+  if (ssrContext.nuxt.error) {
+    return renderErrorPage();
+  }
+  /*
+  ** Call .validate()
+  */
+
+
+  let isValid = true;
+
+  try {
+    for (const Component of Components) {
+      if (typeof Component.options.validate !== 'function') {
+        continue;
+      }
+
+      isValid = await Component.options.validate(app.context);
+
+      if (!isValid) {
+        break;
+      }
+    }
+  } catch (validationError) {
+    // ...If .validate() threw an error
+    app.context.error({
+      statusCode: validationError.statusCode || '500',
+      message: validationError.message
+    });
+    return renderErrorPage();
+  } // ...If .validate() returned false
+
+
+  if (!isValid) {
+    // Render a 404 error page
+    return render404Page();
+  } // If no Components found, returns 404
+
+
+  if (!Components.length) {
+    return render404Page();
+  } // Call asyncData & fetch hooks on components matched by the route.
+
+
+  const asyncDatas = await Promise.all(Components.map(Component => {
+    const promises = []; // Call asyncData(context)
+
+    if (Component.options.asyncData && typeof Component.options.asyncData === 'function') {
+      const promise = promisify(Component.options.asyncData, app.context);
+      promise.then(asyncDataResult => {
+        ssrContext.asyncData[Component.cid] = asyncDataResult;
+        applyAsyncData(Component);
+        return asyncDataResult;
+      });
+      promises.push(promise);
+    } else {
+      promises.push(null);
+    } // Call fetch(context)
+
+
+    if (Component.options.fetch && Component.options.fetch.length) {
+      promises.push(Component.options.fetch(app.context));
+    } else {
+      promises.push(null);
+    }
+
+    return Promise.all(promises);
+  })); // datas are the first row of each
+
+  ssrContext.nuxt.data = asyncDatas.map(r => r[0] || {}); // ...If there is a redirect or an error, stop the process
+
+  if (ssrContext.redirected) {
+    return noopApp();
+  }
+
+  if (ssrContext.nuxt.error) {
+    return renderErrorPage();
+  } // Call beforeNuxtRender methods & add store state
+
+
+  await beforeRender();
+  return _app;
+});
+
+/***/ }),
+/* 30 */
+/***/ (function(module, exports) {
+
+module.exports = require("axios");
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports) {
+
+module.exports = require("clipboard");
+
+/***/ })
+/******/ ]);
 //# sourceMappingURL=server.js.map
