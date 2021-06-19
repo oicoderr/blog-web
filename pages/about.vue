@@ -4,7 +4,7 @@
       <div class="info">
         <p>
           <i class="iconfont icon">&#xe670;</i>
-          <span>我是Pydw, 一个前端开发程序员</span>
+          <span>我是Pydw, 一个前端开发程序猿</span>
         </p>
         <p>
           <i class="iconfont icon">&#xe65b;</i>
@@ -112,7 +112,7 @@ export default {
         var myGeo = new BMap.Geocoder();
         // 将地址解析结果显示在地图上,并调整地图视野
         myGeo.getPoint(
-          "中关村软件园",
+          "海淀区万柳中路",
           point => {
             if (point) {
               map.centerAndZoom(point, 16);

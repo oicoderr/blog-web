@@ -15,23 +15,23 @@
     "img/star-1.2f2c251.png",
     "img/star-2.09cd48f.png",
     "img/weixin.ec3a78b.png",
-    "pages/about.3d7cf55.js",
+    "pages/about.ca0e9ff.js",
     "pages/allarticle.0c1a164.js",
     "pages/article/_id.8ce90e3.js",
     "pages/article/index.4cc9a99.js",
     "pages/hero.c131149.js",
     "pages/index.4ec2982.js",
     "pages/project.f6f1d8a.js",
-    "runtime.5a0a815.js"
+    "runtime.eed17f3.js"
   ],
   "initial": [
-    "runtime.5a0a815.js",
+    "runtime.eed17f3.js",
     "commons/app.1f35141.js",
     "app.921c250.js"
   ],
   "async": [
     "commons/pages/allarticle/pages/article/_id/pages/article/index/pages/hero/pages/project.dbba4e1.js",
-    "pages/about.3d7cf55.js",
+    "pages/about.ca0e9ff.js",
     "pages/allarticle.0c1a164.js",
     "pages/article/_id.8ce90e3.js",
     "pages/article/index.4cc9a99.js",
@@ -65,6 +65,16 @@
     "51603402": [
       16,
       5
+    ],
+    "52615372": [
+      14,
+      7,
+      13,
+      9,
+      8,
+      11,
+      12,
+      10
     ],
     "54547279": [
       4
@@ -677,7 +687,7 @@
     "d805ce5a": [
       5
     ],
-    "a65f4cfc": [
+    "5ce87362": [
       14,
       7,
       13,
@@ -785,17 +795,7 @@
       12,
       10
     ],
-    "0929cc94": [
-      14,
-      7,
-      13,
-      9,
-      8,
-      11,
-      12,
-      10
-    ],
-    "26b73c67": [
+    "a8f998d4": [
       14,
       7,
       13,
@@ -1019,7 +1019,7 @@
       12,
       10
     ],
-    "5df4aebe": [
+    "f0440e44": [
       14,
       7,
       13,
@@ -1029,7 +1029,7 @@
       12,
       10
     ],
-    "6d28e10a": [
+    "d1dba9ac": [
       14,
       7,
       13,
@@ -1146,7 +1146,7 @@
       "commons/pages/allarticle/pages/article/_id/pages/article/index/pages/hero/pages/project.dbba4e1.js"
     ],
     "2aff1868": [
-      "pages/about.3d7cf55.js"
+      "pages/about.ca0e9ff.js"
     ],
     "99bb2954": [
       "pages/allarticle.0c1a164.js"
@@ -1167,7 +1167,7 @@
       "pages/project.f6f1d8a.js"
     ],
     "6fca0322": [
-      "runtime.5a0a815.js"
+      "runtime.eed17f3.js"
     ]
   }
 }
