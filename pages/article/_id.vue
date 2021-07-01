@@ -7,7 +7,7 @@
       </div>
       <div v-html="article.editContent"></div>
     </div>
-    
+
     <!-- 文章简要 -->
     <div class="info articleDetailBox">
       <p>
@@ -25,7 +25,7 @@
         >
       </p>
       <p>作者：{{ article.author.name }}</p>
-      <p>链接：http://stealfood.com/article/{{ article.id }}</p>
+      <p>链接：https://stealfood.com/article/{{ article.id }}</p>
       <p>
         著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
       </p>
@@ -53,11 +53,16 @@
           <span>{{ article.likeCount }}</span
           >人喜欢
         </div>
-        <div class="view"><span>{{this.comments.length}}</span>条评论</div>
+        <div class="view">
+          <span>{{ this.comments.length }}</span
+          >条评论
+        </div>
       </div>
       <div class="arcMataShear">
         <span class="pay iconfont" title="打赏一下">&#xe614;</span>
-        <span class="shear iconfont" @click="showShear" title="分享呀">&#xe6a5;</span>
+        <span class="shear iconfont" @click="showShear" title="分享呀"
+          >&#xe6a5;</span
+        >
       </div>
     </div>
 
@@ -116,14 +121,13 @@
                 >
                   <i class="iconfont">&#xe6b4;</i>{{ comment.likes }}
                 </div>
-                <div
-                  class="showReply"
-                  @click="toShowReply(index)"
-                >
+                <div class="showReply" @click="toShowReply(index)">
                   <i class="iconfont">&#xe65d;</i>
                   <span>评论 + </span>
                 </div>
-                <div class="time">{{ getDateDiff(comment.create_time || comment.update_time) }}</div>
+                <div class="time">
+                  {{ getDateDiff(comment.create_time || comment.update_time) }}
+                </div>
               </div>
               <div class="replyConten" v-if="comment.isShow">
                 <div
@@ -132,12 +136,14 @@
                   :key="j"
                 >
                   <div class="replyAverter">
-                    <img :src="
-                      replys.from_.gravatar
-                        ? avarterArr[replys.from_.gravatar]
-                        : avarterArr[0]
-                    "
-                    alt="" />
+                    <img
+                      :src="
+                        replys.from_.gravatar
+                          ? avarterArr[replys.from_.gravatar]
+                          : avarterArr[0]
+                      "
+                      alt=""
+                    />
                   </div>
                   <div class="replayItemContet">
                     <div class="userInfoMata">
@@ -164,7 +170,7 @@
                       <span>
                         <i class="iconfont">&#xe662;</i>
                         {{ replys.province }} - {{ replys.city }}
-                        </span>
+                      </span>
                     </div>
                     <div class="replyPepole" v-if="replys.to_.name">
                       回复
@@ -174,7 +180,9 @@
                     </div>
                     <div class="rContent">{{ replys.content }}</div>
                     <div class="rTime">
-                      <span>{{ getDateDiff(comment.create_time || comment.update_time) }}</span>
+                      <span>{{
+                        getDateDiff(comment.create_time || comment.update_time)
+                      }}</span>
                       <span
                         class="toShowReply"
                         @click="toReplyComment(replys.from_, index)"
@@ -351,7 +359,7 @@ export default {
       // console.log('comment: ')
       // console.info(this.comments[index])
       if (!this.comments[index].isShow) {
-        const res = await getReply({articleId: target.id, commentId: id});
+        const res = await getReply({ articleId: target.id, commentId: id });
         this.comments[index].replyList = res.result.list;
       }
       this.comments[index].isShow = !this.comments[index].isShow;
@@ -391,7 +399,10 @@ export default {
       };
       const res = await addReply(params);
       if (res.code === 200) {
-        const reply = await getReply({articleId: this.$route.params.id, commentId: cid});
+        const reply = await getReply({
+          articleId: this.$route.params.id,
+          commentId: cid
+        });
         for (let i = 0, len = this.comments.length; i < len; i++) {
           if (this.comments[i].id == cid) {
             this.comments[i].replyList = reply.result.list;
@@ -431,7 +442,7 @@ export default {
         localStorage.setItem("likeComment", JSON.stringify(commentLikeArr));
       }
     },
-    
+
     linkInit() {
       const likeArr = JSON.parse(localStorage.getItem("linkArr") || "[]");
       const id = this.$route.params.id;
