@@ -17,15 +17,15 @@
     "img/weixin.ec3a78b.png",
     "pages/about.ca0e9ff.js",
     "pages/allarticle.0c1a164.js",
-    "pages/article/_id.8ce90e3.js",
+    "pages/article/_id.8cb71f9.js",
     "pages/article/index.4cc9a99.js",
     "pages/hero.c131149.js",
     "pages/index.4ec2982.js",
     "pages/project.f6f1d8a.js",
-    "runtime.eed17f3.js"
+    "runtime.b4a8204.js"
   ],
   "initial": [
-    "runtime.eed17f3.js",
+    "runtime.b4a8204.js",
     "commons/app.1f35141.js",
     "app.921c250.js"
   ],
@@ -33,7 +33,7 @@
     "commons/pages/allarticle/pages/article/_id/pages/article/index/pages/hero/pages/project.dbba4e1.js",
     "pages/about.ca0e9ff.js",
     "pages/allarticle.0c1a164.js",
-    "pages/article/_id.8ce90e3.js",
+    "pages/article/_id.8cb71f9.js",
     "pages/article/index.4cc9a99.js",
     "pages/hero.c131149.js",
     "pages/index.4ec2982.js",
@@ -977,11 +977,11 @@
       16,
       5
     ],
-    "b9df25c0": [
+    "6b52523f": [
       16,
       5
     ],
-    "70bb486c": [
+    "38fd2d8b": [
       16,
       5
     ],
@@ -1152,7 +1152,7 @@
       "pages/allarticle.0c1a164.js"
     ],
     "249c1620": [
-      "pages/article/_id.8ce90e3.js"
+      "pages/article/_id.8cb71f9.js"
     ],
     "6e7e4bb8": [
       "pages/article/index.4cc9a99.js"
@@ -1167,7 +1167,7 @@
       "pages/project.f6f1d8a.js"
     ],
     "6fca0322": [
-      "runtime.eed17f3.js"
+      "runtime.b4a8204.js"
     ]
   }
 }
