@@ -10,6 +10,7 @@ module.exports = {
   /*
    ** Headers of the page
    */
+  telemetry: false,
   head: {
     title: "Pydw",
     meta: [
