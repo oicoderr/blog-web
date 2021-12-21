@@ -1,4 +1,5 @@
 module.exports = {
+  telemetry: false,
   server: {
     port: "80",
     host: "0.0.0.0"
@@ -10,7 +11,6 @@ module.exports = {
   /*
    ** Headers of the page
    */
-  telemetry: false,
   head: {
     title: "Pydw",
     meta: [
@@ -49,7 +49,7 @@ module.exports = {
    */
   build: {
     vendor: ["axios"],
-    analyze: true, // 开启打包分析
+    analyze: false, // 开启打包分析
     /*
      ** Run ESLint on save
      */

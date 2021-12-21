@@ -1592,19 +1592,19 @@ function shouldScrollToTop(route) {
 
 
 
-const _f34b0378 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 1).then(__webpack_require__.bind(null, 78)));
+const _5a9ea462 = () => interopDefault(__webpack_require__.e(/* import() | pages/about */ 1).then(__webpack_require__.bind(null, 78)));
 
-const _25d5110e = () => interopDefault(__webpack_require__.e(/* import() | pages/allarticle */ 2).then(__webpack_require__.bind(null, 79)));
+const _4035e063 = () => interopDefault(__webpack_require__.e(/* import() | pages/allarticle */ 2).then(__webpack_require__.bind(null, 79)));
 
-const _edf2bfa0 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/index */ 4).then(__webpack_require__.bind(null, 76)));
+const _30e614bb = () => interopDefault(__webpack_require__.e(/* import() | pages/article/index */ 4).then(__webpack_require__.bind(null, 76)));
 
-const _2404ef13 = () => interopDefault(__webpack_require__.e(/* import() | pages/hero */ 5).then(__webpack_require__.bind(null, 80)));
+const _0db52228 = () => interopDefault(__webpack_require__.e(/* import() | pages/hero */ 5).then(__webpack_require__.bind(null, 80)));
 
-const _21bbd410 = () => interopDefault(__webpack_require__.e(/* import() | pages/project */ 7).then(__webpack_require__.bind(null, 81)));
+const _9d77664a = () => interopDefault(__webpack_require__.e(/* import() | pages/project */ 7).then(__webpack_require__.bind(null, 81)));
 
-const _251eee98 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 3).then(__webpack_require__.bind(null, 77)));
+const _56d809e3 = () => interopDefault(__webpack_require__.e(/* import() | pages/article/_id */ 3).then(__webpack_require__.bind(null, 77)));
 
-const _b3db4dee = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 82)));
+const _1b2eeed8 = () => interopDefault(__webpack_require__.e(/* import() | pages/index */ 6).then(__webpack_require__.bind(null, 82)));
 
 const emptyFn = () => {};
 
@@ -1617,31 +1617,31 @@ const routerOptions = {
   scrollBehavior: router_scrollBehavior,
   routes: [{
     path: "/about",
-    component: _f34b0378,
+    component: _5a9ea462,
     name: "about"
   }, {
     path: "/allarticle",
-    component: _25d5110e,
+    component: _4035e063,
     name: "allarticle"
   }, {
     path: "/article",
-    component: _edf2bfa0,
+    component: _30e614bb,
     name: "article"
   }, {
     path: "/hero",
-    component: _2404ef13,
+    component: _0db52228,
     name: "hero"
   }, {
     path: "/project",
-    component: _21bbd410,
+    component: _9d77664a,
     name: "project"
   }, {
     path: "/article/:id",
-    component: _251eee98,
+    component: _56d809e3,
     name: "article-id"
   }, {
     path: "/",
-    component: _b3db4dee,
+    component: _1b2eeed8,
     name: "index"
   }],
   fallback: false
@@ -1839,7 +1839,7 @@ var nuxt_error_component = Object(componentNormalizer["a" /* default */])(
   false,
   injectStyles,
   null,
-  "8344e0e0"
+  "47baf31c"
   
 )
 
@@ -2143,7 +2143,7 @@ var nuxt_loading_component = Object(componentNormalizer["a" /* default */])(
   false,
   nuxt_loading_injectStyles,
   null,
-  "138ee8c4"
+  "89bccd60"
   
 )
 
@@ -2484,7 +2484,7 @@ var layout_component = Object(componentNormalizer["a" /* default */])(
   false,
   layout_injectStyles,
   null,
-  "30268829"
+  "1992511d"
   
 )
 
@@ -2510,7 +2510,7 @@ var default_component = Object(componentNormalizer["a" /* default */])(
   false,
   null,
   null,
-  "a749e898"
+  "523d0840"
   
 )
 

@@ -4,13 +4,13 @@ import { normalizeURL, decode } from 'ufo'
 import { interopDefault } from './utils'
 import scrollBehavior from './router.scrollBehavior.js'
 
-const _f34b0378 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
-const _25d5110e = () => interopDefault(import('../pages/allarticle.vue' /* webpackChunkName: "pages/allarticle" */))
-const _edf2bfa0 = () => interopDefault(import('../pages/article/index.vue' /* webpackChunkName: "pages/article/index" */))
-const _2404ef13 = () => interopDefault(import('../pages/hero.vue' /* webpackChunkName: "pages/hero" */))
-const _21bbd410 = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
-const _251eee98 = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
-const _b3db4dee = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
+const _5a9ea462 = () => interopDefault(import('../pages/about.vue' /* webpackChunkName: "pages/about" */))
+const _4035e063 = () => interopDefault(import('../pages/allarticle.vue' /* webpackChunkName: "pages/allarticle" */))
+const _30e614bb = () => interopDefault(import('../pages/article/index.vue' /* webpackChunkName: "pages/article/index" */))
+const _0db52228 = () => interopDefault(import('../pages/hero.vue' /* webpackChunkName: "pages/hero" */))
+const _9d77664a = () => interopDefault(import('../pages/project.vue' /* webpackChunkName: "pages/project" */))
+const _56d809e3 = () => interopDefault(import('../pages/article/_id.vue' /* webpackChunkName: "pages/article/_id" */))
+const _1b2eeed8 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 const emptyFn = () => {}
 
@@ -25,31 +25,31 @@ export const routerOptions = {
 
   routes: [{
     path: "/about",
-    component: _f34b0378,
+    component: _5a9ea462,
     name: "about"
   }, {
     path: "/allarticle",
-    component: _25d5110e,
+    component: _4035e063,
     name: "allarticle"
   }, {
     path: "/article",
-    component: _edf2bfa0,
+    component: _30e614bb,
     name: "article"
   }, {
     path: "/hero",
-    component: _2404ef13,
+    component: _0db52228,
     name: "hero"
   }, {
     path: "/project",
-    component: _21bbd410,
+    component: _9d77664a,
     name: "project"
   }, {
     path: "/article/:id",
-    component: _251eee98,
+    component: _56d809e3,
     name: "article-id"
   }, {
     path: "/",
-    component: _b3db4dee,
+    component: _1b2eeed8,
     name: "index"
   }],
 
