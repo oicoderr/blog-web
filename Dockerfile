@@ -15,8 +15,8 @@ RUN npm config set registry https://registry.npm.taobao.org
 # 清除缓存
 RUN npm cache clean --force
 # 安装依赖
-RUN npm install --no-package-lock
+RUN npm install
 # 构建，生成dist文件
 RUN npm run build
 # start
-RUN chmod 777 ./run.sh
+CMD ["npm","start"]
