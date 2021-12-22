@@ -3,7 +3,7 @@ import axios from "../config/axios";
 const baseUrl =
   process.env.NODE_ENV === "production"
     ? "https://www.stealfood.com/v1/"
-    : "http://127.0.0.1:8103/";
+    : "http://127.0.0.1:8110/";
 // const baseUrl = 'http://127.0.0.1:3009/api/'
 
 export const getArticle = (params = {}) =>

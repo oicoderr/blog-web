@@ -8,8 +8,8 @@ RUN mkdir -p /www/blogNuxt
 COPY . /www/blogNuxt
 # 切换工作目录到blog
 WORKDIR /www/blogNuxt
-# 暴露端口8103
-EXPOSE 8103
+# 暴露端口8110
+EXPOSE 8110
 # 配置npm的远程仓库
 RUN npm config set registry https://registry.npm.taobao.org
 # 清除缓存

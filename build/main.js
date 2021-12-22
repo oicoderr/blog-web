@@ -206,7 +206,7 @@ module.exports = /******/ (function(modules) {
                       case 0:
                         app = new __WEBPACK_IMPORTED_MODULE_1_koa___default.a();
                         host = process.env.HOST || "127.0.0.1";
-                        port = process.env.PORT || 8103;
+                        port = process.env.PORT || 8110;
 
                         // Import and Set Nuxt.js options
 
