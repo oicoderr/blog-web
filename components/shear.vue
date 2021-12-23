@@ -49,14 +49,6 @@
       ><i class="iconfont">&#xe6e2;</i></a
     >
     <a
-      title="人人网"
-      target="_blank"
-      :href="
-        `http://widget.renren.com/dialog/share?resourceUrl=${url}&srcUrl=${url}&title=${title}`
-      "
-      ><i class="iconfont">&#xe608;</i></a
-    >
-    <a
       title="twitter"
       target="_blank"
       :href="`https://twitter.com/intent/tweet?text=${title}&url=${url}`"

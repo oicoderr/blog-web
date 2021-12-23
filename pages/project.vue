@@ -2,10 +2,10 @@
 	<section class="projectBox">
 		<div class="item" v-for="(item, index) in project" :key="index">
 			<div class="iconfont iconfont1 icon" :class="item.icon"></div>
-			<h3 class="title">{{item.title}}</h3>
-			<p class="desc">{{item.desc}}</p>
+			<h3 class="title" :title="item.title">{{item.title}}</h3>
+			<p class="desc" :title="item.describe" >{{item.describe}}</p>
 			<div class="btn">
-				<a class="github" target="_blank" :href="item.github"><i class="iconfont">&#xe8b6;</i>github</a>
+				<a class="github" target="_blank" :href="item.git"><i class="iconfont">&#xe8b6;</i>github</a>
 				<a class="view" target="_blank" :href="item.view"><i class="iconfont">&#xe7b9;</i>view</a>
 			</div>
 		</div>
@@ -32,7 +32,7 @@ export default {
 		if (this.project.length == 0) {
 			getProject({}).then(res => {
 				if (res.code === 200) {
-					this.$store.commit('getProject', res.result.list)
+					this.$store.commit('getProject', res.result.project)
 					this.$nextTick(() => {
 						this.footer()
 					})
@@ -104,6 +104,7 @@ export default {
 	height: 50px;
 	margin-top: 10px;
 	overflow: hidden;
+  text-overflow: ellipsis;
 	line-height: 26px;
 	margin-bottom: 10px;
 }

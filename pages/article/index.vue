@@ -3,17 +3,17 @@
         <main class="box main">
             <section class="article">
                 <div class="item" v-for="(item, index) in article" :key="index">
-                    <a href="javascript:void(0)" class="article-title" @click="goDetail(item.id, article)">
+                    <a href="javascript:void(0)" class="article-title" @click="goDetail(item.id)">
                         <h2>{{item.title}}</h2>
                     </a>
-                    <p class="article-desc">{{item.desc}}</p>
+                    <p class="article-desc">{{item.describe}}</p>
                     <div class="article-info">
-                        <span class="time">{{item.update_time || item.create_time }}</span>
+                        <span class="time">{{item.update_at || item.create_at }}</span>
                             <i class="iconfont">&#xe600;</i>
                         <span class="time">
-                          <strong>{{item.viewCount}}</strong>次阅读</span>
+                          <strong>{{item.reading}}</strong>次阅读</span>
                             <i class="iconfont">&#xe600;</i>
-                        <span class="time"><strong>{{item.likeCount}}</strong>人喜欢</span>
+                        <span class="time"><strong>{{item.likeView}}</strong>人喜欢</span>
                     </div>
                 </div>
                 <div class="loadmore" v-if="!hasMore">没有更多数据了</div>
@@ -22,35 +22,27 @@
                 </div>
             </section>
             <section class="side">
-                <div class="hot" id = "sideHot">
-                    <div class="hot-title">热门文章</div>
-                    <div class="hot-article">
-                        <h3 v-for="(item, index) in hotArticle" :key="index" @click="goDetail(item.id, hotArticle)">
-                            <a href="javascript:void(0)">{{item.title}}</a>
-                        </h3>
+              <div :class="showFixedTag ? 'fixedCategories' : ''">
+                <div class="categories" id="categories">
+                    <div class="hot-title">类目</div>
+                    <div class="tag-list">
+                        <nuxt-link
+                          v-for="(item, index) in categories"
+                          :key="index"
+                          :to="`/article?category=${item.id}`">{{item.name}}</nuxt-link>
                     </div>
                 </div>
-                <div :class="showFixedTag ? 'fixedTag' : ''">
-                  <div class="tags" id = "tags">
-                      <div class="hot-title">标签</div>
-                      <div class="tag-list">
-                          <nuxt-link
-                            v-for="(item, index) in tags.result.list"
-                            :key="index"
-                            :to="`/article?tag=${item.id}`">{{item.name}}<span>({{item.meta.count}})</span></nuxt-link>
-                      </div>
-                  </div>
-                  <div class="smallNav">
-                      <div class="flag"></div>
-                      <div>
-                          <nuxt-link to="/about">我</nuxt-link>
-                          <i>•</i>
-                          <nuxt-link to="/hero">留言墙</nuxt-link>
-                          <i>•</i>
-                          <nuxt-link to="/allarticle">归档</nuxt-link>
-                      </div>
-                  </div>
+                <div class="smallNav">
+                    <div class="flag"></div>
+                    <div>
+                        <nuxt-link to="/about">我</nuxt-link>
+                        <i>•</i>
+                        <nuxt-link to="/hero">留言墙</nuxt-link>
+                        <i>•</i>
+                        <nuxt-link to="/archive">归档</nuxt-link>
+                    </div>
                 </div>
+              </div>
             </section>
         </main>
         <to-top></to-top>
@@ -58,15 +50,15 @@
 </template>
 
 <script>
-import {getArticle, getTag} from '../../api'
+import {getArticles, getArticleDetails, getCategory} from '../../api'
 import ToTop from '../../components/toTop.vue'
 import FooterMixin from '../../utils/footer-mixin'
 import TimeMixin from '../../utils/time-mixin'
 
 let page = 1
-let fetchTags = getTag()
-let fetchHotArticle = getArticle({top: true})
-let fetchArticle = getArticle({current_page: page, publish: true})
+let limit = 20
+let fetchCategories = getCategory()
+let fetchArticles = getArticles({page: page, limit: limit})
 
 export default {
   head () {
@@ -79,20 +71,18 @@ export default {
   components: {
     ToTop
   },
-  async asyncData ({ params }) {
-    const tags = await fetchTags
-    const articles = await fetchArticle
-    const hotArticle = await fetchHotArticle
+  async asyncData () {
+    const categories  = await fetchCategories
+    const articles = await fetchArticles
+    console.log(999, fetchArticles.then((res)=>{console.log(67, res)}))
     return {
-      tags,
-      article: articles.result.list,
-      hotArticle: hotArticle.result.list
+      categories: categories.result.category,
+      article: articles.result.post,
     }
   },
   data () {
     return {
       showFixedTag: false,
-      sideHot: null,
       isLoadingData: false,
       hasMore: true,
       page: page
@@ -108,19 +98,19 @@ export default {
       this.isLoadingData = true
       this.page += 1
       let params = {current_page: this.page, ...opts}
-      getArticle(params).then(res => {
+      getArticles(params).then(res => {
         this.isLoadingData = false
         const {result} = res
-        if (this.page >= result.pagination.total_page) {
+        if (this.page >= result.totalPage) {
           this.hasMore = false
         }
         let arr = []
         if (opts.tag || opts.keyword || opts.isNew) {
-          arr = result.list
+          arr = result.post
         } else {
-          arr = this.article.concat(result.list)
+          arr = this.article.concat(result.post)
         }
-        // this.$store.commit('getArticle', arr)
+        // this.$store.commit('getArticles', arr)
         this.article = arr
         this.$nextTick(() => {
           this.footer()
@@ -129,22 +119,22 @@ export default {
         this.isLoadingData = false
       })
     },
-    goDetail(id, data) {
-      const arr = data.filter(item => item.id == id)
-      this.$store.commit('selectArticle', arr[0])
+    async goDetail(id) {
+      const res = await getArticleDetails(id)
+      this.$store.commit('selectArticle', res.result)
       this.$router.push('/article/' + id)
     }
   },
   mounted () {
     this.$nextTick(() => {
-      this.sideHot = document.querySelector('#sideHot')
       this.mailContentDom = document.querySelector('#mailContent')
       this.windowHeight = document.documentElement.clientHeight
       this.footer()
       window.addEventListener('scroll', (e) => {
         const top = $(document).scrollTop()
         const mailContentDomHeight = this.mailContentDom.offsetHeight
-        this.showFixedTag = (top >= (this.sideHot.offsetHeight + 80))
+        // this.showFixedTag = (top >= (this.sideHot.offsetHeight + 80))
+        this.showFixedTag = true
         if ((this.windowHeight + top) > (mailContentDomHeight - 50) && !this.isLoadingData && this.hasMore) {
           this.loadMore()
         }
@@ -260,7 +250,7 @@ export default {
       box-sizing: border-box;
       padding-top: 24px;
     }
-    .tagSide {
+    .categoriesSide {
         width: 250px;
         box-sizing: border-box;
         padding-top: 24px;
@@ -286,7 +276,7 @@ export default {
         white-space: nowrap;
         text-overflow: ellipsis;
     }
-    .tags{
+    .categories{
         margin-top: 24px;
     }
     .tag-list a{
@@ -315,7 +305,7 @@ export default {
         padding: 0 5px;
         color: #797979;
     }
-    .fixedTag{
+    .fixedCategories{
       position: fixed;
       width: 250px;
       top: 60px;

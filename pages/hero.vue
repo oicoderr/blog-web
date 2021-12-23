@@ -5,14 +5,13 @@
 				:class="btnShow ? 'animate' : ''">我要上墙!</button>
 		<div class="heroList">
 			<div class="item" v-for="(item, index) in hero" :key="index">
-				<div class="time">{{item.create_time}}</div>
+				<div class="time">{{item.create_at.substring(0, 10)}}</div>
 				<p class="content">{{item.content}}</p>
-				<div class="author">——{{item.fans.name}}</div>
+				<div class="author">——{{item.nickname}}</div>
 				<div class="bgcircle"></div>
 			</div>
 		</div>
-		<div class="loadmore more" v-if="hasMore" @click="getHeroData">{{loadText}}</div>
-		<div class="nomore" v-else>木有更多鸟</div>
+		<div class="nomore" v-if="hero.length">木有更多了...</div>
 		<transition name="fade">
 			<div class="popup"
 				 v-show="showUp"
@@ -27,8 +26,6 @@
 
 <script>
 import Comment from '../components/comment'
-import FooterMixin from '../utils/footer-mixin'
-import TimeMixin from '../utils/time-mixin'
 import {getHero, addHero } from '../api'
 var timer = null
 
@@ -45,12 +42,9 @@ export default {
 			btnShow: false,
 			showUp: false,
 			page: 0,
-			hasMore: true,
-			loadText: '加载中...',
       userInfo: {},
 		}
 	},
-	mixins: [FooterMixin, TimeMixin],
 	computed: {
 		hero () {
 			return this.$store.state.hero.data
@@ -69,31 +63,16 @@ export default {
 			this.showUp = false
 		},
 		async getHeroData() {
-			this.page += 1
-			this.loadText = '加载中...'
-			const res = await getHero({current_page: this.page, state: 1})
+			const res = await getHero()
 			if (res.code === 200) {
-				let list = res.result.list || []
-				if (this.page > 1) {
-					list = this.hero.concat(list)
-				}
+				let list = res.result.heropsot || []
 				this.$store.commit('getHero', list)
 			}
-			if (this.page >= res.result.pagination.total_page) {
-				this.hasMore = false
-			} else {
-				this.hasMore = true
-			}
-			this.loadText = '加载更多'
-			this.$nextTick(() => {
-				this.footer()
-			})
 		},
 		async toAddHero(user) {
       const res = await addHero(user)
       if (res.code === 200) {
         this.showUp = false
-        this.page = 0
         this.getHeroData()
       }
 		}

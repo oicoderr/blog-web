@@ -2,10 +2,13 @@
 import axios from 'axios'
 
 axios.interceptors.response.use((response) => {
-	// Do something with response data
-	return response.data ? response.data : {};
+	// return response.data ? response.data : {};
+  if (response.status === 200) {
+    return response.data
+  } else {
+    return Promise.reject(response)
+  }
 }, function (error) {
-	// Do something with response error
 	return Promise.reject(error);
 })
 

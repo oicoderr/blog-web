@@ -5,15 +5,15 @@
 		</div>
 		<div class="inputBox" :style="isShowBtn ? {height: '180px'} : null">
 			<div class="user" v-if="showUserSet">
-				<input type="text" v-model="userinfo.name" placeholder="称呼*" />
-				<input type="email" v-model="userinfo.email" placeholder="请填写真实邮箱(不会公开)*" />
-				<input type="text" v-model="userinfo.site" placeholder="网站（http, https:// 开头)" />
+				<input type="text" v-model="userInfo.nickname" placeholder="称呼*" />
+				<input type="email" v-model="userInfo.email" placeholder="请填写真实邮箱(不会公开)*" />
+				<input type="text" v-model="userInfo.home_page" placeholder="网站（http, https:// 开头)" />
 				<span class="confirm" @click="conform" title="确认信息后即可发送留言"> <!-- v-if="showReset" -->
           <i class="iconfont">&#xe640;</i>
         </span>
 			</div>
 			<div class="hasuser" v-else>
-				<span class="name">{{userinfo.name}}</span>
+				<span class="name">{{userInfo.nickname}}</span>
 				<div class="userSet">
 					<div class="setBtn"><i class="iconfont">&#xe60e;</i>账户设置</div>
 					<div class="setCon">
@@ -23,14 +23,14 @@
 				</div>
 			</div>
 			<div class="comContent">
-				<textarea v-model="content"
+				<textarea v-model="userInfo.content"
 						  @focus="contenFocus"
 						  @blur="contenBlur"
-						  :placeholder="at.name ? `回复 ${at.name}:` : '这位大侠说说你的看法~'"
+						  :placeholder="at.nickname ? `回复 ${at.nickname}:` : '这位大侠说说你的看法~'"
 						  :style="reply ? {height: '43px'} : null"
 						  ></textarea>
 				<div v-if="reply" class="rBtn">
-					<span @click="concleReply" v-if="at.name && !content">取消</span>
+					<span @click="concleReply" v-if="at.nickname && !content">取消</span>
 					<span @click="submit" v-else>评论</span>
 				</div>
 			</div>
@@ -46,7 +46,6 @@
 
 <script>
 import {avarterArr} from '../utils/blowser'
-import {createFans} from '../api'
 
 export default {
 	props: {
@@ -67,12 +66,14 @@ export default {
 	},
 	data () {
 		return {
-			content: '',
 			isShowBtn: false,
-			userinfo: {
-				name: '',
+			userInfo: {
+				nickname: '',
 				email: '',
-				site: '',
+				home_page: '',
+        content: '',
+        state: 1,
+        agent: '',
 				gravatar: ''
 			},
 			regexs: {
@@ -101,12 +102,12 @@ export default {
 			}
 		},
 		validate() {
-			const {name, email, site} = this.userinfo
-			if (!name.trim()) {
-				alert('请输入昵称哦~~'); 
+			const {nickname, email, home_page} = this.userInfo
+			if (!nickname.length) {
+				alert('请输入昵称哦~~');
 				return false
 			}
-			if (!email.trim()) {
+			if (!email.length) {
 				alert('请输入邮箱哦~~');
 				return false
 			}
@@ -114,7 +115,7 @@ export default {
 				alert('请输入正确邮箱格式哦~~');
 				return false
 			}
-			if (site && !this.regexs.url.test(site)) {
+			if (home_page && !this.regexs.url.test(home_page)) {
 				alert('请输入正确网址格式哦~~');
 				return false
 			}
@@ -122,28 +123,25 @@ export default {
 		},
 		submit() {
 			if (this.validate()){
-				if (!this.content.trim()) {
+				if (!this.userInfo.content.length) {
 					alert('请输入评论内容哦~~');
 					return false
 				}
-				// this.userinfo.gravatar = this.averterNum
-			  // localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
-        this.userinfo = JSON.parse(localStorage.getItem('userInfo'))
-				const user = {
-					content: this.content
-				}
-				if (this.reply) {
-					if (this.at.name) {
-						user.to = this.at
-					}
-					user.from = this.userinfo
-					user.cid = this.cid
-				} else {
-					user.author = this.userinfo
-				}
+        localStorage.setItem('userInfo', JSON.stringify(this.userInfo))
+
+				// if (this.reply) {
+				// 	if (this.at.nickname) {
+				// 		user.to = this.at
+				// 	}
+				// 	user.from = this.userInfo
+				// 	user.cid = this.cid
+				// } else {
+				// 	user.author = this.userInfo
+				// }
 				this.showUserSet = false
 				this.showReset = false
-				this.$emit('pushComment', user)
+				this.$emit('pushComment', this.userInfo)
+
 				setTimeout(()=> {
 					this.content = ''
 					this.isShowBtn = false
@@ -157,28 +155,27 @@ export default {
 		clearInfo() {
 			this.showUserSet = true
 			this.showReset = true
-			this.userinfo = {
-				name: '',
+			this.userInfo = {
+				nickname: '',
 				email: '',
-				site: '',
+				home_page: '',
+        content: '',
+        state: 1,
+        agent: '',
 				gravatar: this.averterNum
 			}
 			localStorage.setItem('userInfo', '')
 		},
 		conform() {
 			if (this.validate()){
-        this.userinfo.gravatar = this.averterNum
-        this.$options.methods.createFans_(this.userinfo)
+        this.userInfo.gravatar = this.averterNum
+        this.$options.methods.createFans_(this.userInfo)
 				this.showUserSet = false
 				this.showReset = false
 			}
 		},
-    async createFans_(user) {
-      const res = await createFans(user)
-      if (res.code) {
-        this.userinfo = res.result
-        localStorage.setItem('userInfo', JSON.stringify(this.userinfo))
-      }
+    createFans_(user) {
+      localStorage.setItem('userInfo', JSON.stringify(user))
     },
 
 		concleReply() {
@@ -186,9 +183,9 @@ export default {
 		}
 	},
 	mounted() {
-		const userinfo = localStorage.getItem('userInfo')
-		if (userinfo) {
-			this.userinfo = JSON.parse(userinfo)
+		const userInfo = localStorage.getItem('userInfo')
+		if (userInfo) {
+			this.userInfo = JSON.parse(userInfo)
 			this.showUserSet = false
 		}
 	}

@@ -30,9 +30,9 @@
 						<span class="lt1">文章</span>
 						<span class="lt2">Article</span>
 					</nuxt-link>
-          <nuxt-link to="/allarticle">
+          <nuxt-link to="/archive">
 						<span class="lt1">归档</span>
-						<span class="lt2">ALLArticle</span>
+						<span class="lt2">Archive</span>
 					</nuxt-link>
 				</div>
 				<div class="about-nav">

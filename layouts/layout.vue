@@ -36,7 +36,7 @@
 		</div>
 		<footer class="layoutFooter" :class="footerFixed ? 'footerFixed' : ''">
 			© 2021 - <nuxt-link to="/">pydw的博客</nuxt-link>
-			 - Powered by Nuxt.js & Tornado
+			 - Powered by Nuxt.js & FastApi
 		</footer>
 	</div>
 </template>
@@ -69,7 +69,7 @@ export default {
 					text: '关于'
 				},
         {
-					path: '/allarticle',
+					path: '/archive',
 					text: '归档'
 				}
 			]

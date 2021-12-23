@@ -3,29 +3,27 @@
     <!-- md 文章详情 -->
     <div class="markdown articleDetailBox">
       <div class="title">
-        <h1>{{ article.title }}</h1>
+        <h1>{{ article.post.title }}</h1>
       </div>
-      <div v-html="article.editContent"></div>
+      <div v-html="article.post.htmlBody"></div>
     </div>
 
     <!-- 文章简要 -->
     <div class="info articleDetailBox">
       <p>
         本文于
-        {{ article.update_time || article.create_time }} 发布，当前已被围观
-        {{ article.viewCount }} 次
+        {{ article.post.update_at.substring(0, 10) || article.post.create_at.substring(0, 10) }} 发布，当前已被围观
+        {{ article.post.reading }} 次<span v-if="article.post.likeView">，喜欢了{{article.post.likeView}}次</span>
       </p>
       <p>
-        标签：<nuxt-link
-          v-for="(tag, index) in article.tag"
-          :key="index"
+        类目：<nuxt-link
           to="/article"
           class="tagLink"
-          >{{ tag.name }}</nuxt-link
+          >{{ article.category.name }}</nuxt-link
         >
       </p>
-      <p>作者：{{ article.author.name }}</p>
-      <p>链接：https://stealfood.com/article/{{ article.id }}</p>
+      <p>作者：pydw</p>
+      <p>链接：https://stealfood.com/article/{{ article.post.id }}</p>
       <p>
         著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
       </p>
@@ -40,7 +38,7 @@
       >
         <shear
           :title="article.title"
-          :url="`https://blog.Pydw.me/article/${article.id}`"
+          :url="`https://stealfood.com/article/${article.post.id}`"
         ></shear>
       </div>
     </transition>
@@ -50,11 +48,11 @@
         <div class="like" @click="toLike">
           <i class="iconfont" v-if="isLike" style="color: #51ce23">&#xe63b;</i>
           <i class="iconfont" v-else>&#xe65c;</i>
-          <span>{{ article.likeCount }}</span
+          <span>{{ article.post.likeView }}</span
           >人喜欢
         </div>
         <div class="view">
-          <span>{{ this.comments.length }}</span
+          <span>{{ article.comment.length }}</span
           >条评论
         </div>
       </div>
@@ -72,46 +70,30 @@
       <div class="arcCommentList">
         <div
           class="arcCommentItem"
-          v-for="(comment, index) in comments"
+          v-for="(comment, index) in article.comment"
           :key="index"
         >
           <div class="userAverter">
             <img
               :src="
-                comment.from_.gravatar
-                  ? avarterArr[comment.from_.gravatar]
+                comment.gravatar
+                  ? avarterArr[comment.gravatar]
                   : avarterArr[0]
               "
               alt=""
             />
           </div>
           <div class="userComment">
+
             <div class="userInfo">
               <div class="userInfoMata">
-                <a class="name" :href="comment.from_.site" target="_blank">{{
-                  comment.from_.name
-                }}</a>
-                <span>
-                  <i class="iconfont">
-                    {{
-                      currentSystem(comment.agent) === "Mac"
-                        ? "&#xe64b;"
-                        : "&#xec83;"
-                    }}
-                  </i>
-                  {{ currentSystem(comment.agent) }}
-                </span>
-                <span
-                  ><i class="iconfont">&#xe68f;</i
-                  >{{ getBrowser(comment.agent) }}</span
-                >
-                <span
-                  ><i class="iconfont">&#xe662;</i>{{ comment.province }} -
-                  {{ comment.city }}</span
-                >
+                <a class="name" :href="comment.home_page" target="_blank">{{comment.nickname}}
+                </a>
               </div>
             </div>
+
             <div class="itemContent">{{ comment.content }}</div>
+<!--
             <div class="replyBox">
               <div class="replyTitle">
                 <div
@@ -126,7 +108,7 @@
                   <span>评论 + </span>
                 </div>
                 <div class="time">
-                  {{ getDateDiff(comment.create_time || comment.update_time) }}
+                  {{ getDateDiff(comment.create_at || comment.update_at) }}
                 </div>
               </div>
               <div class="replyConten" v-if="comment.isShow">
@@ -149,9 +131,9 @@
                     <div class="userInfoMata">
                       <a
                         class="name"
-                        :href="replys.from_.site"
+                        :href="replys.site"
                         target="_blank"
-                        >{{ replys.from_.name }}</a
+                        >{{ replys.nickname }}</a
                       >
                       <span>
                         <i class="iconfont">
@@ -181,7 +163,7 @@
                     <div class="rContent">{{ replys.content }}</div>
                     <div class="rTime">
                       <span>{{
-                        getDateDiff(comment.create_time || comment.update_time)
+                        getDateDiff(comment.create_at || comment.update_at)
                       }}</span>
                       <span
                         class="toShowReply"
@@ -202,6 +184,7 @@
                 </div>
               </div>
             </div>
+           -->
           </div>
         </div>
       </div>
@@ -216,8 +199,7 @@ import Comment from "../../components/comment";
 import FooterMixin from "../../utils/footer-mixin";
 import TimeMixin from "../../utils/time-mixin";
 import {
-  getArticle,
-  getComment,
+  getArticleDetails,
   addReply,
   getReply,
   addComment,
@@ -230,7 +212,7 @@ export default {
   layout: "layout",
   head() {
     return {
-      title: this.article.title || `Pydw | blog`
+      title: this.article.title || `Pydw | 文章详情`
     };
   },
   validate({ params }) {
@@ -241,15 +223,48 @@ export default {
     Shear,
     Comment
   },
-  async asyncData({ params }) {
-    const res = await getArticle({ id: params.id });
-    return { article: res.result };
-  },
   data() {
     return {
       isShowShear: true,
       isLike: false,
-      comments: [],
+      article: {
+        post: {
+          body: "",
+          category_id: 26,
+          create_at: "",
+          describe: "",
+          htmlBody: "",
+          id: 1,
+          likeView: 0,
+          reading: 0,
+          status: 1,
+          title: "",
+          update_at: "",
+        },
+        category:{
+          create_at: "",
+          describe: "",
+          id: 1,
+          name: "",
+          update_at: "",
+        },
+        comment: [
+          {
+            content: "",
+            create_at: "",
+            email: "",
+            gravatar: 1,
+            home_page: "",
+            id: 1,
+            ip: "",
+            nickname: "",
+            post_id: 1,
+            replied_id: null,
+            state: 1,
+            update_at: "",
+          }
+        ]
+      },
       conmentsPage: 0,
       avarterArr,
       isCommentLike: true
@@ -265,28 +280,6 @@ export default {
           hljs.highlightBlock(block);
         });
         this.footer();
-      });
-    },
-    getComment() {
-      const post_id = this.$route.params.id;
-      const likeComment = JSON.parse(
-        localStorage.getItem("likeComment") || "[]"
-      );
-      getComment({ post_id }).then(res => {
-        let comments = res.result.list || [];
-        if (comments.length) {
-          comments.forEach(item => {
-            item.isShow = false;
-            (item.replyList = []), (item.at = {});
-            if (likeComment.indexOf(item.id) >= 0) {
-              item.isLike = true;
-            } else {
-              item.isLike = false;
-            }
-          });
-        }
-        this.comments = comments;
-        this.$nextTick(() => this.footer());
       });
     },
     getBrowser(agent) {
@@ -355,14 +348,14 @@ export default {
     },
 
     async toShowReply(index) {
-      const { id, target } = this.comments[index];
+      const { id, target } = this.article.comment[index];
       // console.log('comment: ')
-      // console.info(this.comments[index])
-      if (!this.comments[index].isShow) {
+      // console.info(this.article.comment[index])
+      if (!this.article.comment[index].isShow) {
         const res = await getReply({ articleId: target.id, commentId: id });
-        this.comments[index].replyList = res.result.list;
+        this.article.comment[index].replyList = res.result.list;
       }
-      this.comments[index].isShow = !this.comments[index].isShow;
+      this.article.comment[index].isShow = !this.article.comment[index].isShow;
     },
 
     async putComment(user) {
@@ -372,21 +365,20 @@ export default {
       };
       const res = await addComment(params);
       if (res.code === 200) {
-        this.getComment();
-        this.article.likeCount += 1;
+        this.article.likeView += 1;
       }
     },
 
     toConcleReply(index) {
-      this.comments[index].at = {};
+      this.article.comment[index].at = {};
     },
 
     toReplyComment(from, index) {
       // console.log('from :')
       // console.info(from)
-      this.comments[index].at = from;
+      this.article.comment[index].at = from;
       // console.log('at :')
-      // console.info(this.comments[index].at)
+      // console.info(this.article.comment[index].at)
     },
 
     async putReply(user) {
@@ -403,10 +395,10 @@ export default {
           articleId: this.$route.params.id,
           commentId: cid
         });
-        for (let i = 0, len = this.comments.length; i < len; i++) {
-          if (this.comments[i].id == cid) {
-            this.comments[i].replyList = reply.result.list;
-            this.comments[i].reply += 1;
+        for (let i = 0, len = this.article.comment.length; i < len; i++) {
+          if (this.article.comment[i].id == cid) {
+            this.article.comment[i].replyList = reply.result.list;
+            this.article.comment[i].reply += 1;
             break;
           }
         }
@@ -423,7 +415,7 @@ export default {
         likeArr.push(this.$route.params.id);
         localStorage.setItem("linkArr", JSON.stringify(likeArr));
         this.isLike = true;
-        this.article.likeCount += 1;
+        this.article.likeView += 1;
       }
     },
 
@@ -437,30 +429,23 @@ export default {
           localStorage.getItem("likeComment") || "[]"
         );
         commentLikeArr.push(id);
-        this.comments[index].isLike = true;
-        this.comments[index].likes += 1;
+        this.article.comment[index].isLike = true;
+        this.article.comment[index].likes += 1;
         localStorage.setItem("likeComment", JSON.stringify(commentLikeArr));
-      }
-    },
-
-    linkInit() {
-      const likeArr = JSON.parse(localStorage.getItem("linkArr") || "[]");
-      const id = this.$route.params.id;
-      if (likeArr.length) {
-        const arr = likeArr.filter(item => item === id);
-        this.isLike = arr[0] ? true : false;
       }
     },
     ...mapMutations({
       changeScroll: "changeScroll"
     })
   },
-  created() {
+  async created() {
     this.changeScroll(0);
+    // this.article = this.$store.state.article.selectArticle
+    const postId = this.$route.params.id
+    const res = await getArticleDetails(postId);
+    this.article = res.result
   },
   mounted() {
-    this.linkInit();
-    this.getComment();
     this.codehl();
   }
 };
