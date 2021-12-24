@@ -6,7 +6,7 @@
                     <a href="javascript:void(0)" class="article-title" @click="goDetail(item.id)">
                         <h2>{{item.title}}</h2>
                     </a>
-                    <p class="article-desc">{{item.describe}}</p>
+                    <p class="article-desc">{{item.characterization}}</p>
                     <div class="article-info">
                         <span class="time">{{item.update_at || item.create_at }}</span>
                             <i class="iconfont">&#xe600;</i>
@@ -74,7 +74,6 @@ export default {
   async asyncData () {
     const categories  = await fetchCategories
     const articles = await fetchArticles
-    console.log(999, fetchArticles.then((res)=>{console.log(67, res)}))
     return {
       categories: categories.result.category,
       article: articles.result.post,

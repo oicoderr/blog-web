@@ -232,7 +232,7 @@ export default {
           body: "",
           category_id: 26,
           create_at: "",
-          describe: "",
+          characterization: "",
           htmlBody: "",
           id: 1,
           likeView: 0,
@@ -243,7 +243,7 @@ export default {
         },
         category:{
           create_at: "",
-          describe: "",
+          characterization: "",
           id: 1,
           name: "",
           update_at: "",

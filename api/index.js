@@ -1,13 +1,6 @@
 import axios from "../config/axios";
 
-// const baseUrl =
-//   process.env.NODE_ENV === "production"
-//     ? "https://www.stealfood.com/v1/"
-//     : "http://127.0.0.1:8110/";
 const baseUrl = 'https://www.stealfood.com/v1/'
-
-
-
 
 export const getComment = params => axios.get(`${baseUrl}comment/get`, { params });
 

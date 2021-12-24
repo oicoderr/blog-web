@@ -4,7 +4,7 @@
       <div class="info">
         <p>
           <i class="iconfont icon">&#xe670;</i>
-          <span>我是Pydw, 一个前端开发程序猿</span>
+          <span>Pydw 一个前端开发程序猿</span>
         </p>
         <p>
           <i class="iconfont icon">&#xe65b;</i>
@@ -12,7 +12,7 @@
         </p>
         <p>
           <i class="iconfont icon">&#xe63b;</i>
-          <span>喜欢coding、看书、电影、农药</span>
+          <span>喜欢coding、看书、电影、撸啊撸</span>
         </p>
         <p>
           <i class="iconfont icon">&#xe6c3;</i>
