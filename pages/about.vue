@@ -112,7 +112,7 @@ export default {
         var myGeo = new BMap.Geocoder();
         // 将地址解析结果显示在地图上,并调整地图视野
         myGeo.getPoint(
-          "海淀区万柳中路",
+          "海淀区长春桥路15号",
           point => {
             if (point) {
               map.centerAndZoom(point, 16);
@@ -130,7 +130,7 @@ export default {
       };
       const script = document.createElement("script");
       script.type = "text/javascript";
-      script.src = `https://api.map.baidu.com/api?v=2.0&ak=BGfk56dKPEOpvSLiLNuXqqbUVNrPSAKF&s=1&callback=initialize`;
+      script.src = `https://api.map.baidu.com/api?v=2.0&ak=ZqVw1VxXBVn7u2PUafUfxNA9KaWiA6zp&callback=initialize`
       document.body.appendChild(script);
     },
     canvasAnimation(ctx, w, h, ratio) {
