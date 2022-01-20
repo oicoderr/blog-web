@@ -56,7 +56,7 @@ import FooterMixin from '../../utils/footer-mixin'
 import TimeMixin from '../../utils/time-mixin'
 
 let page = 1
-let limit = 20
+let limit = 10
 let fetchCategories = getCategory()
 let fetchArticles = getArticles({page: page, limit: limit})
 
@@ -96,7 +96,7 @@ export default {
     loadMore(opts = {}) {
       this.isLoadingData = true
       this.page += 1
-      let params = {current_page: this.page, ...opts}
+      let params = {page: this.page, ...opts}
       getArticles(params).then(res => {
         this.isLoadingData = false
         const {result} = res
@@ -110,7 +110,7 @@ export default {
           arr = this.article.concat(result.post)
         }
         // this.$store.commit('getArticles', arr)
-        this.article = arr
+        this.article = this.uniqueJsonArray(arr, 'id')
         this.$nextTick(() => {
           this.footer()
         })
@@ -122,7 +122,27 @@ export default {
       const res = await getArticleDetails(id)
       this.$store.commit('selectArticle', res.result)
       this.$router.push('/article/' + id)
-    }
+    },
+    uniqueJsonArray(array, key) {
+      if (!array.length) {
+        return []
+      }
+      let result = [array[0]]
+      for (let i = 1; i < array.length; i++) {
+        let item = array[i]
+        let repeat = false
+        for (let j = 0; j < result.length; j++) {
+          if (item[key] == result[j][key]) {
+            repeat = true
+            break
+          }
+        }
+        if (!repeat) {
+          result.push(item)
+        }
+      }
+      return result
+    },
   },
   mounted () {
     this.$nextTick(() => {
